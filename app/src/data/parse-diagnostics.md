@@ -4,8 +4,8 @@
 - sourceFiles: raw/dlcs/base_game.txt, raw/dlcs/northern_lords_clean.txt, raw/dlcs/royal_court_clean.txt, raw/dlcs/fate_of_iberia_clean.txt, raw/dlcs/tours_and_tournaments_clean.txt, raw/dlcs/legacy_of_persia_clean.txt, raw/dlcs/legends_of_the_dead_clean.txt, raw/dlcs/roads_to_power_clean.txt, raw/dlcs/khans_of_the_steppe_clean.txt, raw/dlcs/all_under_heaven_clean.txt
 - Total achievements: 188
 - Total guides: 1
-- With image: 187
-- Without image: 1
+- With image: 188
+- Without image: 0
 - With same PT/EN description: 0
 - Difficulty counts: very-easy=13, easy=37, medium=63, hard=56, very-hard=19, unknown=0
 - Difficulty expected counts: very-easy=13, easy=37, medium=63, hard=56, very-hard=19, unknown=0

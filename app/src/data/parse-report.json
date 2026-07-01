@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-01T07:54:29.232Z",
+  "generatedAt": "2026-07-01T08:06:23.536Z",
   "sourceMode": "dlc-files",
   "sourceFiles": [
     "raw/dlcs/base_game.txt",
@@ -103,8 +103,8 @@
     "khans-of-the-steppe": -6,
     "all-under-heaven": 4
   },
-  "withIcon": 187,
-  "withoutIcon": 1,
+  "withIcon": 188,
+  "withoutIcon": 0,
   "withSamePtEnDescription": 0,
   "difficultyCounts": {
     "very-easy": 13,

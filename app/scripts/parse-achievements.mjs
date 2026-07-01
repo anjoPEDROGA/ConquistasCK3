@@ -558,7 +558,7 @@ async function main() {
       name_en: 'The Heavenly Kingdom',
       name_pt: '',
       dlc: 'all-under-heaven',
-      icon: placeholderIcon,
+      icon: pickImage('The Heavenly Kingdom', 'all-under-heaven', fileList),
       difficulty: 'very-hard',
       description_en: 'Claim the Mandate of Heaven as the Head of Faith of a Christian faith',
       description_pt: '',
