@@ -4,6 +4,7 @@ import { CheckSquare2 } from 'lucide-react'
 import { getAchievementIconUrl } from '../utils/assets'
 import { getDlcDisplayName } from '../data/dlcLabels'
 import { getAchievementText } from '../utils/achievementFilters'
+import { getGuideByAchievementId, getGuideChecklistLabel, getGuideSectionText, getGuideText } from '../utils/guides'
 
 interface Props {
   achievement: Achievement
@@ -26,6 +27,8 @@ export function AchievementDetails({
     ? Math.round((completed.length / achievement.checklist.length) * 100)
     : 0
   const text = getAchievementText(achievement, language)
+  const guide = getGuideByAchievementId(achievement.id)
+  const guideText = guide ? getGuideText(guide, language) : null
 
   return (
     <div className="achievement-details">
@@ -53,6 +56,38 @@ export function AchievementDetails({
         <div className="detail-block">
           <h4>{language === 'pt' ? 'Como conquistar' : 'How to unlock'}</h4>
           <p>{text.howTo}</p>
+        </div>
+      )}
+
+      {guide && guideText && (
+        <div className="detail-block">
+          <h4>{language === 'pt' ? 'Guia' : 'Guide'}</h4>
+          <p className="guide-summary">{guideText.summary}</p>
+          <p className="guide-title">{guideText.title}</p>
+          {guide.sections.map((section) => {
+            const sectionText = getGuideSectionText(section, language)
+            return (
+              <div key={section.id} className="guide-section">
+                <h5>{sectionText.title}</h5>
+                <p>{sectionText.body}</p>
+              </div>
+            )
+          })}
+          {guide.checklist && guide.checklist.length > 0 && (
+            <div className="guide-checklist">
+              <h5>{language === 'pt' ? 'Checklist do guia' : 'Guide checklist'}</h5>
+              <ul className="checklist">
+                {guide.checklist.map((item) => (
+                  <li key={item.id}>
+                    <label>
+                      <CheckSquare2 size={14} aria-hidden="true" className="check-icon" />
+                      <span>{getGuideChecklistLabel(item, language)}</span>
+                    </label>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
       )}
 

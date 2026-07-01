@@ -12,6 +12,29 @@ export interface ChecklistItem {
   description_en?: string
 }
 
+export interface AchievementGuideSection {
+  id: string
+  title_en: string
+  title_pt?: string
+  body_en: string
+  body_pt?: string
+}
+
+export interface AchievementGuide {
+  id: string
+  achievement_id: string
+  title_en: string
+  title_pt?: string
+  summary_en?: string
+  summary_pt?: string
+  recommended_start?: string
+  recommended_date?: string
+  sections: AchievementGuideSection[]
+  checklist?: ChecklistItem[]
+  maps?: string[]
+  tags?: string[]
+}
+
 export interface Achievement {
   id: string
   name_en: string

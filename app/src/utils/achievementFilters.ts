@@ -5,6 +5,7 @@ import type {
   AchievementStatus,
   Language,
 } from '../types/achievement'
+import { hasGuide } from './guides'
 
 export interface AchievementFilterState {
   search: string
@@ -36,8 +37,6 @@ const getDisplayDescription = (achievement: Achievement, language: Language) =>
 
 const getDisplayHowTo = (achievement: Achievement, language: Language) =>
   language === 'pt' ? achievement.how_to_pt?.trim() || achievement.how_to_en || '' : achievement.how_to_en || ''
-
-const hasGuide = (achievement: Achievement) => Boolean(achievement.guide_id)
 
 const statusRank: Record<AchievementStatus, number> = {
   pending: 0,
@@ -91,7 +90,7 @@ export const filterAchievements = (
     const matchesDifficulty =
       filters.difficulty === 'all' ? true : normalizedDifficulty === filters.difficulty
     const matchesFavorites = !filters.favoritesOnly || favorites.includes(achievement.id)
-    const matchesGuide = !filters.hasGuideOnly || hasGuide(achievement)
+    const matchesGuide = !filters.hasGuideOnly || hasGuide(achievement.id)
     const matchesCompleted = !filters.hideCompleted || statuses[achievement.id] !== 'completed'
 
     return (

@@ -47,9 +47,29 @@ Build a local-first web app for tracking Crusader Kings III achievements, with r
 - `without image`: `0`
 - `guides`: `1`
 - `warnings`: `179`
-- `rejectedBlocks`: `201`
+- `rejectedBlocks`: `202`
 - Invalid wiki URL removed from final JSON
 - Exact post-processing removals remain in place for known false positives
+
+## Phase 10 Closure
+
+- Total achievements: `188`
+- Duplicates: `0`
+- Real images: `188/188`
+- Placeholder images in final achievements: `0`
+- Official difficulty distribution:
+  - `very-easy`: `13`
+  - `easy`: `37`
+  - `medium`: `63`
+  - `hard`: `56`
+  - `very-hard`: `19`
+  - `unknown`: `0`
+- `Completed a Raid Estate scheme` was removed as an internal false positive.
+- `The Heavenly Kingdom` is included in `all-under-heaven`.
+- `The Heavenly Kingdom` uses the real image `/assets/images/10 All Under Heaven/The_heavenly_kingdom_achievement.png`.
+- `The Heavenly Kingdom` has `difficulty: very-hard`.
+- Manual difficulty curation now comes from `src/data/difficulty-manual.txt` and `src/data/difficulty-overrides.json`.
+- The dataset matches the official difficulty distribution.
 
 ## Generated Data
 
@@ -93,9 +113,15 @@ Build a local-first web app for tracking Crusader Kings III achievements, with r
 - Possible future guide cleanup
 - Optional UI polish for large-data browsing
 - Difficulty is still not curated in the parser; UI now safely treats missing, empty, and `unknown` difficulty as `unknown`
+- PT translations are still not real translations
+- Tags still need curation
+- Checklists are still mostly generic
+- `guides.generated.json` is still a weak initial base
+- Maps are not yet integrated as a UI resource
+- Warnings and rejected blocks remain as parser diagnostics
 
 ## Recommended Next Steps
 
-1. Add UI polish for browsing 188 achievements comfortably.
+1. Fase 11: guias complexas e checklists avançadas.
 2. Tidy guide rendering if we want to expose long walkthroughs better.
 3. Consider code-splitting if bundle size becomes a concern.

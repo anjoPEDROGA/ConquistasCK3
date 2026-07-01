@@ -8,6 +8,7 @@ import { ChevronDown, ChevronUp, Heart, ListChecks } from 'lucide-react'
 import { getAchievementIconUrl } from '../utils/assets'
 import { getDlcDisplayName } from '../data/dlcLabels'
 import { getAchievementText } from '../utils/achievementFilters'
+import { hasGuide } from '../utils/guides'
 
 interface Props {
   achievements: Achievement[]
@@ -71,6 +72,9 @@ export function AchievementTable({
                     <StatusBadge status={status} language={language} />
                     <DifficultyBadge difficulty={achievement.difficulty} language={language} />
                     <span className="dlc-pill">{getDlcDisplayName(achievement.dlc)}</span>
+                    {hasGuide(achievement.id) && (
+                      <span className="guide-pill">{language === 'pt' ? 'Guia' : 'Guide'}</span>
+                    )}
                   </span>
                 </button>
                 <span className="achievement-controls">
