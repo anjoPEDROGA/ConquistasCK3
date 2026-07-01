@@ -11,6 +11,9 @@ interface Props {
   language: Language
   progress: AchievementProgress
   onToggleChecklistItem: (achievementId: string, itemId: string) => void
+  onToggleGuideChecklistItem: (guideId: string, itemId: string) => void
+  isGuideChecklistItemCompleted: (guideId: string, itemId: string) => boolean
+  getGuideChecklistProgress: (guideId: string) => { completed: number; total: number; percentage: number }
   onNoteChange: (achievementId: string, note: string) => void
 }
 
@@ -19,6 +22,9 @@ export function AchievementDetails({
   language,
   progress,
   onToggleChecklistItem,
+  onToggleGuideChecklistItem,
+  isGuideChecklistItemCompleted,
+  getGuideChecklistProgress,
   onNoteChange,
 }: Props) {
   const completed = progress.completedChecklistItems[achievement.id] ?? []
@@ -64,6 +70,16 @@ export function AchievementDetails({
           <h4>{language === 'pt' ? 'Guia' : 'Guide'}</h4>
           <p className="guide-summary">{guideText.summary}</p>
           <p className="guide-title">{guideText.title}</p>
+          {guide.checklist && guide.checklist.length > 0 && (
+            <p className="guide-progress">
+              {(() => {
+                const progressInfo = getGuideChecklistProgress(guide.id)
+                return language === 'pt'
+                  ? `Checklist do guia: ${progressInfo.completed}/${progressInfo.total} - ${progressInfo.percentage}%`
+                  : `Guide checklist: ${progressInfo.completed}/${progressInfo.total} - ${progressInfo.percentage}%`
+              })()}
+            </p>
+          )}
           {guide.sections.map((section) => {
             const sectionText = getGuideSectionText(section, language)
             return (
@@ -80,7 +96,16 @@ export function AchievementDetails({
                 {guide.checklist.map((item) => (
                   <li key={item.id}>
                     <label>
-                      <CheckSquare2 size={14} aria-hidden="true" className="check-icon" />
+                      <input
+                        type="checkbox"
+                        checked={isGuideChecklistItemCompleted(guide.id, item.id)}
+                        onChange={() => onToggleGuideChecklistItem(guide.id, item.id)}
+                      />
+                      <CheckSquare2
+                        size={14}
+                        aria-hidden="true"
+                        className={isGuideChecklistItemCompleted(guide.id, item.id) ? 'check-icon checked' : 'check-icon'}
+                      />
                       <span>{getGuideChecklistLabel(item, language)}</span>
                     </label>
                   </li>

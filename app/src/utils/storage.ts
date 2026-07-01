@@ -13,6 +13,7 @@ export const createInitialProgress = (achievementIds: string[]): AchievementProg
   favorites: [],
   notes: {},
   completedChecklistItems: {},
+  completedGuideChecklistItems: {},
 })
 
 const isRecord = (value: unknown): value is Record<string, unknown> => Boolean(value) && typeof value === 'object'
@@ -48,6 +49,17 @@ const normalizeChecklistItems = (value: unknown, achievementIds: string[]) => {
   )
 }
 
+const normalizeGuideChecklistItems = (value: unknown) => {
+  if (!isRecord(value)) return {}
+
+  return Object.fromEntries(
+    Object.entries(value).map(([guideId, rawItems]) => [
+      guideId,
+      normalizeStringArray(rawItems),
+    ]),
+  )
+}
+
 const normalizeNotes = (value: unknown, achievementIds: string[]) => {
   if (!isRecord(value)) return {}
 
@@ -73,6 +85,7 @@ export const sanitizeProgress = (
     favorites: normalizeStringArray(rawProgress.favorites).filter((id) => achievementIds.includes(id)),
     notes: normalizeNotes(rawProgress.notes, achievementIds),
     completedChecklistItems: normalizeChecklistItems(rawProgress.completedChecklistItems, achievementIds),
+    completedGuideChecklistItems: normalizeGuideChecklistItems(rawProgress.completedGuideChecklistItems),
   }
 }
 

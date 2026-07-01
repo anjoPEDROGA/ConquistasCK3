@@ -1,5 +1,6 @@
 import { useCallback, useState } from 'react'
 import type { AchievementProgress, AchievementStatus } from '../types/achievement'
+import { getGuideById } from '../utils/guides'
 import {
   clearProgress,
   createInitialProgress,
@@ -75,6 +76,45 @@ export function useAchievementProgress(achievementIds: string[]) {
     [commitProgress],
   )
 
+  const toggleGuideChecklistItem = useCallback(
+    (guideId: string, itemId: string) => {
+      commitProgress((current) => {
+        const checkedItems = current.completedGuideChecklistItems[guideId] ?? []
+        const nextItems = checkedItems.includes(itemId)
+          ? checkedItems.filter((id) => id !== itemId)
+          : [...checkedItems, itemId]
+
+        return {
+          ...current,
+          completedGuideChecklistItems: {
+            ...current.completedGuideChecklistItems,
+            [guideId]: nextItems,
+          },
+        }
+      })
+    },
+    [commitProgress],
+  )
+
+  const isGuideChecklistItemCompleted = useCallback(
+    (guideId: string, itemId: string) => (progress.completedGuideChecklistItems[guideId] ?? []).includes(itemId),
+    [progress.completedGuideChecklistItems],
+  )
+
+  const getGuideChecklistProgress = useCallback(
+    (guideId: string) => {
+      const guide = getGuideById(guideId)
+      const total = guide?.checklist?.length ?? 0
+      const completed = progress.completedGuideChecklistItems[guideId]?.length ?? 0
+      return {
+        completed,
+        total,
+        percentage: total === 0 ? 0 : Math.round((completed / total) * 100),
+      }
+    },
+    [progress.completedGuideChecklistItems],
+  )
+
   const importProgress = useCallback((fileContent: string) => {
     try {
       const parsed: unknown = JSON.parse(fileContent)
@@ -105,6 +145,9 @@ export function useAchievementProgress(achievementIds: string[]) {
     toggleFavorite,
     updateNote,
     toggleChecklistItem,
+    toggleGuideChecklistItem,
+    isGuideChecklistItemCompleted,
+    getGuideChecklistProgress,
     importProgress,
     exportProgressData,
     resetProgress,

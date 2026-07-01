@@ -8,7 +8,7 @@ import { ChevronDown, ChevronUp, Heart, ListChecks } from 'lucide-react'
 import { getAchievementIconUrl } from '../utils/assets'
 import { getDlcDisplayName } from '../data/dlcLabels'
 import { getAchievementText } from '../utils/achievementFilters'
-import { hasGuide } from '../utils/guides'
+import { getGuideByAchievementId, hasGuide } from '../utils/guides'
 
 interface Props {
   achievements: Achievement[]
@@ -19,6 +19,9 @@ interface Props {
   onStatusChange: (achievementId: string, status: AchievementStatus) => void
   onToggleFavorite: (achievementId: string) => void
   onToggleChecklistItem: (achievementId: string, itemId: string) => void
+  onToggleGuideChecklistItem: (guideId: string, itemId: string) => void
+  isGuideChecklistItemCompleted: (guideId: string, itemId: string) => boolean
+  getGuideChecklistProgress: (guideId: string) => { completed: number; total: number; percentage: number }
   onNoteChange: (achievementId: string, note: string) => void
 }
 
@@ -31,6 +34,9 @@ export function AchievementTable({
   onStatusChange,
   onToggleFavorite,
   onToggleChecklistItem,
+  onToggleGuideChecklistItem,
+  isGuideChecklistItemCompleted,
+  getGuideChecklistProgress,
   onNoteChange,
 }: Props) {
   return (
@@ -45,6 +51,8 @@ export function AchievementTable({
           const status = progress.statuses[achievement.id] ?? 'pending'
           const isFavorite = progress.favorites.includes(achievement.id)
           const completed = progress.completedChecklistItems[achievement.id] ?? []
+          const guide = getGuideByAchievementId(achievement.id)
+          const guideProgress = guide ? getGuideChecklistProgress(guide.id) : null
           const checklistPercent = achievement.checklist.length
             ? Math.round((completed.length / achievement.checklist.length) * 100)
             : 0
@@ -73,7 +81,15 @@ export function AchievementTable({
                     <DifficultyBadge difficulty={achievement.difficulty} language={language} />
                     <span className="dlc-pill">{getDlcDisplayName(achievement.dlc)}</span>
                     {hasGuide(achievement.id) && (
-                      <span className="guide-pill">{language === 'pt' ? 'Guia' : 'Guide'}</span>
+                      <span className="guide-pill guide-badge">
+                        {guideProgress && guideProgress.total > 0
+                          ? language === 'pt'
+                            ? `Guia ${guideProgress.completed}/${guideProgress.total} — ${guideProgress.percentage}%`
+                            : `Guide ${guideProgress.completed}/${guideProgress.total} — ${guideProgress.percentage}%`
+                          : language === 'pt'
+                            ? 'Guia'
+                            : 'Guide'}
+                      </span>
                     )}
                   </span>
                 </button>
@@ -113,6 +129,9 @@ export function AchievementTable({
                   language={language}
                   progress={progress}
                   onToggleChecklistItem={onToggleChecklistItem}
+                  onToggleGuideChecklistItem={onToggleGuideChecklistItem}
+                  isGuideChecklistItemCompleted={isGuideChecklistItemCompleted}
+                  getGuideChecklistProgress={getGuideChecklistProgress}
                   onNoteChange={onNoteChange}
                 />
               )}

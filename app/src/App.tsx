@@ -34,7 +34,19 @@ function App() {
   const [filters, setFilters] = useState(defaultFilters)
   const [sortBy, setSortBy] = useState<AchievementSortOption>('default')
   const [expandedId, setExpandedId] = useState<string | null>(achievements[0]?.id ?? null)
-  const { progress, setAchievementStatus, toggleFavorite, updateNote, toggleChecklistItem, importProgress, exportProgressData, resetProgress } =
+  const {
+    progress,
+    setAchievementStatus,
+    toggleFavorite,
+    updateNote,
+    toggleChecklistItem,
+    toggleGuideChecklistItem,
+    isGuideChecklistItemCompleted,
+    getGuideChecklistProgress,
+    importProgress,
+    exportProgressData,
+    resetProgress,
+  } =
     useAchievementProgress(achievements.map((achievement) => achievement.id))
 
   const filteredAchievements = useMemo(
@@ -119,6 +131,9 @@ function App() {
         onStatusChange={setAchievementStatus}
         onToggleFavorite={toggleFavorite}
         onToggleChecklistItem={toggleChecklistItem}
+        onToggleGuideChecklistItem={toggleGuideChecklistItem}
+        isGuideChecklistItemCompleted={isGuideChecklistItemCompleted}
+        getGuideChecklistProgress={getGuideChecklistProgress}
         onNoteChange={updateNote}
       />
       <Footer />

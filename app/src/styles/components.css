@@ -144,6 +144,10 @@ textarea {
   border-color: rgba(197, 160, 89, 0.35);
 }
 
+.guide-badge {
+  font-variant-numeric: tabular-nums;
+}
+
 .progress-track {
   width: 100%;
   height: 10px;
@@ -186,6 +190,10 @@ textarea {
 .guide-title,
 .guide-section p {
   color: var(--color-muted);
+}
+
+.guide-progress {
+  color: var(--color-royal-gold);
 }
 
 .guide-section {

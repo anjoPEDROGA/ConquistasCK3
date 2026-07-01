@@ -6,6 +6,8 @@ const guideList = guides as AchievementGuide[]
 export const getGuideByAchievementId = (achievementId: string) =>
   guideList.find((guide) => guide.achievement_id === achievementId)
 
+export const getGuideById = (guideId: string) => guideList.find((guide) => guide.id === guideId)
+
 export const hasGuide = (achievementId: string) => Boolean(getGuideByAchievementId(achievementId))
 
 export const getGuideText = (guide: AchievementGuide, language: Language) => ({
@@ -19,4 +21,6 @@ export const getGuideSectionText = (section: AchievementGuideSection, language: 
 })
 
 export const getGuideChecklistLabel = (item: ChecklistItem, language: Language) =>
-  language === 'pt' ? item.label_pt?.trim() || item.label_en || '' : item.label_en || item.label_pt
+  language === 'pt'
+    ? item.label_pt?.trim() || item.label_en?.trim() || item.id
+    : item.label_en?.trim() || item.label_pt?.trim() || item.id

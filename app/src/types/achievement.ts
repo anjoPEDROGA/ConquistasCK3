@@ -62,6 +62,7 @@ export interface AchievementProgress {
   favorites: string[]
   notes: Record<string, string>
   completedChecklistItems: Record<string, string[]>
+  completedGuideChecklistItems: Record<string, string[]>
 }
 
 export type Language = 'pt' | 'en'
