@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Placeholder achievement icon">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#2A4B6B"/>
+      <stop offset="100%" stop-color="#18120D"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="32" fill="url(#bg)"/>
+  <circle cx="128" cy="128" r="88" fill="none" stroke="#C5A059" stroke-width="10"/>
+  <path d="M80 88h96l-12 28H92z" fill="#8B2626" opacity="0.95"/>
+  <path d="M88 116h80l-8 44H96z" fill="#E1D6C0" opacity="0.9"/>
+  <path d="M104 154h48l-6 30h-36z" fill="#C5A059"/>
+  <path d="M128 62l12 24 26 4-19 18 5 26-24-13-24 13 5-26-19-18 26-4z" fill="#E1D6C0" stroke="#C5A059" stroke-width="4" stroke-linejoin="round"/>
+</svg>

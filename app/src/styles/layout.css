@@ -1,0 +1,335 @@
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    linear-gradient(180deg, rgba(24, 18, 13, 0.25), rgba(24, 18, 13, 0.9)),
+    radial-gradient(circle at top left, rgba(197, 160, 89, 0.15), transparent 30%),
+    radial-gradient(circle at top right, rgba(42, 75, 107, 0.18), transparent 30%),
+    var(--color-dark-wood);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.panel {
+  background: linear-gradient(180deg, rgba(58, 45, 32, 0.96), rgba(42, 33, 24, 0.96));
+  border: 1px solid rgba(197, 160, 89, 0.45);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+  border-radius: 18px;
+}
+
+.app-header,
+.footer,
+.table-panel,
+.filters,
+.dashboard-grid {
+  margin-bottom: 20px;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 22px 24px;
+}
+
+.header-brand {
+  display: grid;
+  gap: 4px;
+}
+
+.header-brand h1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 2rem;
+}
+
+.header-mark {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  color: var(--color-royal-gold);
+  background: rgba(197, 160, 89, 0.1);
+  border: 1px solid rgba(197, 160, 89, 0.35);
+}
+
+.header-actions {
+  display: grid;
+  gap: 10px;
+  justify-items: end;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.stat-card {
+  padding: 18px;
+}
+
+.stat-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-royal-gold);
+}
+
+.stat-card strong {
+  display: block;
+  font-size: 2rem;
+  margin-top: 8px;
+}
+
+.stat-card-wide {
+  grid-column: span 2;
+}
+
+.dlc-progress-card {
+  grid-column: 1 / -1;
+}
+
+.dlc-progress-list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0;
+  display: grid;
+  gap: 8px;
+}
+
+.dlc-progress-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+
+.dlc-progress-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dlc-progress-name img {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.progress-controls {
+  padding: 14px;
+}
+
+.controls-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.control-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(197, 160, 89, 0.45);
+  background: rgba(42, 33, 24, 0.85);
+  color: var(--color-parchment-white);
+  border-radius: 999px;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+.control-button.danger {
+  border-color: rgba(139, 38, 38, 0.6);
+}
+
+.control-button.ghost {
+  background: transparent;
+}
+
+.feedback-text {
+  margin-top: 10px;
+  color: var(--color-muted);
+}
+
+.filter-field {
+  display: grid;
+  gap: 6px;
+}
+
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-with-icon svg {
+  position: absolute;
+  left: 12px;
+  color: var(--color-muted);
+}
+
+.input-with-icon input {
+  width: 100%;
+  padding-left: 38px;
+}
+
+.filters-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  grid-column: 1 / -1;
+  flex-wrap: wrap;
+}
+
+.filters-count {
+  color: var(--color-muted);
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 12px;
+  padding: 18px;
+}
+
+.table-panel {
+  padding: 20px;
+}
+
+.achievement-table {
+  display: grid;
+  gap: 14px;
+  overflow-x: auto;
+}
+
+.achievement-row {
+  border: 1px solid rgba(143, 113, 64, 0.4);
+  border-radius: 16px;
+  background: rgba(24, 18, 13, 0.38);
+  overflow: hidden;
+}
+
+.achievement-summary {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 14px;
+  align-items: center;
+  padding: 16px;
+  background: transparent;
+  color: inherit;
+  border: 0;
+  text-align: left;
+}
+
+.achievement-summary:focus-within,
+.achievement-summary button:focus-visible,
+.control-button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+.language-toggle button:focus-visible,
+.favorite:focus-visible,
+.expand-toggle:focus-visible {
+  outline: 2px solid var(--color-royal-gold);
+  outline-offset: 2px;
+}
+
+.achievement-progress {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 16px 16px;
+}
+
+.expand-toggle,
+.favorite {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  border: 1px solid rgba(197, 160, 89, 0.35);
+}
+
+.achievement-details {
+  padding: 0 16px 18px;
+}
+
+.check-icon {
+  color: var(--color-muted);
+}
+
+.check-icon.checked {
+  color: var(--color-success);
+}
+
+@media (max-width: 1000px) {
+  .dashboard-grid,
+  .filters {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .app-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-actions {
+    width: 100%;
+    justify-items: stretch;
+  }
+
+  .progress-controls {
+    width: 100%;
+  }
+}
+
+@media (max-width: 720px) {
+  .app-shell {
+    padding: 14px;
+  }
+
+  .dashboard-grid,
+  .filters {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-card-wide,
+  .dlc-progress-card {
+    grid-column: auto;
+  }
+
+  .achievement-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .achievement-progress {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .controls-row {
+    flex-direction: column;
+  }
+
+  .control-button {
+    width: 100%;
+    justify-content: center;
+  }
+}

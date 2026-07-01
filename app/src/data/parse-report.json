@@ -1,0 +1,2024 @@
+{
+  "generatedAt": "2026-07-01T05:13:02.426Z",
+  "sourceMode": "dlc-files",
+  "sourceFiles": [
+    "raw/dlcs/base_game.txt",
+    "raw/dlcs/northern_lords_clean.txt",
+    "raw/dlcs/royal_court_clean.txt",
+    "raw/dlcs/fate_of_iberia_clean.txt",
+    "raw/dlcs/tours_and_tournaments_clean.txt",
+    "raw/dlcs/legacy_of_persia_clean.txt",
+    "raw/dlcs/legends_of_the_dead_clean.txt",
+    "raw/dlcs/roads_to_power_clean.txt",
+    "raw/dlcs/khans_of_the_steppe_clean.txt",
+    "raw/dlcs/all_under_heaven_clean.txt"
+  ],
+  "filesRead": [
+    {
+      "file": "raw/dlcs/base_game.txt",
+      "dlc": "base-game",
+      "achievements": 60
+    },
+    {
+      "file": "raw/dlcs/northern_lords_clean.txt",
+      "dlc": "northern-lords",
+      "achievements": 10
+    },
+    {
+      "file": "raw/dlcs/royal_court_clean.txt",
+      "dlc": "royal-court",
+      "achievements": 20
+    },
+    {
+      "file": "raw/dlcs/fate_of_iberia_clean.txt",
+      "dlc": "fate-of-iberia",
+      "achievements": 11
+    },
+    {
+      "file": "raw/dlcs/tours_and_tournaments_clean.txt",
+      "dlc": "tours-and-tournaments",
+      "achievements": 22
+    },
+    {
+      "file": "raw/dlcs/legacy_of_persia_clean.txt",
+      "dlc": "legacy-of-persia",
+      "achievements": 10
+    },
+    {
+      "file": "raw/dlcs/legends_of_the_dead_clean.txt",
+      "dlc": "legends-of-the-dead",
+      "achievements": 11
+    },
+    {
+      "file": "raw/dlcs/roads_to_power_clean.txt",
+      "dlc": "roads-to-power",
+      "achievements": 21
+    },
+    {
+      "file": "raw/dlcs/khans_of_the_steppe_clean.txt",
+      "dlc": "khans-of-the-steppe",
+      "achievements": 10
+    },
+    {
+      "file": "raw/dlcs/all_under_heaven_clean.txt",
+      "dlc": "all-under-heaven",
+      "achievements": 19
+    }
+  ],
+  "totalAchievements": 188,
+  "totalGuides": 1,
+  "byDlc": {
+    "base-game": 56,
+    "northern-lords": 10,
+    "royal-court": 20,
+    "fate-of-iberia": 11,
+    "tours-and-tournaments": 20,
+    "legacy-of-persia": 10,
+    "legends-of-the-dead": 11,
+    "roads-to-power": 21,
+    "khans-of-the-steppe": 10,
+    "all-under-heaven": 19
+  },
+  "expectedByDlc": {
+    "base-game": 56,
+    "northern-lords": 10,
+    "royal-court": 18,
+    "fate-of-iberia": 12,
+    "tours-and-tournaments": 15,
+    "legacy-of-persia": 13,
+    "legends-of-the-dead": 11,
+    "roads-to-power": 21,
+    "khans-of-the-steppe": 16,
+    "all-under-heaven": 16
+  },
+  "differencesByDlc": {
+    "base-game": 0,
+    "northern-lords": 0,
+    "royal-court": 2,
+    "fate-of-iberia": -1,
+    "tours-and-tournaments": 5,
+    "legacy-of-persia": -3,
+    "legends-of-the-dead": 0,
+    "roads-to-power": 0,
+    "khans-of-the-steppe": -6,
+    "all-under-heaven": 3
+  },
+  "withIcon": 188,
+  "withoutIcon": 0,
+  "withSamePtEnDescription": 0,
+  "withDefaultDifficulty": 173,
+  "rejectedBlocks": [
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "Kingdom of Hungary\n Christian religion\n Playing as Álmos Árpád"
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "Declaring war using the Migrate to Pannonia casus belli will create two powerful armies in the realm capital and outnumber the Bulgarian armies two to one."
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "Capital is in Ireland region"
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "Kingdom of Ireland\tPlay the Rags to Riches scenario as Petty King Murchad of Munster. Fabricating claims is sufficient for this, as most of Ireland is divided among independent counts."
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "Alternatively, if you have the perks in the August diplomacy lifestyle at game start, the +20 to vassalization acceptance makes it possible to do this quite quickly without a single war: it's possible"
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "Since 1.13 and the scheme rework, it might be easier achieve it playing as Jarl Haesteinn, the Count of Montigue in 867, become your wife's soulmate, fire your spymaster and wait for the murder attemp"
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "Has neither:"
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "Has a full set of lifestyle traits perks in a tree:"
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "In 1066 replace the king of England with a 75 year old custom ruler with Coptic faith, Syriac culture,  Mastermind Philosopher,  Genius and  Strong traits. With all these you get 56 experience per mon"
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "Note that having lifestyle traits is not enough. You need to unlock required lifestyle perks in a tree."
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "French culture\n Catholic faith\n Byzantine Empire\n Roman Empire\n Liege owns the Byzantine Empire\n Liege owns the Roman Empire"
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "Note that you don't need to hold the Kingdom of Thessalonika title, only all its counties. Replace the Byzantine emperor from 1066 with a custom character of French culture and Catholic faith and trai"
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "This achievement is possible to do in under 10 years as Haesteinn. With the Bellem Justum perk conquering an easy duchy like Brittany or Cornwall (and forming the title) and doing a pilgrimage will gi"
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "Playing as Jarl Hæsteinn of Montaigu"
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "Declare war on Cornwall using the Conquer Duchy Casus Belli. You should have no problem winning the war unless the Cornish get a strong ally (just restart if that happens). Move capital to Cornwall, c"
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "Alternatively, you can start multiple murder plots to stress suicide Rurik, allowing you to play as his only heir, a 17-year-old who also uses the martial tree. His stats are worse than Rurik's, but y"
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "English culture\n Kingdom of England\n All direct vassals who hold a county or duchy in De Jure England have English culture"
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "Moving the Realm Capital within the de jure territory of Kingdom of England enables the Embrace English Culture decision. The achievement checks direct vassals only so revoke all the duchies of non-En"
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "Holy Roman Empire"
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "Wait a few months and you will have enough gold to create the Duchy of Moravia. Then make no expenses for a few years and you'll be able to create the Kingdom of Bohemia."
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "To take the Holy Roman Empire, fabricate a hook on the Kaiser (requires the Truth is Relative Perk) and force him to vote for you. You and the Kaiser will always beat out the other electors. Then, sim"
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "Owns or is liege of the owner of the  Counties of:"
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "Varanasi\nAyodhyā\nMathura\nSthanisvara\nKanchipuram\nUjjayini\nDvaraka\n\tSeveral Hindu faiths have holy sites that are unrelated to this achievement. Smartism or Kalikula Shaktism have the correct holy site"
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "In 867 Maharaja Bhoja of Pratihara (Khosala) starts in control of all but one of the Smartism Holy Sites. If you convert to Smartism or Kalikula Shaktism you only need to gain a casus belli against a "
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "Is naked"
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "Starting in 1066, replace the King of France with a custom character of the Papuan or Nakavaram Culture and the traits  Temperate,  Forgiving,  Compassionate, and  Honest. The character should be at l"
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "You can start in 867 as any of the Igbo culture Chiefs and simply conquer enough to become a High Chief (Ajapado). You can use the raiding intent of capture. Make use of the Igbo culture tradition of "
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "Almost any run that lasts long enough will achieve this level of splendor naturally. To that end, you do not necessarily need to specifically aim for this achievement if you're doing a very long run, "
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "Capital is in Iberia"
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "Taken the Avenge the Battle of Tours decision"
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "Completely controls the Iberia region"
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "In 867 replace the Umayyad Sultan with a custom character of Andalusian culture and Muwalladism faith. This solves his initial Popular Opinion. Surrender in the starting wars and conquer the independe"
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "Fabricate claims to conquer all the independent counties in Italy (restart if your Realm Priest has poor Learning). Meanwhile, try to request a claim on the Duchy of Lombardy, either by befriending th"
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "To accelerate the siring of dynasty members, land all your sons and matrilineal sons-in-law. Rulers and their spouses receive a fertility bonus."
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "Is Playing Duke Nuño Mendez of Portucale."
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "Sometimes the character starts with the Meritocracy perk, allowing the Claim Throne scheme to be used from the start with adequate success chance. Note that you will still have to defeat several Musli"
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "With the  Fate of Iberia DLC you can Found Portugal without being independent as long as it's the Opportunity Phase (which the game begins in)."
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "Alternatively, search for a member of the  Turumism faith that randomly generates with two of three virtuous personality traits, restarting if unsuccessful. This is slightly easier in 1066 as there ar"
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "Christian religion"
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "Completely controls the Iberia region"
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "In 867 replace the Umayyad Sultan with a custom character of Andalusian culture, Apostolic faith, learning education and pick traits that will offset the Opinion loss (Gregarious is a great option for"
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "Alternatively, if the  Fate of Iberia DLC is enabled, you can follow the same instructions as above, but starting with a Mozarab ruler instead, as you will automatically be involved with the Struggle "
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "Alternatively, consider leaving the DLC enabled. Once you are in position to end the Struggle, do so (do not take the Status Quo ending as it destroys the Hispania title), then create the empire. Conv"
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "One of the following:"
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "Completely Controls the  Kingdom of Epirus\nAll  Counties are  Catholic\nCompletely Controls the  Kingdom of Thessalonika\nAll  Counties are  Catholic\nCompletely Controls the  Kingdom of Hellas\nAll  Coun"
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "The achievement does not require you to be independent, so it is also possible (if the  Roads to Power DLC is NOT installed, making the Byzantines remain Feudal) to swear fealty to the Byzantine Empir"
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "Start in Iceland with the restricted diplomatic range rule, where you're rather isolated and can be left alone. Use the Ruler Designer to create a character of the Messalianism faith with the Pure-blo"
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "Alternatively, play as a Zoroastrian ruler somewhere in India. Since it is an Eastern Religion, you won't have to worry about Holy Wars."
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "**This achievement is bugged in the current patch (as of April 2025). It will never trigger no matter what you do. Use the Steam Beta feature to roll your version back to 1.13.2 and it should trigger "
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "All dynasty members except the player is not landed or an independent ruler"
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "In 1066 play as Count Herbert of Vermandois, a vassal of France and the only landed Karling. Declare an independence war and surrender. There is a chance that you will be banished as an adventurer, wh"
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "Another approach is to get strong alliances. William the Conqueror and Kaiser Heinrich are both good candidates and should be willing to ally. Make sure your allies are at peace, declare an independen"
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "Try not to overuse Holy Wars, for they decrease fervor and at 40% or less there can be a heresy outbreak (of the unreformed version of your faith). Ensure that all of the county holders in your realm "
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "Remember: all of Africa has to follow your religion, not your faith. Those who follow the unreformed version of your faith are still following your religion."
+    },
+    {
+      "dlc": "base-game",
+      "reason": "weak-title-description",
+      "preview": "The decision requires either the Byzantine Empire, Holy Roman Empire, or Empire of Italia (after using theUnify Italy decision). Pick any achievement that sets you on a path towards one of these title"
+    },
+    {
+      "dlc": "royal-court",
+      "reason": "weak-title-description",
+      "preview": "Choose a culture with the \"Astute Diplomats\" tradition for the +1 foreign language limit and +25% Learn Language Scheme Power (Franconian, German, Nubian, Volhynian, Öngüd, Croatian, Bolghar) or with "
+    },
+    {
+      "dlc": "royal-court",
+      "reason": "weak-title-description",
+      "preview": "Use the free perks to get the Pedagogy and Open-Minded perks. Use the Learn Language scheme to learn more languages. Choose a diplomacy lifestyle and get the Adaptive Traditions perk for an extra sche"
+    },
+    {
+      "dlc": "royal-court",
+      "reason": "weak-title-description",
+      "preview": "The artifacts can be acquired by sponsoring their creation yourself, and by taking them from others. To get more Inspired characters, raise court grandeur, switch to a Scholarly court, and get the fir"
+    },
+    {
+      "dlc": "royal-court",
+      "reason": "weak-title-description",
+      "preview": "In the Royal Court you will need 3 large wall ornaments, 3 small wall ornaments, 4 pedestal items, 2 furniture items, 2 books, and a throne. The throne is the hardest to obtain, so playing as Scotland"
+    },
+    {
+      "dlc": "royal-court",
+      "reason": "weak-title-description",
+      "preview": "Namdé Ösung of Gugé in 867 is also viable. Be reminded that the faith Namdé Ösung follows does have the tenet \"Dharmic Pacifism\" which disallows you to fight holy wars. Creating a new faith with \"Warm"
+    },
+    {
+      "dlc": "royal-court",
+      "reason": "weak-title-description",
+      "preview": "Now you may start the game. Look at your education, if it isn't stewardship - repeat the previous steps until you get it. Reroll the perks, unlock the Meritocracy perk (put the rest towards avaricious"
+    },
+    {
+      "dlc": "royal-court",
+      "reason": "weak-title-description",
+      "preview": "Now you should completely control the duchies of Ghur and Kabulistan. Fill the building slots with money making buildings and start filling out men at arms (with at least two regiments of mangonels)"
+    },
+    {
+      "dlc": "royal-court",
+      "reason": "weak-title-description",
+      "preview": "Swear fealty to the Seljuk empire and use the claim throne scheme again. Forge alliances through marriage and start a claimant faction/declare war for your claim. Naturally, your best bet would be to "
+    },
+    {
+      "dlc": "royal-court",
+      "reason": "weak-title-description",
+      "preview": "Alternatively, you can become an adventurer and work your way up to becoming a great conqueror. This is the fastest way to obtain an army that surpasses the Byzantine Empire, along with the Conqueror "
+    },
+    {
+      "dlc": "royal-court",
+      "reason": "weak-title-description",
+      "preview": "AI Adoption of another court's language is weighted down by being a different religious group and their court capital being outside of the same geographic region, and against the number of counties wi"
+    },
+    {
+      "dlc": "royal-court",
+      "reason": "weak-title-description",
+      "preview": "To keep a vassal king from changing culture to the local culture, or change an existing vassal king's culture, you can convert the culture of their capital county. The AI will switch culture to their "
+    },
+    {
+      "dlc": "royal-court",
+      "reason": "weak-title-description",
+      "preview": "Consider starting as Charles the Bald in 867. You start with claims on three additional kingdoms held by your much weaker relatives, and once conquered you will be in a great position to take the \"Res"
+    },
+    {
+      "dlc": "royal-court",
+      "reason": "weak-title-description",
+      "preview": "Pick on your weaker neighbors and diverge your culture as soon as you have the prestige, then form a duchy and just play a regular game, converting enough counties to get the achievement. Consider swe"
+    },
+    {
+      "dlc": "royal-court",
+      "reason": "weak-title-description",
+      "preview": "Alternatively, start as Jarl Haesteinn in 867. Immediately assign your steward to convert the County of Montaigu to Norse culture and your Godi (Realm Priest) to fabricate a claim on the County of Fik"
+    },
+    {
+      "dlc": "fate-of-iberia",
+      "reason": "weak-title-description",
+      "preview": "Make sure that you keep all holdings in your primary kingdom title when releasing vassals, as that is one of the requirements. Releasing one or two large vassals to go under the 50% limit will make it"
+    },
+    {
+      "dlc": "fate-of-iberia",
+      "reason": "weak-title-description",
+      "preview": "Alternatively, play as Eudes Robertine of Anjou in 867, working towards the Kings to the Seventh Generation achivement. As King of France or Emperor of Francia it is very easy to conquer Iberian land "
+    },
+    {
+      "dlc": "fate-of-iberia",
+      "reason": "weak-title-description",
+      "preview": "Make sure that you keep all holdings in your primary kingdom title when releasing vassals, as that is one of the requirements. Releasing one or two large vassals to go under the 50% limit will make it"
+    },
+    {
+      "dlc": "fate-of-iberia",
+      "reason": "weak-title-description",
+      "preview": "Easily combined with Mio Cid. After completing the story and becoming a vassal of Castille, build up power and take your liege's throne. Claim a random county within Valencia, preferably one that's pa"
+    },
+    {
+      "dlc": "tours-and-tournaments",
+      "reason": "weak-title-description",
+      "preview": "Intrigue Path: Start as Werner in Aargau, marry your son into the duchy of Austria, and become an intrigue-focused character. Murder the two sons who would inherit instead. Then, as you receive the du"
+    },
+    {
+      "dlc": "tours-and-tournaments",
+      "reason": "weak-title-description",
+      "preview": "Grand Weddings have a chance to give you a strong hook on your liege, which you need for the Archduchy of Austria decision, and the first Dynasty legacy of 'Activities' increases that chance (make sur"
+    },
+    {
+      "dlc": "tours-and-tournaments",
+      "reason": "weak-title-description",
+      "preview": "All wars where you are not the primary aggressor (the character who declared the war) are allowed, including tyranny wars from imprisoning or revoking, factions against you, crusades, or ally's wars."
+    },
+    {
+      "dlc": "tours-and-tournaments",
+      "reason": "weak-title-description",
+      "preview": "The most straightforward path for this achievement is to start as any Norse ruler in 867 and play a regular game. Create the accolade one you're a King and rconstantly raid overseas with the Adventure"
+    },
+    {
+      "dlc": "tours-and-tournaments",
+      "reason": "weak-title-description",
+      "preview": "Option 1 - When powerful enough, conquer Rome from the pope to force Christianity into unlocking Crusades, then convert. A Crusade should be called for Jerusalem very quickly. Participate and send you"
+    },
+    {
+      "dlc": "tours-and-tournaments",
+      "reason": "weak-title-description",
+      "preview": "Option 2 - Build up enough piety from pilgrimages to form a new religion. It will need the Theocratic Clerical Tradition and Temporal Head of Faith (which will be you) doctrines, and the Armed Pilgra "
+    },
+    {
+      "dlc": "tours-and-tournaments",
+      "reason": "weak-title-description",
+      "preview": "Note that you do not need to win the war, but your acclaimed knight must enter the target kingdom and fight there (sieges or battles) to get the trait."
+    },
+    {
+      "dlc": "tours-and-tournaments",
+      "reason": "weak-title-description",
+      "preview": "Start as the Chiefdom of Obran Osh in 867 with Vaishnavism (Hindu) as your faith and perform a pilgrimage to Ujjayini with the following stops:"
+    },
+    {
+      "dlc": "tours-and-tournaments",
+      "reason": "weak-title-description",
+      "preview": "This route will hit the 15 terrains on land and 2 at sea, at least once at:"
+    },
+    {
+      "dlc": "tours-and-tournaments",
+      "reason": "weak-title-description",
+      "preview": "The barony's income is indicated as \"Tax\" in the Holding view. \"Monthly Income\" modifiers like Greedy or Wealth Focus are irrelevant. Increase \"Taxes\" with buildings, high personal stewardship, Tax Of"
+    },
+    {
+      "dlc": "tours-and-tournaments",
+      "reason": "weak-title-description",
+      "preview": "Use ruler designer to create a genius ruler with high overall stats and marry a 20+ skill wife that matches the skill of the regency mandate (Fill Coffers = Stewardship, Swell Armies = Martial, Promot"
+    },
+    {
+      "dlc": "tours-and-tournaments",
+      "reason": "weak-title-description",
+      "preview": "Given that the scales have a natural decay every year, and your liege could use the Swings the Scales decision as well, balancing your swinging, you heavily rely on the random outcome of the mandate e"
+    },
+    {
+      "dlc": "legacy-of-persia",
+      "reason": "weak-title-description",
+      "preview": "You must personally hold (cannot be held by a vassal) the County of Samarra for five years to take the decision. After conquering Mesopotamia you will have all of the territorial requirements, simply "
+    },
+    {
+      "dlc": "legacy-of-persia",
+      "reason": "weak-title-description",
+      "preview": "There are four tiers of modifiers:"
+    },
+    {
+      "dlc": "legacy-of-persia",
+      "reason": "weak-title-description",
+      "preview": "First tier : Notable, the Vizier does a check every 12-18 months for 100 gold\nSecond tier : Remarkable, same but for 200 gold\nThird tier : Famous, 300 gold\nFourth tier : Illustrious, 400 gold"
+    },
+    {
+      "dlc": "legacy-of-persia",
+      "reason": "weak-title-description",
+      "preview": "One modifier will be gained at a time, and the vizier will only start to gain Remarkable modifiers once they have four Notable modifiers, etc. This means it will take about 16 years to build up four I"
+    },
+    {
+      "dlc": "legacy-of-persia",
+      "reason": "weak-title-description",
+      "preview": "Once all four are present, right click your vizier. Go for Mulct Vizier and Aggressive Auditing. If your vizier dies, you will have to restart therefore make sure the vizier can sustain those 16 years"
+    },
+    {
+      "dlc": "legacy-of-persia",
+      "reason": "weak-title-description",
+      "preview": "Go in pilgrimages to get the necessary level of devotion for Kingdom-level holy wars. At the same time start a murder plot to eliminate the Byzantine Emperor to avoid the truce cooldown. Declare a hol"
+    },
+    {
+      "dlc": "legacy-of-persia",
+      "reason": "weak-title-description",
+      "preview": "Kill the Byzantine Emperor and declare duchy wars for the actual targets. You can also wait for a rebellion to remove the Byzantine Emperor and the truce cooldown will disappear as well."
+    },
+    {
+      "dlc": "legacy-of-persia",
+      "reason": "weak-title-description",
+      "preview": "N.B. : Remember to convert to a culture of Iranian heritage. You do not need every county in all 3 titles for the achievement to trigger, but you need to own the kingdoms yourself as opposed to being "
+    },
+    {
+      "dlc": "legacy-of-persia",
+      "reason": "weak-title-description",
+      "preview": "Starting as al-Andalus in 867, conquer the weaker duchies on the African coast, then use them to take Krete, allowing you to swear fealty to the Abbasids. Use the Claim Throne scheme to take the empir"
+    },
+    {
+      "dlc": "legacy-of-persia",
+      "reason": "weak-title-description",
+      "preview": "Prestige is not required for the decision to restore the Caliphate, so you can ignore the truce and conquer all of the available land. Make sure to get piety level 3 before doing so, otherwise another"
+    },
+    {
+      "dlc": "legacy-of-persia",
+      "reason": "weak-title-description",
+      "preview": "Alternately, use the game rule to make the Abbasids Administrative. Then, if you take the throne, you will simply gain the Caliphate title at the same time."
+    },
+    {
+      "dlc": "legends-of-the-dead",
+      "reason": "weak-title-description",
+      "preview": "In 867, replace the Chief of Gotland in Scandinavia with a custom ruler that has high stewardship and the Holy Monarch trait. This trait unlocks a legend seed that has no fame or piety requirements. A"
+    },
+    {
+      "dlc": "legends-of-the-dead",
+      "reason": "weak-title-description",
+      "preview": "Another option is to start and promote the legend as a King or Emperor, then wait until death, choose a new destiny as a count, take ownership of the legend from your deceased dyansty member, and comp"
+    },
+    {
+      "dlc": "legends-of-the-dead",
+      "reason": "weak-title-description",
+      "preview": "Create a custom character to replace the duke in the Doolani Amirate in the Habbari Sultanate from 867. Make the character Just, Sayyid and with Diplomacy focus. You will start with Legitamacy 4/5 wit"
+    },
+    {
+      "dlc": "legends-of-the-dead",
+      "reason": "weak-title-description",
+      "preview": "Losing the bubonic trait naturally will also trigger the achievement."
+    },
+    {
+      "dlc": "legends-of-the-dead",
+      "reason": "weak-title-description",
+      "preview": "In 1066, replace the King of Scotland with a character of Scots culture that has high diplomacy and a few children. Wait until William conquers England, then ally with him and use him to take some of "
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "At least 10 camp followers"
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "in 1066 replace King Harold of England with a custom character with a spouse and 9 children and spend all points on Diplomacy. Surrender to William to become an adventurer."
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "Only \"Choose a New Destiny\" on succession counts - other events that change your player character, like the historical character \"I wonder what destiny lies before him...\" option, do not count, though"
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "Other recommended starts are to accept defeat as King Harold (Fate of England, 1066) or un-land yourself as Prince Pascueten of Brittany (867). This strategy relies either on hoarding gold for mercena"
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "Rules a Despotate"
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "In 1066 play as Strategos Michael of Philippopolis. He starts as Co-Emperor of the Byzantine Empire. Swing the Scales of Power to level 3 and then demand a private despotate."
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "Constructed a domicile building in each building slot"
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "Set the Extra Administrative Realms - Players game rule to Always. Then in 1178 play as the Holy Roman Empire to start with an estate halfway built and upgraded."
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "Alternatively, in the course of completing Against All Odds, converting to Administrative government after swearing fealty to the Byzantines will give you a similarly upgraded estate."
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "The remit has a tendency to disappear without warning or feedback, so the safe approach is to start the raid scheme first, ask for the remit once it's ready to fire, and fire it as soon as you have th"
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "Start in 1066 as Basileus Konstantinos X will almost always agree to grant a remit if you offer some gold. Begin the scheme as soon as possible as the remit will expire if the emperor dies. Try to sta"
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "Strategos Iosephos of Kilikia Provence starts with a decent level of intrigue learning as an Intricate Webweaver which makes the scheme much easier. Make sure you have a decent spymaster and set them "
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "Byzantine Empire\n Playing as Strategos Alexios or Tourmarchēs Alexios"
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "It needs to be accomplished in Alexios's lifetime. Start with the Skullduggery focus of the Intrigue Lifestyle and immediately begin scheming to murder the top candidate to the Empire. At the same tim"
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "It is likely that the emperor at game start will die before you get yourself into the top position. Don't worry, just keep building your score. Only murder candidates that are hundreds of score above "
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "Note: The achievement will be blocked if your Palaiologos successor is female."
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "Note: available without Roads to Power DLC."
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "Byzantine Empire"
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "With minimal DLC, a strong start is Master Todor (1178, Landless Adventurer), who starts within Byzantine Empire borders with high gold, high prestige and a prestige gain modifier. Note that you will "
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "With the Khans of the Steppe DLC, however, starting in 1178 is NOT recommended because the Mongols will conquer rapidly, potentially un-landing you and leaving you rivaled with the Khan (making it ted"
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "Regardless of the chosen character and start date, the paths to the throne are about the same."
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "Your first goal is to grow your family. You will need adult heirs to maintain your governorship and spread your dynasty. Marry a camp follower, romance nearby eligible courtiers, or complete \"Rescue F"
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "Before landing yourself, your next goal is to buy an estate. Prioritize completing contracts for duchy-level patrons in the Empire, all of whom can be approached for the \"Procure Estate\" interaction. "
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "Once estate-landed, there are several Roads to Power. Stockpile Influence and seek candidacy for your House within the realm. If the Emperor likes you, you may be able to use 200+ Influence to request"
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "Note: not available without Roads to Power DLC (due to requirement to hold an estate)."
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "Emperor"
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "Set the \"Extra Administraive Realms - Players\" game rule to \"Always\". In 1066 create a custom King of France who is 50 years old with five sons. Grant Theme governorships to all five sons to unlock th"
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "Achieved the loyal ending to The Song of El Cid story"
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "Simply make the loyal choice each time one of the story events happens."
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "County of Constantinople\n Islam religion\n Taken the Adopt Centralized Administration decision"
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "Start as Salāh al-Din (Sultan of Egypt in 1178). You start with one regiment of Mubarizun and one regiment of Trebuchets - build them to max size, hire at least three regiments of Pikemen and max thos"
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "In 867 start as a custom Baron Vassal of the Khagan of Khazaria at age 44 with Conniving Puppetmaster Education Trait, Sadistic and Deceitful Personality Traits, high Intrigue and a single Son."
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "Increase your Authority to Limited Tribal Authority, Select a Stewardship Lifestyle and all Perks from the Schemer Perk Tree then wait until you receive a Stewardship Perk to get the Meritocracy Perk."
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "Start a Claim Throne and Abduct Schemes against the Khagan. Do not complete the Abduct Schme before you have the Claim or the Scheme will be aborted."
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "Marry your son to an infertile (age 46+) woman to his liking to ensure there won't be another Heir."
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "As soon as you have the Claim also execute the Abduct Scheme, start a Claimant Faction and when you imprison the Khagan press your Claim."
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "Enforce your Demands to become the Khagan and thus Emperor."
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "With Limited Tribal Authority you can attempt to revoke a Title of a Vassal. Select one who provides 0% chance of success and will start a War against your Tyranny when they decline."
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "Make sure you surrender to all other ongoing Wars first. You can't lose your Title while your fighting a War against a foreign Ruler."
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "Surrender to your Vassals to get desposed and thus an Adventurer."
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "Your Son will have become the new Khagan. Start a Murder Scheme against him."
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "On successful execution of the Scheme you will be Khagan again and should thus receive the Achievement after at most a few ingame days."
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "Won a war against Salāh al-Din Yusuf"
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "In game rules set Conquerors: Frequency to None. This way, Saladin will not have the conqueror trait."
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "Jerusalem starts with higher income than the Ayyubids and Saladin is prone to moving west. At the start, fill your men-at-arms as high as possible (focus on crossbowmen) while simultaneously marrying "
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "Completely controls the Kingdom of Armenia\n Completely controls the Kingdom of Daylam\n Completely controls the Kingdom of Georgia"
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "Play with the Gender Equality game rule set to Inverted. King Giorgi III starts with poor health and will eventually die, passing the kingdom of Georgia to you."
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "Must be done within the lifetime of Princess Tamar."
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "It is possible to start as King Giorgi III. When he dies, the achievement will become available for Princess Tamar. You can grant her a duchy to get her started while you proceed to conquer."
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "Prioritise the territories that are most likely to fall to big rulers first, as fighting them later can be tough. The best Kingdom to focus on the soonest is Armenia as it is in danger of falling to t"
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "Won the final war"
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "Hasan's story has a hidden tracker that advances during certain story events or after using the Evangelize the Faith decision. Stay in Persia, build up your piety (via pilgrimages, using the Prolific "
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "Eventually another event will appear which will send you back to Persia; now it is time to Evangelize as much as possible, as you will recieve special soldiers scaling to the number of counties of you"
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "Despoiler of Byzantium trait"
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "You need to be the strongest Catholic leading the crusade in order to be eligible for the event. So England, France, the HRE or Hungary are a good choice. If you aren't the most powerful of the Cathol"
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "weak-title-description",
+      "preview": "Can be combined with Regnum Dei."
+    },
+    {
+      "dlc": "khans-of-the-steppe",
+      "reason": "weak-title-description",
+      "preview": "As this is also on the path to take for the The Stallion that Mounts the World achievement starting as Temüjin is advisable but it is doable with any Nomadic Mongolian ruler with high Martial, Diploma"
+    },
+    {
+      "dlc": "khans-of-the-steppe",
+      "reason": "weak-title-description",
+      "preview": "Set your Kurultai to Increase Control if necessary and to Support Herders or Manage Fertility otherwise. If you need Piety a Pilgrimage is more effective than Aid Stargazer."
+    },
+    {
+      "dlc": "khans-of-the-steppe",
+      "reason": "weak-title-description",
+      "preview": "Make sure you have competent people in your Caravan Master, Noyan and Keeper of the Horses Court Positions and set their tasks to Prepare Armies, Cow Vassals and Warhorse Grooming."
+    },
+    {
+      "dlc": "khans-of-the-steppe",
+      "reason": "weak-title-description",
+      "preview": "Do a Nerge Hunt each year (Hunt Activity cooldown is reduced by 50% because of Prolific Hunters Cultural Tradition) with Substantial Party Size Activity Option. Always pick the options on maxing out t"
+    },
+    {
+      "dlc": "khans-of-the-steppe",
+      "reason": "weak-title-description",
+      "preview": "Create Men-at-Arms and improve your Realm Capital. Focus on Heavy Horse Archers and Torch Bearers Regiments as well as Domicile Buildings increasing Herd Capacity, Herd Gain, County Fertility and Army"
+    },
+    {
+      "dlc": "khans-of-the-steppe",
+      "reason": "weak-title-description",
+      "preview": "Inbetween Nerge Hunts you can wage war with the Nomadic Quarrels, Bring under Tribute and Expand Dominance Casus Belli to grow your realm."
+    },
+    {
+      "dlc": "khans-of-the-steppe",
+      "reason": "weak-title-description",
+      "preview": "Continue to Demand Vassalization and Tributaries, change Contracts to higher Herd Tithes, Demand Submission, Demand Horses and give Vassal Directives to increase County Fertility. Do not accept Vassal"
+    },
+    {
+      "dlc": "khans-of-the-steppe",
+      "reason": "weak-title-description",
+      "preview": "Offering to join wars on Tributaries defending against rulers from other Realms, hosting a Tsagaan Sar Feast, Funeral or Grand Tournament are also good ways to collect Prestige and opinion."
+    },
+    {
+      "dlc": "khans-of-the-steppe",
+      "reason": "weak-title-description",
+      "preview": "Raiding and Stealing Herd can also increase your resources but will reduce opinion so preferably ignore those options."
+    },
+    {
+      "dlc": "khans-of-the-steppe",
+      "reason": "weak-title-description",
+      "preview": "Continue until you can increase your Dominance and take Dominate Title and ultimately the Become the Greatest of Khans decisions. The ensuing Wars can have a Battle Won Score which is capped at 100% s"
+    },
+    {
+      "dlc": "khans-of-the-steppe",
+      "reason": "weak-title-description",
+      "preview": "Pick Strategist Perks and Nomadic Dynasty Legacies as they become available. After you've fully unlocked the Strategist Perk Tree switch to Diplomacy Lifestile Focus and aim for the True Ruler Perk."
+    },
+    {
+      "dlc": "khans-of-the-steppe",
+      "reason": "weak-title-description",
+      "preview": "If you want the helpful Paiza System change the Cultural Fascination to Ledger as soon as you become the Cultural Head and if you have enough Prestige to spare reform Mongol by establishing the Horse "
+    },
+    {
+      "dlc": "khans-of-the-steppe",
+      "reason": "weak-title-description",
+      "preview": "Make sure to not to accidentaly take the Move into Conquered Lands, Settle the Steppe, Forsake Nomadism or Convert to Local Culture Decisions."
+    },
+    {
+      "dlc": "khans-of-the-steppe",
+      "reason": "weak-title-description",
+      "preview": "Destroy your current Regiments and replace them with Keshig and Cataphract Archers recruited from your subjects. You should get access to those by having Khitan or Tangut Vassals."
+    },
+    {
+      "dlc": "khans-of-the-steppe",
+      "reason": "weak-title-description",
+      "preview": "Use the Offer Submission or Ruin interaction on your neighbouring rulers even if the Acceptance Chance is 0%. Either Demand Siege Weapons if their culture has Trebuchet Innovation unlocked or Demand S"
+    },
+    {
+      "dlc": "khans-of-the-steppe",
+      "reason": "weak-title-description",
+      "preview": "Grant conquered Counties and Duchies to people of the local culture or Mongols with high Martial. Demand Submission and Demand or Inspire Conversion with all your new Vassals."
+    },
+    {
+      "dlc": "khans-of-the-steppe",
+      "reason": "weak-title-description",
+      "preview": "Don't Demand Vassalization anymore. The Offer Submission or Ruin interaction is much more effective and can even be made on your Tributaries."
+    },
+    {
+      "dlc": "khans-of-the-steppe",
+      "reason": "weak-title-description",
+      "preview": "Continue until you control the entire world."
+    },
+    {
+      "dlc": "all-under-heaven",
+      "reason": "weak-title-description",
+      "preview": "Start as a Ritsuryō Governor (check the government of a selected character), ensuring they are a House Head (holding the Domicile) and take the decision."
+    },
+    {
+      "dlc": "all-under-heaven",
+      "reason": "weak-title-description",
+      "preview": "The Palace Examination is only available if you score in the top 10 of the regular Metropolitan Examination. You should be able to complete both at once if you're a skilled scholar."
+    },
+    {
+      "dlc": "all-under-heaven",
+      "reason": "weak-title-description",
+      "preview": "From here, all you need to do is gain Gold, Piety, and Legitimacy, the latter two coming via Mandala Rituals on the map and the Pilgrimage activity, and the former coming from the buildings you have r"
+    },
+    {
+      "dlc": "all-under-heaven",
+      "reason": "weak-title-description",
+      "preview": "The requirements for the Rite of Worthiness will change depending on your Mandala Aspect. Destruction is the fastest, but will require you to have a high martial spouse set to Chivalry."
+    },
+    {
+      "dlc": "all-under-heaven",
+      "reason": "weak-title-description",
+      "preview": "Instead, You need to use the Bloc Expansion Casus Belli, which is available to Soryo governors. as victory with this CB gives a special event and +5.0 Cohesion instantly. To get the achievement, start"
+    },
+    {
+      "dlc": "all-under-heaven",
+      "reason": "weak-title-description",
+      "preview": "This can be done anywhere, as long as you have a bad enough relationship with a landed ruler. Keep murdering/killing/doing bad things to a house, and you can get the house extermination CB. Win that, "
+    },
+    {
+      "dlc": "all-under-heaven",
+      "reason": "weak-title-description",
+      "preview": "Holding a Coronation and swearing an Expand the Realm Oath before you start the first war is one of the most useful steps towards collecting Prestige and ensuring Realm stability."
+    },
+    {
+      "dlc": "all-under-heaven",
+      "reason": "weak-title-description",
+      "preview": "Additionally, ensure that all of the House Heads in your Bloc follow the same Aspiration as you, accomplished via the \"Demand Aspiration Change\" interaction. This will cause your Bloc Cohesion to rapi"
+    },
+    {
+      "dlc": "all-under-heaven",
+      "reason": "weak-title-description",
+      "preview": "Once your Bloc has greater military strength than the current Daijo-daijin, start an \"Install Ruling Regent\" faction and press your demands. Win the war if necessary, and relish in your new title as D"
+    },
+    {
+      "dlc": "all-under-heaven",
+      "reason": "weak-title-description",
+      "preview": "Continue this cycle until you reach the highest rank. It will take quite a while (50+ years), so be patient. Hosting Examinations and Inspections are additional ways of getting Merit."
+    },
+    {
+      "dlc": "all-under-heaven",
+      "reason": "weak-title-description",
+      "preview": "This is a major bug in the game not upgrading the max piety level even when it should have. A current workaround is to use the designated successor button to pick an heir that the game does recognize."
+    },
+    {
+      "dlc": "all-under-heaven",
+      "reason": "weak-title-description",
+      "preview": "Starting in 867 as Korehito, use political schemes and influence to get yourself to the front of the line of succession as soon as possible. The reigning Kampaku is old and will die within a few years"
+    },
+    {
+      "dlc": "all-under-heaven",
+      "reason": "weak-title-description",
+      "preview": "You now want to ensure your heir is first in line for the Empire, whilst biding your time as you await the Early Medieval era and the Royal Prerogative innovation. Once you have this innovation and ha"
+    },
+    {
+      "dlc": "all-under-heaven",
+      "reason": "weak-title-description",
+      "preview": "Starting as Chikahito in 1066, you can either use politics to be elected to the throne as above (difficult as there are less Japanese rulers in 1066 with access to influence to help you), or use the D"
+    },
+    {
+      "dlc": "all-under-heaven",
+      "reason": "weak-title-description",
+      "preview": "Note that despite the achievement being worded as \"Starting as Hæsteinn\" it is actually \"Playing as Hæsteinn\"."
+    },
+    {
+      "dlc": "all-under-heaven",
+      "reason": "weak-title-description",
+      "preview": "The Heavenly Kingdom\nClaim the Mandate of Heaven as the Head of Faith of a Christian faith\n\t\tOwns the Hegemony of China title\nHead of Faith of a Christian faith\tCan be combined with Fishing in China a"
+    },
+    {
+      "dlc": "all-under-heaven",
+      "reason": "weak-title-description",
+      "preview": "Set the Rule Conquerors: Frequency to None or Vicayâla Chola will be a Conqueror and possibly block you from taking the optimal Holy Site."
+    },
+    {
+      "dlc": "all-under-heaven",
+      "reason": "weak-title-description",
+      "preview": "Playing as Hæsteinn, make your way towards India. Take a break after an Adventure CB on a Tribal Duchy on the eastern African coast which will allow you to Raid with the Capture Intent. Make as many p"
+    },
+    {
+      "dlc": "all-under-heaven",
+      "reason": "weak-title-description",
+      "preview": "Continue and conquer the Holy site of Kerala of Nestorianism in the Raj of Chera Nadu. Then continue without any further Adventure CBs towards the border of China."
+    },
+    {
+      "dlc": "all-under-heaven",
+      "reason": "weak-title-description",
+      "preview": "Once you have the Claim the Mandate CB, convert to Nestorianism, then create a new Christian Faith with you as temporal Head of Faith (new Faiths can't be created while at war). Reset your perks to ta"
+    },
+    {
+      "dlc": "base-game",
+      "reason": "way-of-life-internal-list",
+      "preview": "Diplomat, August and Patriarch / Matriarch"
+    },
+    {
+      "dlc": "base-game",
+      "reason": "way-of-life-internal-list",
+      "preview": "Diplomat, August and Patriarch / Matriarch"
+    },
+    {
+      "dlc": "base-game",
+      "reason": "internal-requirement",
+      "preview": "Dynasty has 50 living members"
+    },
+    {
+      "dlc": "base-game",
+      "reason": "internal-requirement",
+      "preview": "All counties in the Iberia region is Christian"
+    },
+    {
+      "dlc": "tours-and-tournaments",
+      "reason": "travel-route-guide-line",
+      "preview": "Obran Osh - Start"
+    },
+    {
+      "dlc": "tours-and-tournaments",
+      "reason": "travel-route-guide-line",
+      "preview": "Obran Osh - Taiga"
+    }
+  ],
+  "guideCandidatesRejected": [],
+  "duplicates": [],
+  "warnings": [
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "death-did-us-part",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "its-not-a-cult",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "until-death-do-us-part",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "a-house-of-my-own",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "above-god",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "almost-there",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "dreadful-ruler",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "fine-print",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "moving-up-in-the-world",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "not-so-feudal-system",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "stressful-situation",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "the-emerald-isle",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "the-things-love-does-for-us",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "the-things-we-do-for-love",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "turning-to-diamonds",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "way-of-life",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "diplomat-august-and-patriarch-matriarch",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "diplomat-august-and-patriarch-matriarch-2",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "a-legacy-to-last-the-ages",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "an-unfortunate-accident",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "bad-blood",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "followed-by-shadows",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "for-the-faith",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "frankokratia",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "keeping-it-in-the-family",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "know-your-place",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "land-of-the-rus",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "monumental",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "non-nobis-domine",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "norman-yoke",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "royal-dignity",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "saint",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "seven-holy-cities",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "the-emperors-new-clothes",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "trapped-in-the-web",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "a-name-known-throughout-the-world",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "al-andalus",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "beacon-of-progress",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "blood-eagle",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "from-rags-to-riches",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "give-a-dog-a-bone",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "dynasty-has-50-living-members",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "kings-to-the-seventh-generation",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "last-count-first-king",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "paragon-of-virtue",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "prolific",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "reconquista",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "all-counties-in-the-iberia-region-is-christian",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "sibling-rivalry",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "wily-as-the-fox",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "a-perfect-circle",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "carolingian-consolidation",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "mother-of-us-all",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "rise-from-the-ashes",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "what-nepotism",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "first-of-the-crusader-kings",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "volva",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "a-dangerous-business",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "saga-in-stone",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "vladimirs-second-choice",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "canute-the-greater",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "faster-than-the-fox",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "king-of-all-the-isles",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "patronage",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "changing-course",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "converging-paths",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "i-made-this",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "polyglot",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "brave-and-bold",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "creme-de-la-creme",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "hoarder",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "one-of-a-kind",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "the-true-royal-court",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "they-belong-in-a-museum",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "beta-israel",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "bod-chen-po",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "delusions-of-grandeur",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "inspirational",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "rise-of-the-ghurids",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "true-tolerance",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "turkish-eagle",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "lingua-franca",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "nobody-comes-to-fika",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "basque-in-my-glory",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "friendship-is-magic",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "historys-best-friends",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "high-stakes",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "iberia-or-iberia",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "iberian-compromise",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "iberian-hostilities",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "holidaying-in-iberia",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "the-andalusian-inquisition",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "legacy-of-the-campeadores",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "hunting-accident",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "a-thousand-one-nights",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "black-dinner",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "fly-my-pretty",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "imperial-march",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "lions-tigers-bears-oh-my",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "pathway-to-heaven",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "sir-lance-a-lot",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "the-very-best",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "a-e-i-o-u-me",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "a-knights-tale",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "a-true-perfect-knight",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "in-my-element-s",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "obran-osh-start",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "obran-osh-taiga",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "there-and-back-again",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "the-iron-and-golden-king",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "your-eternal-reward",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "ahab",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "like-no-one-ever-was",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "little-william-marshal",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "abbasid-might",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "rich-in-diversity",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "royal-flush",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "all-your-caliphate-are-belong-to-us",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "fiscal-responsibility",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "mulct-them-dry",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "iranian-revival",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "shia-reborn",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "darius-revenge",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "the-umayyad-strikes-back",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "legendary",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "youll-never-take-me-alive",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "neverending-story",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "pay-respects",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "canonized",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "divine-right",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "local-legend",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "upward-mobility",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "not-today",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "the-pharaoh-islands",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "cant-touch-this",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "band-of-brothers",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "quantum-leap",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "despotic",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "epic-paperwork",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "in-good-estate",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "its-ok-i-got-a-permit",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "completed-a-raid-estate-scheme",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "not-content-to-serve",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "started-from-the-bottom-now-were-ere",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "byzywork",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "chaos-is-a-ladder",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "mio-cid",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "new-management-same-as-the-old-management",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "rags-to-riches-to-rags-to-riches",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "regnum-dei",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "tamar-mepe",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "the-old-man-of-the-mountain",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "despoiler-of-byzantium",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "blood-of-my-blood",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "con-fed-up",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "steppe-by-steppe",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "in-xanadu",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "nobodys-business",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "settling-in",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "tribute-band",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "shut-up-nerge",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "this-chinggis-everything",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "the-stallion-that-mounts-the-world",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "promised-land",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "stamp-of-approval",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "yes-i-need-i-need-my-samurai",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "flying-colors",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "highway-of-ideas",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "humble-beginnings",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "confucian-scholar",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "cut-off-the-head-and-the-body-will-follow",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "daits-how-you-do-it",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "devaraja",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "how-its-done-done-done",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "upper-upper",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "a-living-god-on-earth",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "grand-governor",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "mandate-of-heaven",
+      "message": "Dificuldade nao encontrada; usando medium."
+    },
+    {
+      "type": "difficulty_defaulted",
+      "achievementId": "sword-of-japan",
+      "message": "Dificuldade nao encontrada; usando medium."
+    }
+  ],
+  "quality": {
+    "suspiciousHeaderAchievements": 0,
+    "overlongNames": 0,
+    "overlongChecklistItems": 0,
+    "emptyDescriptions": 0,
+    "unknownDlc": 0,
+    "samePtEnDescriptionRatio": 0
+  }
+}

@@ -1,0 +1,22 @@
+@import './styles/theme.css';
+@import './styles/layout.css';
+@import './styles/components.css';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--color-parchment-white);
+}
+
+button,
+select,
+input,
+textarea {
+  outline-color: var(--color-royal-gold);
+}
+
+a {
+  color: inherit;
+}

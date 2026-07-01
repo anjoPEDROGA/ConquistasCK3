@@ -1,0 +1,226 @@
+.eyebrow {
+  margin: 0 0 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-royal-gold);
+  font-size: 0.76rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+input,
+select,
+textarea,
+button {
+  font: inherit;
+}
+
+input,
+select,
+textarea {
+  border-radius: 12px;
+  border: 1px solid rgba(197, 160, 89, 0.45);
+  background: rgba(24, 18, 13, 0.65);
+  color: var(--color-parchment-white);
+  padding: 12px 14px;
+}
+
+textarea {
+  width: 100%;
+  resize: vertical;
+}
+
+.language-toggle {
+  display: inline-flex;
+  border: 1px solid rgba(197, 160, 89, 0.45);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.language-toggle button,
+.favorite {
+  background: transparent;
+  color: var(--color-parchment-white);
+  border: 0;
+  cursor: pointer;
+}
+
+.language-toggle button {
+  padding: 10px 14px;
+}
+
+.language-toggle .active,
+.favorite.active {
+  background: var(--color-royal-gold);
+  color: var(--color-dark-wood);
+}
+
+.badge,
+.dlc-pill {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 5px 10px;
+  font-size: 0.82rem;
+  border: 1px solid transparent;
+}
+
+.badge.status.pending { background: rgba(166, 106, 42, 0.25); border-color: rgba(166, 106, 42, 0.55); }
+.badge.status.in_progress { background: rgba(42, 75, 107, 0.25); border-color: rgba(42, 75, 107, 0.55); }
+.badge.status.completed { background: rgba(63, 107, 58, 0.25); border-color: rgba(63, 107, 58, 0.55); }
+.badge.difficulty.easy { background: rgba(63, 107, 58, 0.25); }
+.badge.difficulty.medium { background: rgba(42, 75, 107, 0.25); }
+.badge.difficulty.hard { background: rgba(166, 106, 42, 0.25); }
+.badge.difficulty.very-hard { background: rgba(139, 38, 38, 0.25); }
+
+.achievement-icon {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: rgba(197, 160, 89, 0.12);
+  border: 1px solid rgba(197, 160, 89, 0.35);
+  overflow: hidden;
+}
+
+.achievement-icon img,
+.details-icon,
+.dlc-progress-name img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.achievement-main {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+}
+
+.achievement-toggle {
+  text-align: left;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  min-width: 0;
+}
+
+.achievement-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-width: 0;
+}
+
+.achievement-controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.dlc-pill {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--color-muted);
+  border-color: rgba(255, 255, 255, 0.08);
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.progress-track {
+  width: 100%;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.progress-track.compact {
+  flex: 1;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-royal-gold), #f0d58f);
+}
+
+.detail-block {
+  margin-top: 16px;
+  display: grid;
+  gap: 10px;
+}
+
+.checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.checklist label {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  min-width: 0;
+}
+
+.details-hero {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+  min-width: 0;
+}
+
+.details-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  border: 1px solid rgba(197, 160, 89, 0.35);
+  background: rgba(24, 18, 13, 0.45);
+}
+
+.detail-dlc {
+  color: var(--color-royal-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  margin-bottom: 4px;
+}
+
+.achievement-toggle strong,
+.achievement-description,
+.detail-block p,
+.detail-dlc,
+.dlc-progress-name span {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.footer {
+  padding: 16px 20px;
+  text-align: center;
+  color: var(--color-muted);
+}

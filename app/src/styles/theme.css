@@ -1,0 +1,19 @@
+:root {
+  --color-royal-gold: #c5a059;
+  --color-coat-red: #8b2626;
+  --color-imperial-blue: #2a4b6b;
+  --color-parchment-white: #e1d6c0;
+  --color-ink: #241a12;
+  --color-dark-wood: #18120d;
+  --color-panel: #2a2118;
+  --color-panel-soft: #3a2d20;
+  --color-border: #8f7140;
+  --color-muted: #7b6b57;
+  --color-success: #3f6b3a;
+  --color-warning: #a66a2a;
+  --color-danger: #8b2626;
+  color-scheme: dark;
+  font-family: Georgia, 'Times New Roman', serif;
+  background: radial-gradient(circle at top, #332519 0%, #18120d 55%);
+  color: var(--color-parchment-white);
+}

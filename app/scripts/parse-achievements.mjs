@@ -1,0 +1,616 @@
+import { mkdir, readFile, readdir, stat, writeFile } from 'node:fs/promises'
+import path from 'node:path'
+
+const projectRoot = 'E:/ConquistasCK3/app'
+const rawRoot = path.join(projectRoot, 'raw')
+const dlcsRoot = path.join(rawRoot, 'dlcs')
+const legacySourceFile = path.join(rawRoot, 'conteudo.txt')
+const imagesRoot = path.join(projectRoot, 'public/assets/images')
+const achievementsOut = path.join(projectRoot, 'src/data/achievements.generated.json')
+const guidesOut = path.join(projectRoot, 'src/data/guides.generated.json')
+const reportOut = path.join(projectRoot, 'src/data/parse-report.json')
+const diagnosticsOut = path.join(projectRoot, 'src/data/parse-diagnostics.md')
+
+const placeholderIcon = '/assets/images/placeholder-achievement.svg'
+const verbose = process.argv.includes('--verbose')
+const forceLegacy = process.argv.includes('--legacy')
+const strictMode = process.argv.includes('--strict')
+
+const DLC_SOURCE_FILES = {
+  'base_game.txt': 'base-game',
+  'northern_lords_clean.txt': 'northern-lords',
+  'royal_court_clean.txt': 'royal-court',
+  'fate_of_iberia_clean.txt': 'fate-of-iberia',
+  'tours_and_tournaments_clean.txt': 'tours-and-tournaments',
+  'legacy_of_persia_clean.txt': 'legacy-of-persia',
+  'legends_of_the_dead_clean.txt': 'legends-of-the-dead',
+  'roads_to_power_clean.txt': 'roads-to-power',
+  'khans_of_the_steppe_clean.txt': 'khans-of-the-steppe',
+  'all_under_heaven_clean.txt': 'all-under-heaven',
+}
+
+const DLC_ORDER = Object.values(DLC_SOURCE_FILES)
+const EXPECTED_BY_DLC = {
+  'base-game': 56,
+  'northern-lords': 10,
+  'royal-court': 18,
+  'fate-of-iberia': 12,
+  'tours-and-tournaments': 15,
+  'legacy-of-persia': 13,
+  'legends-of-the-dead': 11,
+  'roads-to-power': 21,
+  'khans-of-the-steppe': 16,
+  'all-under-heaven': 16,
+}
+
+const difficultyMap = [
+  { re: /\b(vh|very hard|very-hard|muito dificil)\b/i, value: 'very-hard' },
+  { re: /\b(h|hard|dificil)\b/i, value: 'hard' },
+  { re: /\b(m|medium|medio|media)\b/i, value: 'medium' },
+  { re: /\b(ve|e|easy|facil|muito facil)\b/i, value: 'easy' },
+]
+
+const tagKeywords = [
+  ['religion', ['faith', 'religion', 'church', 'pope']],
+  ['culture', ['culture', 'cultura', 'tradition', 'tradicao']],
+  ['war', ['war', 'battle', 'army', 'raid', 'siege']],
+  ['dynasty', ['dynasty', 'house', 'heir', 'bloodline']],
+  ['kingdom', ['kingdom', 'realm', 'crown']],
+  ['empire', ['empire', 'emperor']],
+  ['iberia', ['iberia', 'iberian']],
+  ['persia', ['persia', 'persian', 'iran']],
+  ['steppe', ['steppe', 'khan', 'mongol', 'nomad']],
+  ['viking', ['viking', 'norse', 'raider']],
+  ['court', ['court', 'grandeur', 'artifact', 'guest']],
+  ['tournament', ['tournament', 'joust', 'duel', 'knight']],
+  ['plague', ['plague', 'disease']],
+  ['legend', ['legend', 'local legend']],
+  ['travel', ['travel', 'tour', 'journey']],
+  ['africa', ['africa', 'african']],
+  ['india', ['india', 'indian']],
+  ['china', ['china', 'chinese', 'mandate of heaven']],
+  ['byzantine', ['byzantine', 'roman', 'rome']],
+  ['long-campaign', ['long campaign', 'ages', 'century']],
+]
+
+const normalize = (value) =>
+  String(value)
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/['’]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/-+/g, '-')
+    .replace(/^-|-$/g, '')
+
+const clean = (value) => String(value).replace(/\s+/g, ' ').trim()
+const slugify = (value) => normalize(value)
+const normalizeDlcFilename = (filename) => DLC_SOURCE_FILES[filename.toLowerCase()] ?? null
+
+const isNoiseLine = (line) => {
+  const norm = normalize(line)
+  return (
+    !norm ||
+    /^(list-of-achievements|references|referencias?|dicas-e-estrategias|difficulty|starting-conditions|requirements|hints-strategies|achievement-starting-conditions)$/i.test(norm) ||
+    /(^|\t)(de|di|difficulty)(\t|$)/i.test(line) ||
+    /^https?:\/\//i.test(line)
+  )
+}
+
+const detectDifficulty = (text) => {
+  for (const item of difficultyMap) {
+    if (item.re.test(text)) return item.value
+  }
+  return null
+}
+
+const selectTags = (text) => {
+  const lower = text.toLowerCase()
+  const tags = []
+  for (const [tag, keywords] of tagKeywords) {
+    if (keywords.some((k) => lower.includes(k))) tags.push(tag)
+    if (tags.length >= 6) break
+  }
+  return tags
+}
+
+const titleLooksInvalid = (name) =>
+  !name ||
+  name.length > 80 ||
+  /\t/.test(name) ||
+  /^conquista/i.test(name) ||
+  /^list of achievements$/i.test(name) ||
+  /^https?:\/\//i.test(name) ||
+  /achievement starting conditions/i.test(name)
+
+const titleLooksNarrative = (name) =>
+  /^(In \d{3,4}|Alternatively|Note|N\.B\.|This achievement|The achievement|The following|Within the|Start|Play|Declare|Wait|Create|Replace|Conquer|Move|Use|Take|Go|Kill|Hold|Make sure)\b/i.test(
+    clean(name),
+  )
+
+const titleLooksRequirement = (name) =>
+  /^(Capital is in|Is naked|Has neither:|Holy Roman Empire|Kingdom of |Empire of |County of |Duchy of |Owns or is liege|Completely controls|Playing as)\b/i.test(
+    clean(name),
+  ) || /\b(culture|religion|region|faith|county|duchy|kingdom|empire)$/i.test(clean(name))
+
+const titleLooksTooLong = (name) => clean(name).length > 60
+const looksLikeAchievementName = (line) => {
+  const value = clean(line)
+  if (!value) return false
+  if (value.startsWith('\t')) return false
+  if (value.endsWith(':')) return false
+  if (value.length < 3 || value.length > 60) return false
+  if (/^\d/.test(value)) return false
+  if (value.includes('http://') || value.includes('https://')) return false
+  if (/^\-/.test(value) || /^•/.test(value)) return false
+  if (titleLooksInvalid(value) || titleLooksNarrative(value) || titleLooksRequirement(value) || titleLooksTooLong(value)) return false
+  return /[A-Za-z]/.test(value)
+}
+
+const looksLikeDescription = (line) => {
+  const value = clean(line)
+  if (!value) return false
+  if (value.length > 180) return true
+  if (/\t/.test(line)) return true
+  if (
+    /^(As |Have |Starting as |With |Finish |Pass through |Capture |Succeed |Orchestrate |Successfully |Participate |Visit |Obtain |Use |Reach |Hold |Murder |Marry |Increase |Suffer |Have one of |Have a max rank|As an? |As any one)/i.test(
+      value,
+    )
+  ) {
+    return true
+  }
+  return /^[A-Z][^:]{8,160}[.!?]?$/.test(value)
+}
+
+const walkFiles = async (dir) => {
+  const entries = await readdir(dir, { withFileTypes: true })
+  const out = []
+  for (const entry of entries) {
+    const full = path.join(dir, entry.name)
+    if (entry.isDirectory()) out.push(...(await walkFiles(full)))
+    else out.push(full)
+  }
+  return out
+}
+
+const imageFiles = async () => {
+  const files = []
+  try {
+    const walked = await walkFiles(imagesRoot)
+    for (const file of walked) {
+      if (/\.(png|jpg|jpeg|svg|webp|gif)$/i.test(file)) files.push(file)
+    }
+  } catch {
+    return []
+  }
+  return files
+}
+
+const scoreImage = (achievementName, dlcId, filePath) => {
+  const fileSlug = normalize(path.basename(filePath, path.extname(filePath)))
+  const nameSlug = normalize(achievementName)
+  let score = 0
+  if (fileSlug === nameSlug) score += 100
+  if (fileSlug.includes(nameSlug) || nameSlug.includes(fileSlug)) score += 45
+  if (filePath.toLowerCase().includes('achievement')) score += 15
+  if (filePath.toLowerCase().includes(dlcId.replace(/-/g, '_'))) score += 8
+  if (filePath.toLowerCase().includes('map')) score -= 20
+  if (filePath.toLowerCase().includes('logo_')) score -= 5
+  const tokens = nameSlug.split('-').filter(Boolean)
+  const fileTokens = fileSlug.split('-')
+  for (const token of tokens) if (fileTokens.includes(token)) score += 5
+  return score
+}
+
+const pickImage = (achievementName, dlcId, fileList) => {
+  const iconCandidates = fileList
+    .map((file) => ({ file, score: scoreImage(achievementName, dlcId, file) }))
+    .filter((entry) => entry.score > 0)
+    .sort((a, b) => b.score - a.score)
+  return iconCandidates[0]?.score >= 18 ? `/assets/images/${path.relative(imagesRoot, iconCandidates[0].file).replace(/\\/g, '/')}` : placeholderIcon
+}
+
+const detectMaps = (text, fileList) => {
+  if (!/map|maps/i.test(text)) return []
+  return fileList
+    .filter((file) => /map|maps/i.test(file))
+    .slice(0, 3)
+    .map((file) => `/assets/images/${path.relative(imagesRoot, file).replace(/\\/g, '/')}`)
+}
+
+const checklistFromText = (text, howTo) => {
+  const items = [
+    { id: 'confirm-achievement-requirements', label_en: 'Confirm achievement requirements', label_pt: 'Confirmar os requisitos da conquista' },
+    { id: 'prepare-required-setup', label_en: 'Prepare the required character, title, faith, culture or region', label_pt: 'Preparar personagem, título, fé, cultura ou região exigida' },
+    { id: 'execute-main-strategy', label_en: 'Execute the main strategy', label_pt: 'Executar a estratégia principal' },
+    { id: 'unlock-achievement', label_en: 'Unlock the achievement in game', label_pt: 'Desbloquear a conquista no jogo' },
+  ]
+
+  const hints = `${text}\n${howTo}`
+    .split(/[\n.;]+/)
+    .map(clean)
+    .filter((part) => part.length >= 20 && part.length <= 140)
+    .filter((part) => !/^yes|^no|^sim|^nao|^very hard|^hard|^medium|^easy|^ve|^e|^m|^h|^vh/i.test(part))
+    .filter((part) => !/achievement/i.test(part))
+    .slice(0, 2)
+    .map((part) => ({ id: slugify(part), label_en: part, label_pt: part }))
+
+  return [...items, ...hints].slice(0, 6)
+}
+
+const parseTabRow = (line) => {
+  const cells = line.split('\t').map((cell) => clean(cell)).filter(Boolean)
+  if (cells.length < 2) return null
+  const difficultyCell = cells[cells.length - 1]
+  const difficulty = detectDifficulty(difficultyCell) ?? detectDifficulty(line)
+  return {
+    startingConditions: cells[1] ?? '',
+    requirements: cells[2] ?? '',
+    howTo: cells[3] ?? '',
+    difficulty,
+  }
+}
+
+const parseAchievementText = (text, dlcId, fileList, warnings, rejectedBlocks, duplicates, seenIds) => {
+  const rawLines = text.split(/\r?\n/)
+  const lines = rawLines.map((line) => line.replace(/\s+$/g, ''))
+  const meaningful = lines.map(clean).filter(Boolean)
+  if (!meaningful.length) return null
+
+  const name = clean(meaningful[0])
+  const description = clean(meaningful[1] ?? '')
+  const body = meaningful.slice(2).join('\n')
+
+  if (!looksLikeAchievementName(name) || !looksLikeDescription(description)) {
+    rejectedBlocks.push({ dlc: dlcId, reason: 'weak-title-description', preview: text.slice(0, 200) })
+    return null
+  }
+
+  const tabRows = meaningful.slice(2).filter((line) => /\t/.test(line) && !isNoiseLine(line))
+  const row = tabRows.length ? parseTabRow(tabRows[0]) : null
+
+  const idBase = slugify(name)
+  let id = idBase
+  let counter = 2
+  while (seenIds.has(id)) {
+    duplicates.push({ originalId: idBase, duplicateId: `${idBase}-${counter}`, achievement: name })
+    id = `${idBase}-${counter}`
+    counter += 1
+  }
+  seenIds.add(id)
+
+  const textForDifficulty = `${description}\n${body}`
+  const difficulty = row?.difficulty ?? detectDifficulty(textForDifficulty) ?? 'medium'
+  const usedDefaultDifficulty = !row?.difficulty && !detectDifficulty(textForDifficulty)
+  if (usedDefaultDifficulty) warnings.push({ type: 'difficulty_defaulted', achievementId: id, message: 'Dificuldade nao encontrada; usando medium.' })
+
+  const starting = row?.startingConditions || ''
+  const requirements = row?.requirements || ''
+  const howTo = row?.howTo || body || description
+
+  return {
+    id,
+    name_en: name,
+    name_pt: '',
+    dlc: dlcId,
+    icon: pickImage(name, dlcId, fileList),
+    difficulty,
+    description_en: description,
+    description_pt: '',
+    requirements_en: requirements,
+    requirements_pt: '',
+    starting_conditions_en: starting,
+    starting_conditions_pt: '',
+    how_to_en: howTo,
+    how_to_pt: '',
+    tags: selectTags(text),
+    checklist: checklistFromText(text, howTo),
+    guide_id: undefined,
+    maps: detectMaps(text, fileList),
+    _usedDefaultDifficulty: usedDefaultDifficulty,
+  }
+}
+
+const parseDlcFile = async (filePath, dlcId, fileList, warnings, rejectedBlocks, duplicates, seenIds) => {
+  const raw = await readFile(filePath, 'utf8')
+  const paragraphs = raw
+    .split(/\r?\n\s*\r?\n+/)
+    .map((block) => block.trim())
+    .filter(Boolean)
+
+  const achievements = []
+  for (const block of paragraphs) {
+    const achievement = parseAchievementText(block, dlcId, fileList, warnings, rejectedBlocks, duplicates, seenIds)
+    if (achievement) achievements.push(achievement)
+  }
+  return achievements
+}
+
+const parseFromDlcFiles = async ({ fileList, warnings, rejectedBlocks, duplicates, seenIds, filesRead }) => {
+  const results = []
+  const sourceFiles = []
+  const entries = await readdir(dlcsRoot, { withFileTypes: true })
+  const available = entries.filter((entry) => entry.isFile() && entry.name.endsWith('.txt'))
+
+  const mapped = available
+    .map((entry) => ({ name: entry.name, dlc: normalizeDlcFilename(entry.name) }))
+    .filter((entry) => entry.dlc)
+
+  for (const entry of mapped.sort((a, b) => DLC_ORDER.indexOf(a.dlc) - DLC_ORDER.indexOf(b.dlc))) {
+    const filePath = path.join(dlcsRoot, entry.name)
+    const achievements = await parseDlcFile(filePath, entry.dlc, fileList, warnings, rejectedBlocks, duplicates, seenIds)
+    results.push(...achievements)
+    sourceFiles.push(`raw/dlcs/${entry.name}`)
+    filesRead.push({ file: `raw/dlcs/${entry.name}`, dlc: entry.dlc, achievements: achievements.length })
+  }
+
+  return { achievements: results, sourceFiles }
+}
+
+const parseFromLegacyConteudo = async ({ fileList, warnings, rejectedBlocks, duplicates, seenIds, filesRead }) => {
+  const raw = await readFile(legacySourceFile, 'utf8')
+  const block = raw
+    .split(/\r?\n\s*\r?\n+/)
+    .map((part) => part.trim())
+    .filter(Boolean)
+
+  const achievements = []
+  for (const part of block) {
+    const achievement = parseAchievementText(part, 'base-game', fileList, warnings, rejectedBlocks, duplicates, seenIds)
+    if (achievement) achievements.push(achievement)
+  }
+
+  filesRead.push({ file: 'raw/conteudo.txt', dlc: 'base-game', achievements: achievements.length })
+  return { achievements, sourceFiles: ['raw/conteudo.txt'] }
+}
+
+const buildGuide = (achievement, sourceText) => {
+  const text = clean(sourceText.replace(new RegExp(`^${achievement.name_en}\\s*`, 'i'), ''))
+  if (!/guide|guia|walkthrough|passo a passo|estrategia/i.test(text)) return null
+  if (text.length < 300) return null
+  const title = clean(achievement.name_en)
+  if (!title || title.length > 80) return null
+  if (achievement.id.startsWith('conquista-condicoes')) return null
+  return {
+    id: `${achievement.id}-guide`,
+    achievement_id: achievement.id,
+    title_pt: '',
+    title_en: title,
+    sections: [
+      {
+        title_pt: '',
+        title_en: title,
+        body_pt: '',
+        body_en: text,
+      },
+    ],
+    checklist: [],
+  }
+}
+
+const sourceHasValidDlcFiles = async () => {
+  try {
+    const stats = await stat(dlcsRoot)
+    if (!stats.isDirectory()) return false
+    const files = await readdir(dlcsRoot)
+    return files.some((file) => DLC_SOURCE_FILES[file.toLowerCase()])
+  } catch {
+    return false
+  }
+}
+
+async function main() {
+  const fileList = await imageFiles()
+  const warnings = []
+  const rejectedBlocks = []
+  const guideCandidatesRejected = []
+  const duplicates = []
+  const achievements = []
+  const guides = []
+  const filesRead = []
+  const seenIds = new Set()
+  let sourceMode = 'legacy-conteudo'
+  let sourceFiles = ['raw/conteudo.txt']
+
+  const useDlcFiles = !forceLegacy && (await sourceHasValidDlcFiles())
+  if (useDlcFiles) {
+    sourceMode = 'dlc-files'
+    const parsed = await parseFromDlcFiles({ fileList, warnings, rejectedBlocks, duplicates, seenIds, filesRead })
+    achievements.push(...parsed.achievements)
+    sourceFiles = parsed.sourceFiles
+  } else {
+    const parsed = await parseFromLegacyConteudo({ fileList, warnings, rejectedBlocks, duplicates, seenIds, filesRead })
+    achievements.push(...parsed.achievements)
+    sourceFiles = parsed.sourceFiles
+  }
+
+  const filtered = []
+  for (const achievement of achievements) {
+    if (achievement.name_en.startsWith('http://') || achievement.name_en.startsWith('https://')) {
+      rejectedBlocks.push({ dlc: achievement.dlc, reason: 'url-removed', preview: achievement.name_en })
+      continue
+    }
+    if (titleLooksInvalid(achievement.name_en) || titleLooksNarrative(achievement.name_en) || titleLooksRequirement(achievement.name_en)) {
+      rejectedBlocks.push({ dlc: achievement.dlc, reason: 'invalid-name', preview: achievement.name_en })
+      continue
+    }
+    filtered.push({
+      ...achievement,
+      name_pt: '',
+      description_pt: '',
+      requirements_pt: '',
+      starting_conditions_pt: '',
+      how_to_pt: '',
+    })
+    const guide = buildGuide(achievement, `${achievement.name_en}\n${achievement.how_to_en}\n${achievement.description_en}`)
+    if (guide) guides.push(guide)
+  }
+
+  const exactWayOfLife = normalize('Diplomat, August and Patriarch / Matriarch')
+  const exactInternalRequirements = new Map(
+    [
+      ['Dynasty has 50 living members', 'internal-requirement'],
+      ['All counties in the Iberia region is Christian', 'internal-requirement'],
+      ['Obran Osh - Start', 'travel-route-guide-line'],
+      ['Obran Osh - Taiga', 'travel-route-guide-line'],
+    ].map(([name, reason]) => [normalize(name), reason]),
+  )
+  const finalAchievements = []
+  for (const achievement of filtered) {
+    const normalizedName = normalize(achievement.name_en)
+    if (normalizedName === exactWayOfLife) {
+      rejectedBlocks.push({ dlc: achievement.dlc, reason: 'way-of-life-internal-list', preview: achievement.name_en })
+      continue
+    }
+    if (exactInternalRequirements.has(normalizedName)) {
+      rejectedBlocks.push({ dlc: achievement.dlc, reason: exactInternalRequirements.get(normalizedName), preview: achievement.name_en })
+      continue
+    }
+    finalAchievements.push(achievement)
+  }
+
+  const finalDuplicates = []
+  const finalSeenIds = new Map()
+  for (const achievement of finalAchievements) {
+    if (finalSeenIds.has(achievement.id)) {
+      finalDuplicates.push({
+        originalId: finalSeenIds.get(achievement.id),
+        duplicateId: achievement.id,
+        achievement: achievement.name_en,
+      })
+    } else {
+      finalSeenIds.set(achievement.id, achievement.name_en)
+    }
+  }
+  duplicates.length = 0
+  duplicates.push(...finalDuplicates)
+
+  const byDlc = Object.fromEntries(DLC_ORDER.map((dlc) => [dlc, 0]))
+  let withIcon = 0
+  let withoutIcon = 0
+  let withSamePtEnDescription = 0
+  let withDefaultDifficulty = 0
+  let suspiciousHeaderAchievements = 0
+  let overlongNames = 0
+  let overlongChecklistItems = 0
+  let emptyDescriptions = 0
+
+  for (const a of finalAchievements) {
+    byDlc[a.dlc] = (byDlc[a.dlc] ?? 0) + 1
+    if (a.icon && a.icon !== placeholderIcon) withIcon += 1
+    else withoutIcon += 1
+    if ((a.description_en || '') === (a.description_pt || '')) withSamePtEnDescription += 1
+    if (a._usedDefaultDifficulty) withDefaultDifficulty += 1
+    if (!a.name_en || a.name_en.length > 80) overlongNames += 1
+    if (!a.description_en) emptyDescriptions += 1
+    if (/^conquista/i.test(a.name_en)) suspiciousHeaderAchievements += 1
+    for (const item of a.checklist) if ((item.label_en || item.label_pt || '').length > 140) overlongChecklistItems += 1
+  }
+
+  const quality = {
+    suspiciousHeaderAchievements,
+    overlongNames,
+    overlongChecklistItems,
+    emptyDescriptions,
+    unknownDlc: 0,
+    samePtEnDescriptionRatio: finalAchievements.length ? withSamePtEnDescription / finalAchievements.length : 0,
+  }
+
+  const report = {
+    generatedAt: new Date().toISOString(),
+    sourceMode,
+    sourceFiles,
+    filesRead,
+    totalAchievements: finalAchievements.length,
+    totalGuides: guides.length,
+    byDlc,
+    expectedByDlc: EXPECTED_BY_DLC,
+    differencesByDlc: Object.fromEntries(
+      DLC_ORDER.map((dlc) => [dlc, (byDlc[dlc] ?? 0) - (EXPECTED_BY_DLC[dlc] ?? 0)]),
+    ),
+    withIcon,
+    withoutIcon,
+    withSamePtEnDescription,
+    withDefaultDifficulty,
+    rejectedBlocks,
+    guideCandidatesRejected,
+    duplicates,
+    warnings,
+    quality,
+  }
+
+  const diagnostics = [
+    '# CK3 Achievement Parser Diagnostics',
+    '',
+    `- sourceMode: ${sourceMode}`,
+    `- sourceFiles: ${sourceFiles.join(', ')}`,
+    `- Total achievements: ${filtered.length}`,
+    `- Total guides: ${guides.length}`,
+    `- With image: ${withIcon}`,
+    `- Without image: ${withoutIcon}`,
+    `- With same PT/EN description: ${withSamePtEnDescription}`,
+    `- Default difficulty count: ${withDefaultDifficulty}`,
+    '',
+    '## Files Read',
+    ...filesRead.map((entry) => `- ${entry.file} (${entry.dlc}): ${entry.achievements}`),
+    '',
+    '## By DLC',
+    ...Object.entries(byDlc).map(([key, value]) => `- ${key}: ${value}`),
+    '',
+    '## Expected vs Actual',
+    ...DLC_ORDER.map((dlc) => `- ${dlc}: expected ${EXPECTED_BY_DLC[dlc] ?? 0}, actual ${byDlc[dlc] ?? 0}, diff ${(byDlc[dlc] ?? 0) - (EXPECTED_BY_DLC[dlc] ?? 0)}`),
+    '',
+    '## Problems',
+    `- Rejected blocks: ${rejectedBlocks.length}`,
+    `- Guide candidates rejected: ${guideCandidatesRejected.length}`,
+    `- Duplicates: ${duplicates.length}`,
+    `- Warnings: ${warnings.length}`,
+  ].join('\n')
+
+  await mkdir(path.dirname(achievementsOut), { recursive: true })
+  const cleanedAchievements = finalAchievements.map(({ _usedDefaultDifficulty, ...rest }) => rest)
+  await writeFile(achievementsOut, JSON.stringify(cleanedAchievements, null, 2), 'utf8')
+  await writeFile(guidesOut, JSON.stringify(guides, null, 2), 'utf8')
+  await writeFile(reportOut, JSON.stringify(report, null, 2), 'utf8')
+  await writeFile(diagnosticsOut, diagnostics, 'utf8')
+
+  console.log(`sourceMode: ${sourceMode}`)
+  console.log(`sourceFiles: ${sourceFiles.join(', ')}`)
+  for (const entry of filesRead) {
+    console.log(`${entry.file} -> ${entry.achievements}`)
+  }
+  console.log(`Generated achievements: ${finalAchievements.length}`)
+  console.log(`By DLC: ${Object.entries(byDlc).map(([key, value]) => `${key}=${value}`).join(', ')}`)
+  console.log(`With image: ${withIcon}`)
+  console.log(`Without image: ${withoutIcon}`)
+  console.log(`Guides: ${guides.length}`)
+  console.log(`Warnings: ${warnings.length}`)
+  console.log(`Rejected blocks: ${rejectedBlocks.length}`)
+  console.log(`Duplicates: ${duplicates.length}`)
+  console.log(`Wrote: ${achievementsOut}`)
+  console.log(`Wrote: ${guidesOut}`)
+  console.log(`Wrote: ${reportOut}`)
+  console.log(`Wrote: ${diagnosticsOut}`)
+
+  if (strictMode) {
+    const expectedFiles = Object.keys(DLC_SOURCE_FILES).length
+    if (sourceMode !== 'dlc-files' || filesRead.length !== expectedFiles) {
+      throw new Error(`Strict mode failed: expected ${expectedFiles} DLC files, got ${filesRead.length} in ${sourceMode}`)
+    }
+  }
+
+  if (verbose) {
+    console.log('\nVerbose samples:')
+    console.log('Rejected block sample:', rejectedBlocks.slice(0, 3))
+    console.log('Duplicate sample:', duplicates.slice(0, 3))
+    for (const [dlc, count] of Object.entries(byDlc)) {
+      const sample = finalAchievements.filter((achievement) => achievement.dlc === dlc).slice(0, 5).map((achievement) => achievement.name_en)
+      console.log(`${dlc}: ${sample.join(' | ')}`)
+    }
+  }
+}
+
+main().catch((error) => {
+  console.error(error)
+  process.exitCode = 1
+})
