@@ -7,6 +7,7 @@ import clsx from 'clsx'
 import { ChevronDown, ChevronUp, Heart, ListChecks } from 'lucide-react'
 import { getAchievementIconUrl } from '../utils/assets'
 import { getDlcDisplayName } from '../data/dlcLabels'
+import { getAchievementText } from '../utils/achievementFilters'
 
 interface Props {
   achievements: Achievement[]
@@ -31,8 +32,6 @@ export function AchievementTable({
   onToggleChecklistItem,
   onNoteChange,
 }: Props) {
-  const displayName = (value?: string, fallback = '') => value && value.trim() ? value : fallback
-
   return (
     <section className="panel table-panel">
       <div className="table-header">
@@ -67,7 +66,7 @@ export function AchievementTable({
                   className="achievement-main achievement-toggle"
                   onClick={() => onToggleExpanded(achievement.id)}
                 >
-                  <strong>{language === 'pt' ? displayName(achievement.name_pt, achievement.name_en) : achievement.name_en}</strong>
+                  <strong>{getAchievementText(achievement, language).name}</strong>
                   <span className="achievement-meta">
                     <StatusBadge status={status} language={language} />
                     <DifficultyBadge difficulty={achievement.difficulty} language={language} />

@@ -2,12 +2,19 @@
 
 - sourceMode: dlc-files
 - sourceFiles: raw/dlcs/base_game.txt, raw/dlcs/northern_lords_clean.txt, raw/dlcs/royal_court_clean.txt, raw/dlcs/fate_of_iberia_clean.txt, raw/dlcs/tours_and_tournaments_clean.txt, raw/dlcs/legacy_of_persia_clean.txt, raw/dlcs/legends_of_the_dead_clean.txt, raw/dlcs/roads_to_power_clean.txt, raw/dlcs/khans_of_the_steppe_clean.txt, raw/dlcs/all_under_heaven_clean.txt
-- Total achievements: 194
+- Total achievements: 188
 - Total guides: 1
-- With image: 188
-- Without image: 0
+- With image: 187
+- Without image: 1
 - With same PT/EN description: 0
-- Default difficulty count: 173
+- Difficulty counts: very-easy=13, easy=37, medium=63, hard=56, very-hard=19, unknown=0
+- Difficulty expected counts: very-easy=13, easy=37, medium=63, hard=56, very-hard=19, unknown=0
+- Difficulty actual counts: very-easy=13, easy=37, medium=63, hard=56, very-hard=19, unknown=0
+- Difficulty override count: 188
+- Difficulty unknown count: 0
+- Difficulty manual unmatched: 0
+- Difficulty generated missing from manual: 0
+- Difficulty ambiguous matches: 0
 
 ## Files Read
 - raw/dlcs/base_game.txt (base-game): 60
@@ -29,9 +36,9 @@
 - tours-and-tournaments: 20
 - legacy-of-persia: 10
 - legends-of-the-dead: 11
-- roads-to-power: 21
+- roads-to-power: 20
 - khans-of-the-steppe: 10
-- all-under-heaven: 19
+- all-under-heaven: 20
 
 ## Expected vs Actual
 - base-game: expected 56, actual 56, diff 0
@@ -41,12 +48,12 @@
 - tours-and-tournaments: expected 15, actual 20, diff 5
 - legacy-of-persia: expected 13, actual 10, diff -3
 - legends-of-the-dead: expected 11, actual 11, diff 0
-- roads-to-power: expected 21, actual 21, diff 0
+- roads-to-power: expected 21, actual 20, diff -1
 - khans-of-the-steppe: expected 16, actual 10, diff -6
-- all-under-heaven: expected 16, actual 19, diff 3
+- all-under-heaven: expected 16, actual 20, diff 4
 
 ## Problems
-- Rejected blocks: 201
+- Rejected blocks: 202
 - Guide candidates rejected: 0
 - Duplicates: 0
 - Warnings: 179

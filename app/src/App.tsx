@@ -9,7 +9,12 @@ import achievementsData from './data/achievements.generated.json'
 import { getDlcInfoList } from './data/dlcLabels'
 import { useAchievementProgress } from './hooks/useAchievementProgress'
 import type { Achievement, Language } from './types/achievement'
-import { filterAchievements, type AchievementFilterState } from './utils/achievementFilters'
+import {
+  filterAchievements,
+  sortAchievements,
+  type AchievementFilterState,
+  type AchievementSortOption,
+} from './utils/achievementFilters'
 import { getAchievementCounts } from './utils/achievementStats'
 
 const defaultFilters: AchievementFilterState = {
@@ -17,6 +22,9 @@ const defaultFilters: AchievementFilterState = {
   dlc: 'all',
   status: 'all',
   difficulty: 'all',
+  favoritesOnly: false,
+  hasGuideOnly: false,
+  hideCompleted: false,
 }
 
 function App() {
@@ -24,13 +32,26 @@ function App() {
   const dlcs = useMemo(() => getDlcInfoList([...new Set(achievements.map((achievement) => achievement.dlc))]), [achievements])
   const [language, setLanguage] = useState<Language>('pt')
   const [filters, setFilters] = useState(defaultFilters)
+  const [sortBy, setSortBy] = useState<AchievementSortOption>('default')
   const [expandedId, setExpandedId] = useState<string | null>(achievements[0]?.id ?? null)
   const { progress, setAchievementStatus, toggleFavorite, updateNote, toggleChecklistItem, importProgress, exportProgressData, resetProgress } =
     useAchievementProgress(achievements.map((achievement) => achievement.id))
 
   const filteredAchievements = useMemo(
-    () => filterAchievements(achievements, language, filters, progress.statuses),
-    [achievements, filters, language, progress.statuses],
+    () => filterAchievements(achievements, language, filters, progress.statuses, progress.favorites),
+    [achievements, filters, language, progress.favorites, progress.statuses],
+  )
+
+  const visibleAchievements = useMemo(
+    () =>
+      sortAchievements(
+        filteredAchievements,
+        language,
+        sortBy,
+        progress.statuses,
+        progress.completedChecklistItems,
+      ),
+    [filteredAchievements, language, progress.completedChecklistItems, progress.statuses, sortBy],
   )
 
   const stats = useMemo(() => {
@@ -49,6 +70,7 @@ function App() {
 
     return { ...base, favorites, partialChecklist, dlcProgress }
   }, [achievements, dlcs, progress])
+  const hasUnknownDifficulty = achievements.some((achievement) => !achievement.difficulty || achievement.difficulty === 'unknown')
 
   const handleExport = () => {
     const data = exportProgressData()
@@ -78,13 +100,16 @@ function App() {
         language={language}
         filters={filters}
         dlcs={dlcs.map((dlc) => ({ id: dlc.id, name: dlc.name }))}
-        filteredCount={filteredAchievements.length}
+        filteredCount={visibleAchievements.length}
         totalCount={achievements.length}
+        hasUnknownDifficulty={hasUnknownDifficulty}
+        sortBy={sortBy}
         onChange={setFilters}
+        onSortChange={setSortBy}
         onClear={() => setFilters(defaultFilters)}
       />
       <AchievementTable
-        achievements={filteredAchievements}
+        achievements={visibleAchievements}
         language={language}
         progress={progress}
         expandedId={expandedId}

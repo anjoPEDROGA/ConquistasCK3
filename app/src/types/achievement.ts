@@ -1,6 +1,8 @@
 export type AchievementStatus = 'pending' | 'in_progress' | 'completed'
 
-export type AchievementDifficulty = 'easy' | 'medium' | 'hard' | 'very-hard'
+export type AchievementDifficulty = 'very-easy' | 'easy' | 'medium' | 'hard' | 'very-hard'
+
+export type AchievementDifficultyValue = AchievementDifficulty | 'unknown'
 
 export interface ChecklistItem {
   id: string
@@ -16,7 +18,7 @@ export interface Achievement {
   name_pt: string
   dlc: string
   icon?: string
-  difficulty: AchievementDifficulty
+  difficulty?: AchievementDifficultyValue | ''
   description_en: string
   description_pt: string
   requirements_en?: string

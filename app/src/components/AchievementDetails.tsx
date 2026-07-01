@@ -3,6 +3,7 @@ import { ProgressBar } from './ProgressBar'
 import { CheckSquare2 } from 'lucide-react'
 import { getAchievementIconUrl } from '../utils/assets'
 import { getDlcDisplayName } from '../data/dlcLabels'
+import { getAchievementText } from '../utils/achievementFilters'
 
 interface Props {
   achievement: Achievement
@@ -24,7 +25,7 @@ export function AchievementDetails({
   const percentage = achievement.checklist.length
     ? Math.round((completed.length / achievement.checklist.length) * 100)
     : 0
-  const displayText = (primary?: string, fallback = '') => (primary && primary.trim() ? primary : fallback)
+  const text = getAchievementText(achievement, language)
 
   return (
     <div className="achievement-details">
@@ -32,7 +33,7 @@ export function AchievementDetails({
         <img
           className="details-icon"
           src={getAchievementIconUrl(achievement.icon)}
-          alt={language === 'pt' ? displayText(achievement.name_pt, achievement.name_en) : achievement.name_en}
+          alt={text.name}
           loading="lazy"
           onError={(event) => {
             event.currentTarget.src = getAchievementIconUrl()
@@ -40,18 +41,18 @@ export function AchievementDetails({
         />
         <div>
           <p className="detail-dlc">{getDlcDisplayName(achievement.dlc)}</p>
-          <h4>{language === 'pt' ? displayText(achievement.name_pt, achievement.name_en) : achievement.name_en}</h4>
+          <h4>{text.name}</h4>
         </div>
       </div>
 
       <p className="achievement-description">
-        {language === 'pt' ? displayText(achievement.description_pt, achievement.description_en) : achievement.description_en}
+        {text.description}
       </p>
 
       {(achievement.how_to_pt || achievement.how_to_en) && (
         <div className="detail-block">
           <h4>{language === 'pt' ? 'Como conquistar' : 'How to unlock'}</h4>
-          <p>{language === 'pt' ? displayText(achievement.how_to_pt, achievement.how_to_en ?? '') : achievement.how_to_en}</p>
+          <p>{text.howTo}</p>
         </div>
       )}
 
@@ -70,7 +71,7 @@ export function AchievementDetails({
                     onChange={() => onToggleChecklistItem(achievement.id, item.id)}
                   />
                   <CheckSquare2 size={14} aria-hidden="true" className={checked ? 'check-icon checked' : 'check-icon'} />
-                  <span>{language === 'pt' ? item.label_pt : item.label_en ?? item.label_pt}</span>
+                  <span>{language === 'pt' ? item.label_pt || item.label_en || '' : item.label_en ?? item.label_pt}</span>
                 </label>
               </li>
             )

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-01T05:13:02.426Z",
+  "generatedAt": "2026-07-01T07:54:29.232Z",
   "sourceMode": "dlc-files",
   "sourceFiles": [
     "raw/dlcs/base_game.txt",
@@ -75,9 +75,9 @@
     "tours-and-tournaments": 20,
     "legacy-of-persia": 10,
     "legends-of-the-dead": 11,
-    "roads-to-power": 21,
+    "roads-to-power": 20,
     "khans-of-the-steppe": 10,
-    "all-under-heaven": 19
+    "all-under-heaven": 20
   },
   "expectedByDlc": {
     "base-game": 56,
@@ -99,14 +99,36 @@
     "tours-and-tournaments": 5,
     "legacy-of-persia": -3,
     "legends-of-the-dead": 0,
-    "roads-to-power": 0,
+    "roads-to-power": -1,
     "khans-of-the-steppe": -6,
-    "all-under-heaven": 3
+    "all-under-heaven": 4
   },
-  "withIcon": 188,
-  "withoutIcon": 0,
+  "withIcon": 187,
+  "withoutIcon": 1,
   "withSamePtEnDescription": 0,
-  "withDefaultDifficulty": 173,
+  "difficultyCounts": {
+    "very-easy": 13,
+    "easy": 37,
+    "medium": 63,
+    "hard": 56,
+    "very-hard": 19,
+    "unknown": 0
+  },
+  "difficultyOverrideCount": 188,
+  "difficultyUnknownCount": 0,
+  "difficultyExpectedCounts": {
+    "very-easy": 13,
+    "easy": 37,
+    "medium": 63,
+    "hard": 56,
+    "very-hard": 19,
+    "unknown": 0
+  },
+  "difficultyCountMismatches": {},
+  "difficultyOverrideUnmatched": [],
+  "difficultyOverrideAmbiguous": [],
+  "difficultyManualMissingFromGenerated": [],
+  "difficultyGeneratedMissingFromManual": [],
   "rejectedBlocks": [
     {
       "dlc": "base-game",
@@ -1112,905 +1134,910 @@
       "dlc": "tours-and-tournaments",
       "reason": "travel-route-guide-line",
       "preview": "Obran Osh - Taiga"
+    },
+    {
+      "dlc": "roads-to-power",
+      "reason": "internal-requirement-false-positive",
+      "preview": "Completed a Raid Estate scheme"
     }
   ],
   "guideCandidatesRejected": [],
   "duplicates": [],
   "warnings": [
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "death-did-us-part",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "its-not-a-cult",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "until-death-do-us-part",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "a-house-of-my-own",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "above-god",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "almost-there",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "dreadful-ruler",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "fine-print",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "moving-up-in-the-world",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "not-so-feudal-system",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "stressful-situation",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "the-emerald-isle",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "the-things-love-does-for-us",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "the-things-we-do-for-love",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "turning-to-diamonds",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "way-of-life",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "diplomat-august-and-patriarch-matriarch",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "diplomat-august-and-patriarch-matriarch-2",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "a-legacy-to-last-the-ages",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "an-unfortunate-accident",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "bad-blood",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "followed-by-shadows",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "for-the-faith",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "frankokratia",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "keeping-it-in-the-family",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "know-your-place",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "land-of-the-rus",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "monumental",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "non-nobis-domine",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "norman-yoke",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "royal-dignity",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "saint",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "seven-holy-cities",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "the-emperors-new-clothes",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "trapped-in-the-web",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "a-name-known-throughout-the-world",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "al-andalus",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "beacon-of-progress",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "blood-eagle",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "from-rags-to-riches",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "give-a-dog-a-bone",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "dynasty-has-50-living-members",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "kings-to-the-seventh-generation",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "last-count-first-king",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "paragon-of-virtue",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "prolific",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "reconquista",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "all-counties-in-the-iberia-region-is-christian",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "sibling-rivalry",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "wily-as-the-fox",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "a-perfect-circle",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "carolingian-consolidation",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "mother-of-us-all",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "rise-from-the-ashes",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "what-nepotism",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "first-of-the-crusader-kings",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "volva",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "a-dangerous-business",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "saga-in-stone",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "vladimirs-second-choice",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "canute-the-greater",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "faster-than-the-fox",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "king-of-all-the-isles",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "patronage",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "changing-course",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "converging-paths",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "i-made-this",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "polyglot",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "brave-and-bold",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "creme-de-la-creme",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "hoarder",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "one-of-a-kind",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "the-true-royal-court",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "they-belong-in-a-museum",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "beta-israel",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "bod-chen-po",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "delusions-of-grandeur",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "inspirational",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "rise-of-the-ghurids",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "true-tolerance",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "turkish-eagle",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "lingua-franca",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "nobody-comes-to-fika",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "basque-in-my-glory",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "friendship-is-magic",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "historys-best-friends",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "high-stakes",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "iberia-or-iberia",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "iberian-compromise",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "iberian-hostilities",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "holidaying-in-iberia",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "the-andalusian-inquisition",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "legacy-of-the-campeadores",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "hunting-accident",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "a-thousand-one-nights",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "black-dinner",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "fly-my-pretty",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "imperial-march",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "lions-tigers-bears-oh-my",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "pathway-to-heaven",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "sir-lance-a-lot",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "the-very-best",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "a-e-i-o-u-me",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "a-knights-tale",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "a-true-perfect-knight",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "in-my-element-s",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "obran-osh-start",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "obran-osh-taiga",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "there-and-back-again",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "the-iron-and-golden-king",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "your-eternal-reward",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "ahab",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "like-no-one-ever-was",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "little-william-marshal",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "abbasid-might",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "rich-in-diversity",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "royal-flush",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "all-your-caliphate-are-belong-to-us",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "fiscal-responsibility",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "mulct-them-dry",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "iranian-revival",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "shia-reborn",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "darius-revenge",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "the-umayyad-strikes-back",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "legendary",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "youll-never-take-me-alive",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "neverending-story",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "pay-respects",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "canonized",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "divine-right",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "local-legend",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "upward-mobility",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "not-today",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "the-pharaoh-islands",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "cant-touch-this",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "band-of-brothers",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "quantum-leap",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "despotic",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "epic-paperwork",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "in-good-estate",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "its-ok-i-got-a-permit",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "completed-a-raid-estate-scheme",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "not-content-to-serve",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "started-from-the-bottom-now-were-ere",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "byzywork",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "chaos-is-a-ladder",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "mio-cid",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "new-management-same-as-the-old-management",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "rags-to-riches-to-rags-to-riches",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "regnum-dei",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "tamar-mepe",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "the-old-man-of-the-mountain",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "despoiler-of-byzantium",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "blood-of-my-blood",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "con-fed-up",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "steppe-by-steppe",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "in-xanadu",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "nobodys-business",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "settling-in",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "tribute-band",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "shut-up-nerge",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "this-chinggis-everything",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "the-stallion-that-mounts-the-world",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "promised-land",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "stamp-of-approval",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "yes-i-need-i-need-my-samurai",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "flying-colors",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "highway-of-ideas",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "humble-beginnings",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "confucian-scholar",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "cut-off-the-head-and-the-body-will-follow",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "daits-how-you-do-it",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "devaraja",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "how-its-done-done-done",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "upper-upper",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "a-living-god-on-earth",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "grand-governor",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "mandate-of-heaven",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     },
     {
-      "type": "difficulty_defaulted",
+      "type": "difficulty_unknown",
       "achievementId": "sword-of-japan",
-      "message": "Dificuldade nao encontrada; usando medium."
+      "message": "Dificuldade nao encontrada; usando unknown."
     }
   ],
   "quality": {

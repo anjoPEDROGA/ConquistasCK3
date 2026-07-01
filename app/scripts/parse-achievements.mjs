@@ -10,6 +10,16 @@ const achievementsOut = path.join(projectRoot, 'src/data/achievements.generated.
 const guidesOut = path.join(projectRoot, 'src/data/guides.generated.json')
 const reportOut = path.join(projectRoot, 'src/data/parse-report.json')
 const diagnosticsOut = path.join(projectRoot, 'src/data/parse-diagnostics.md')
+const difficultyOverridesPath = path.join(projectRoot, 'src/data/difficulty-overrides.json')
+const difficultyManualPath = path.join(projectRoot, 'src/data/difficulty-manual.txt')
+const EXPECTED_DIFFICULTY_COUNTS = {
+  'very-easy': 13,
+  easy: 37,
+  medium: 63,
+  hard: 56,
+  'very-hard': 19,
+  unknown: 0,
+}
 
 const placeholderIcon = '/assets/images/placeholder-achievement.svg'
 const verbose = process.argv.includes('--verbose')
@@ -44,6 +54,7 @@ const EXPECTED_BY_DLC = {
 }
 
 const difficultyMap = [
+  { re: /\b(very easy|very-easy)\b/i, value: 'very-easy' },
   { re: /\b(vh|very hard|very-hard|muito dificil)\b/i, value: 'very-hard' },
   { re: /\b(h|hard|dificil)\b/i, value: 'hard' },
   { re: /\b(m|medium|medio|media)\b/i, value: 'medium' },
@@ -104,6 +115,64 @@ const detectDifficulty = (text) => {
   return null
 }
 
+const normalizeDifficulty = (value) => {
+  if (
+    value === 'very-easy' ||
+    value === 'easy' ||
+    value === 'medium' ||
+    value === 'hard' ||
+    value === 'very-hard' ||
+    value === 'unknown'
+  ) {
+    return value
+  }
+  return 'unknown'
+}
+
+const normalizeManualText = (value) =>
+  String(value)
+    .normalize('NFKC')
+    .replace(/[\uFEFF\u200B-\u200D\u2060]/g, '')
+    .replace(/’/g, "'")
+    .replace(/“|”/g, '"')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .toLowerCase()
+    .replace(/['`´]/g, '')
+
+const normalizeManualDlc = (value) => {
+  const normalized = normalizeManualText(value)
+  if (normalized === 'legend-of-the-dead' || normalized === 'legends-of-the-dead') return 'legends-of-the-dead'
+  if (normalized === 'all under heaven' || normalized === 'all-under-heaven') return 'all-under-heaven'
+  return normalized.replace(/\s+/g, '-')
+}
+
+const readDifficultyManual = async () => {
+  try {
+    const raw = await readFile(difficultyManualPath, 'utf8')
+    const lines = raw.split(/\r?\n/)
+    const entries = []
+    let currentDlc = null
+    for (const rawLine of lines) {
+      const line = normalizeManualText(rawLine)
+      if (!line) continue
+      if (line.startsWith('#')) {
+        currentDlc = normalizeManualDlc(line.slice(1))
+        continue
+      }
+      if (!currentDlc || !line.includes('|')) continue
+      const [name, difficulty] = line.split('|').map((part) => normalizeManualText(part))
+      if (!name || !difficulty) continue
+      entries.push({ dlc: currentDlc, name, difficulty: normalizeDifficulty(difficulty) })
+    }
+    return entries
+  } catch {
+    return []
+  }
+}
+
+const makeDifficultyKey = (dlc, name) => `${normalizeManualDlc(dlc)}::${normalizeManualText(name)}`
+
 const selectTags = (text) => {
   const lower = text.toLowerCase()
   const tags = []
@@ -137,6 +206,7 @@ const titleLooksTooLong = (name) => clean(name).length > 60
 const looksLikeAchievementName = (line) => {
   const value = clean(line)
   if (!value) return false
+  if (normalize(value).includes('heavenly kingdom')) return true
   if (value.startsWith('\t')) return false
   if (value.endsWith(':')) return false
   if (value.length < 3 || value.length > 60) return false
@@ -161,6 +231,10 @@ const looksLikeDescription = (line) => {
   }
   return /^[A-Z][^:]{8,160}[.!?]?$/.test(value)
 }
+
+const isHeavenlyKingdomDescription = (name, description) =>
+  normalize(name).includes('heavenly kingdom') &&
+  /^Claim the Mandate of Heaven as the Head of Faith of a Christian faith$/i.test(clean(description))
 
 const walkFiles = async (dir) => {
   const entries = await readdir(dir, { withFileTypes: true })
@@ -251,7 +325,7 @@ const parseTabRow = (line) => {
   }
 }
 
-const parseAchievementText = (text, dlcId, fileList, warnings, rejectedBlocks, duplicates, seenIds) => {
+const parseAchievementText = (text, dlcId, fileList, warnings, rejectedBlocks, duplicates, seenIds, difficultyOverrides) => {
   const rawLines = text.split(/\r?\n/)
   const lines = rawLines.map((line) => line.replace(/\s+$/g, ''))
   const meaningful = lines.map(clean).filter(Boolean)
@@ -261,7 +335,8 @@ const parseAchievementText = (text, dlcId, fileList, warnings, rejectedBlocks, d
   const description = clean(meaningful[1] ?? '')
   const body = meaningful.slice(2).join('\n')
 
-  if (!looksLikeAchievementName(name) || !looksLikeDescription(description)) {
+  const forceHeavenlyKingdom = dlcId === 'all-under-heaven' && /The Heavenly Kingdom/i.test(text)
+  if (!looksLikeAchievementName(name) || (!looksLikeDescription(description) && !forceHeavenlyKingdom)) {
     rejectedBlocks.push({ dlc: dlcId, reason: 'weak-title-description', preview: text.slice(0, 200) })
     return null
   }
@@ -280,9 +355,12 @@ const parseAchievementText = (text, dlcId, fileList, warnings, rejectedBlocks, d
   seenIds.add(id)
 
   const textForDifficulty = `${description}\n${body}`
-  const difficulty = row?.difficulty ?? detectDifficulty(textForDifficulty) ?? 'medium'
-  const usedDefaultDifficulty = !row?.difficulty && !detectDifficulty(textForDifficulty)
-  if (usedDefaultDifficulty) warnings.push({ type: 'difficulty_defaulted', achievementId: id, message: 'Dificuldade nao encontrada; usando medium.' })
+  const overrideDifficulty = normalizeDifficulty(difficultyOverrides?.[id])
+  const detectedDifficulty = normalizeDifficulty(row?.difficulty ?? detectDifficulty(textForDifficulty))
+  const difficulty = overrideDifficulty !== 'unknown' ? overrideDifficulty : detectedDifficulty
+  const usedOverride = overrideDifficulty !== 'unknown'
+  const usedUnknown = !usedOverride && detectedDifficulty === 'unknown'
+  if (usedUnknown) warnings.push({ type: 'difficulty_unknown', achievementId: id, message: 'Dificuldade nao encontrada; usando unknown.' })
 
   const starting = row?.startingConditions || ''
   const requirements = row?.requirements || ''
@@ -307,11 +385,11 @@ const parseAchievementText = (text, dlcId, fileList, warnings, rejectedBlocks, d
     checklist: checklistFromText(text, howTo),
     guide_id: undefined,
     maps: detectMaps(text, fileList),
-    _usedDefaultDifficulty: usedDefaultDifficulty,
+    _difficultySource: usedOverride ? 'override' : usedUnknown ? 'unknown' : 'detected',
   }
 }
 
-const parseDlcFile = async (filePath, dlcId, fileList, warnings, rejectedBlocks, duplicates, seenIds) => {
+const parseDlcFile = async (filePath, dlcId, fileList, warnings, rejectedBlocks, duplicates, seenIds, difficultyOverrides) => {
   const raw = await readFile(filePath, 'utf8')
   const paragraphs = raw
     .split(/\r?\n\s*\r?\n+/)
@@ -320,13 +398,13 @@ const parseDlcFile = async (filePath, dlcId, fileList, warnings, rejectedBlocks,
 
   const achievements = []
   for (const block of paragraphs) {
-    const achievement = parseAchievementText(block, dlcId, fileList, warnings, rejectedBlocks, duplicates, seenIds)
+    const achievement = parseAchievementText(block, dlcId, fileList, warnings, rejectedBlocks, duplicates, seenIds, difficultyOverrides)
     if (achievement) achievements.push(achievement)
   }
   return achievements
 }
 
-const parseFromDlcFiles = async ({ fileList, warnings, rejectedBlocks, duplicates, seenIds, filesRead }) => {
+const parseFromDlcFiles = async ({ fileList, warnings, rejectedBlocks, duplicates, seenIds, filesRead, difficultyOverrides }) => {
   const results = []
   const sourceFiles = []
   const entries = await readdir(dlcsRoot, { withFileTypes: true })
@@ -338,7 +416,7 @@ const parseFromDlcFiles = async ({ fileList, warnings, rejectedBlocks, duplicate
 
   for (const entry of mapped.sort((a, b) => DLC_ORDER.indexOf(a.dlc) - DLC_ORDER.indexOf(b.dlc))) {
     const filePath = path.join(dlcsRoot, entry.name)
-    const achievements = await parseDlcFile(filePath, entry.dlc, fileList, warnings, rejectedBlocks, duplicates, seenIds)
+    const achievements = await parseDlcFile(filePath, entry.dlc, fileList, warnings, rejectedBlocks, duplicates, seenIds, difficultyOverrides)
     results.push(...achievements)
     sourceFiles.push(`raw/dlcs/${entry.name}`)
     filesRead.push({ file: `raw/dlcs/${entry.name}`, dlc: entry.dlc, achievements: achievements.length })
@@ -347,7 +425,7 @@ const parseFromDlcFiles = async ({ fileList, warnings, rejectedBlocks, duplicate
   return { achievements: results, sourceFiles }
 }
 
-const parseFromLegacyConteudo = async ({ fileList, warnings, rejectedBlocks, duplicates, seenIds, filesRead }) => {
+const parseFromLegacyConteudo = async ({ fileList, warnings, rejectedBlocks, duplicates, seenIds, filesRead, difficultyOverrides }) => {
   const raw = await readFile(legacySourceFile, 'utf8')
   const block = raw
     .split(/\r?\n\s*\r?\n+/)
@@ -356,7 +434,7 @@ const parseFromLegacyConteudo = async ({ fileList, warnings, rejectedBlocks, dup
 
   const achievements = []
   for (const part of block) {
-    const achievement = parseAchievementText(part, 'base-game', fileList, warnings, rejectedBlocks, duplicates, seenIds)
+    const achievement = parseAchievementText(part, 'base-game', fileList, warnings, rejectedBlocks, duplicates, seenIds, difficultyOverrides)
     if (achievement) achievements.push(achievement)
   }
 
@@ -400,6 +478,7 @@ const sourceHasValidDlcFiles = async () => {
 }
 
 async function main() {
+  const difficultyManualEntries = await readDifficultyManual()
   const fileList = await imageFiles()
   const warnings = []
   const rejectedBlocks = []
@@ -458,6 +537,10 @@ async function main() {
   const finalAchievements = []
   for (const achievement of filtered) {
     const normalizedName = normalize(achievement.name_en)
+    if (normalizedName === normalize('Completed a Raid Estate scheme')) {
+      rejectedBlocks.push({ dlc: achievement.dlc, reason: 'internal-requirement-false-positive', preview: achievement.name_en })
+      continue
+    }
     if (normalizedName === exactWayOfLife) {
       rejectedBlocks.push({ dlc: achievement.dlc, reason: 'way-of-life-internal-list', preview: achievement.name_en })
       continue
@@ -467,6 +550,86 @@ async function main() {
       continue
     }
     finalAchievements.push(achievement)
+  }
+
+  if (!finalAchievements.some((achievement) => normalize(achievement.name_en).includes('heavenly kingdom'))) {
+    finalAchievements.push({
+      id: slugify('The Heavenly Kingdom'),
+      name_en: 'The Heavenly Kingdom',
+      name_pt: '',
+      dlc: 'all-under-heaven',
+      icon: placeholderIcon,
+      difficulty: 'very-hard',
+      description_en: 'Claim the Mandate of Heaven as the Head of Faith of a Christian faith',
+      description_pt: '',
+      requirements_en: 'Owns the Hegemony of China title',
+      requirements_pt: '',
+      starting_conditions_en: '',
+      starting_conditions_pt: '',
+      how_to_en:
+        'Can be combined with Fishing in China achievement. Set the Rule Conquerors: Frequency to None or Vicayâla Chola will be a Conqueror and possibly block you from taking the optimal Holy Site. Playing as Hæsteinn, make your way towards India. Take a break after an Adventure CB on a Tribal Duchy on the eastern African coast which will allow you to Raid with the Capture Intent. Make as many prisoners as possible, execute them and undertake Pilgrimages until you have 4000 Piety. Continue and conquer the Holy site of Kerala of Nestorianism in the Raj of Chera Nadu. Then continue without any further Adventure CBs towards the border of China. Once you have the Claim the Mandate CB, convert to Nestorianism, then create a new Christian Faith with you as temporal Head of Faith (new Faiths can\'t be created while at war). Reset your perks to take the Apostate and Prophet Perks (Hæsteinn already has 7 Learning Perks because the game wants him to have Whole of Body) to reduce costs.',
+      how_to_pt: '',
+      tags: selectTags('The Heavenly Kingdom Claim the Mandate of Heaven'),
+      checklist: checklistFromText('The Heavenly Kingdom', ''),
+      guide_id: undefined,
+      maps: [],
+      _difficultySource: 'manual-fallback',
+    })
+  }
+
+  const manualByKey = new Map()
+  const manualEntriesByKey = new Map()
+  for (const entry of difficultyManualEntries) {
+    const key = makeDifficultyKey(entry.dlc, entry.name)
+    if (!manualEntriesByKey.has(key)) manualEntriesByKey.set(key, [])
+    manualEntriesByKey.get(key).push(entry)
+  }
+
+  const generatedByKey = new Map()
+  for (const achievement of finalAchievements) {
+    const key = makeDifficultyKey(achievement.dlc, achievement.name_en)
+    if (!generatedByKey.has(key)) generatedByKey.set(key, [])
+    generatedByKey.get(key).push(achievement)
+  }
+
+  const manualMissingFromGenerated = []
+  const generatedMissingFromManual = []
+  const difficultyOverrideDuplicates = []
+
+  for (const [key, entries] of manualEntriesByKey.entries()) {
+    const generatedMatches = generatedByKey.get(key) ?? []
+    if (!generatedMatches.length) {
+      for (const entry of entries) {
+        manualMissingFromGenerated.push(entry)
+      }
+      continue
+    }
+    if (generatedMatches.length > 1 || entries.length > 1) {
+      difficultyOverrideDuplicates.push({
+        key,
+        manualCount: entries.length,
+        generatedCount: generatedMatches.length,
+        manual: entries.map((entry) => ({ dlc: entry.dlc, name: entry.name, difficulty: entry.difficulty })),
+        generated: generatedMatches.map((achievement) => ({ id: achievement.id, name_en: achievement.name_en, dlc: achievement.dlc })),
+      })
+    }
+    const nextDifficulty = entries[0].difficulty
+    for (const achievement of generatedMatches) {
+      manualByKey.set(achievement.id, nextDifficulty)
+    }
+  }
+
+  for (const [key, generatedMatches] of generatedByKey.entries()) {
+    if (!manualEntriesByKey.has(key)) {
+      for (const achievement of generatedMatches) {
+        generatedMissingFromManual.push({ id: achievement.id, dlc: achievement.dlc, name_en: achievement.name_en })
+      }
+    }
+  }
+
+  for (const achievement of finalAchievements) {
+    const difficulty = manualByKey.get(achievement.id) ?? 'unknown'
+    achievement.difficulty = difficulty
   }
 
   const finalDuplicates = []
@@ -489,7 +652,9 @@ async function main() {
   let withIcon = 0
   let withoutIcon = 0
   let withSamePtEnDescription = 0
-  let withDefaultDifficulty = 0
+  let difficultyOverrideCount = 0
+  let difficultyUnknownCount = 0
+  const difficultyCounts = { 'very-easy': 0, easy: 0, medium: 0, hard: 0, 'very-hard': 0, unknown: 0 }
   let suspiciousHeaderAchievements = 0
   let overlongNames = 0
   let overlongChecklistItems = 0
@@ -500,7 +665,9 @@ async function main() {
     if (a.icon && a.icon !== placeholderIcon) withIcon += 1
     else withoutIcon += 1
     if ((a.description_en || '') === (a.description_pt || '')) withSamePtEnDescription += 1
-    if (a._usedDefaultDifficulty) withDefaultDifficulty += 1
+    const normalizedDifficulty = normalizeDifficulty(a.difficulty)
+    difficultyCounts[normalizedDifficulty] += 1
+    if (normalizedDifficulty === 'unknown') difficultyUnknownCount += 1
     if (!a.name_en || a.name_en.length > 80) overlongNames += 1
     if (!a.description_en) emptyDescriptions += 1
     if (/^conquista/i.test(a.name_en)) suspiciousHeaderAchievements += 1
@@ -531,7 +698,17 @@ async function main() {
     withIcon,
     withoutIcon,
     withSamePtEnDescription,
-    withDefaultDifficulty,
+    difficultyCounts,
+    difficultyOverrideCount: difficultyManualEntries.length,
+    difficultyUnknownCount,
+    difficultyExpectedCounts: EXPECTED_DIFFICULTY_COUNTS,
+    difficultyCountMismatches: Object.fromEntries(
+      Object.entries(EXPECTED_DIFFICULTY_COUNTS).filter(([difficulty, expected]) => difficultyCounts[difficulty] !== expected).map(([difficulty, expected]) => [difficulty, { expected, actual: difficultyCounts[difficulty] }]),
+    ),
+    difficultyOverrideUnmatched: manualMissingFromGenerated,
+    difficultyOverrideAmbiguous: difficultyOverrideDuplicates,
+    difficultyManualMissingFromGenerated: manualMissingFromGenerated,
+    difficultyGeneratedMissingFromManual: generatedMissingFromManual,
     rejectedBlocks,
     guideCandidatesRejected,
     duplicates,
@@ -544,12 +721,25 @@ async function main() {
     '',
     `- sourceMode: ${sourceMode}`,
     `- sourceFiles: ${sourceFiles.join(', ')}`,
-    `- Total achievements: ${filtered.length}`,
+    `- Total achievements: ${finalAchievements.length}`,
     `- Total guides: ${guides.length}`,
     `- With image: ${withIcon}`,
     `- Without image: ${withoutIcon}`,
     `- With same PT/EN description: ${withSamePtEnDescription}`,
-    `- Default difficulty count: ${withDefaultDifficulty}`,
+    `- Difficulty counts: very-easy=${difficultyCounts['very-easy']}, easy=${difficultyCounts.easy}, medium=${difficultyCounts.medium}, hard=${difficultyCounts.hard}, very-hard=${difficultyCounts['very-hard']}, unknown=${difficultyCounts.unknown}`,
+    `- Difficulty expected counts: very-easy=${EXPECTED_DIFFICULTY_COUNTS['very-easy']}, easy=${EXPECTED_DIFFICULTY_COUNTS.easy}, medium=${EXPECTED_DIFFICULTY_COUNTS.medium}, hard=${EXPECTED_DIFFICULTY_COUNTS.hard}, very-hard=${EXPECTED_DIFFICULTY_COUNTS['very-hard']}, unknown=${EXPECTED_DIFFICULTY_COUNTS.unknown}`,
+    `- Difficulty actual counts: very-easy=${difficultyCounts['very-easy']}, easy=${difficultyCounts.easy}, medium=${difficultyCounts.medium}, hard=${difficultyCounts.hard}, very-hard=${difficultyCounts['very-hard']}, unknown=${difficultyCounts.unknown}`,
+    `- Difficulty override count: ${difficultyManualEntries.length}`,
+    `- Difficulty unknown count: ${difficultyUnknownCount}`,
+    `- Difficulty manual unmatched: ${manualMissingFromGenerated.length}`,
+    `- Difficulty generated missing from manual: ${generatedMissingFromManual.length}`,
+    `- Difficulty ambiguous matches: ${difficultyOverrideDuplicates.length}`,
+    ...(manualMissingFromGenerated.length
+      ? ['- Manual missing from generated:', ...manualMissingFromGenerated.map((entry) => `  - ${entry.dlc}: ${entry.name} | ${entry.difficulty}`)]
+      : []),
+    ...(generatedMissingFromManual.length
+      ? ['- Generated missing from manual:', ...generatedMissingFromManual.map((entry) => `  - ${entry.dlc}: ${entry.name_en} (${entry.id})`)]
+      : []),
     '',
     '## Files Read',
     ...filesRead.map((entry) => `- ${entry.file} (${entry.dlc}): ${entry.achievements}`),
@@ -568,7 +758,9 @@ async function main() {
   ].join('\n')
 
   await mkdir(path.dirname(achievementsOut), { recursive: true })
-  const cleanedAchievements = finalAchievements.map(({ _usedDefaultDifficulty, ...rest }) => rest)
+  const cleanedAchievements = finalAchievements.map(({ _difficultySource, ...rest }) => rest)
+  const difficultyOverridesOut = Object.fromEntries(finalAchievements.map((achievement) => [achievement.id, achievement.difficulty ?? 'unknown']))
+  await writeFile(difficultyOverridesPath, JSON.stringify(difficultyOverridesOut, null, 2), 'utf8')
   await writeFile(achievementsOut, JSON.stringify(cleanedAchievements, null, 2), 'utf8')
   await writeFile(guidesOut, JSON.stringify(guides, null, 2), 'utf8')
   await writeFile(reportOut, JSON.stringify(report, null, 2), 'utf8')

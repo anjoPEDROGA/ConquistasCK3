@@ -1,0 +1,207 @@
+# base-game
+Death Did Us Part | very-easy
+It's not a Cult! | very-easy
+Until Death Do Us Part | very-easy
+A House of My Own | easy
+Above God | easy
+Álmost There | easy
+Dreadful Ruler | easy
+Fine Print | easy
+Moving up in the World | easy
+Not So Feudal System | easy
+Seductive | easy
+Stressful Situation | easy
+The Emerald Isle | easy
+The Succession is Safe | easy
+The Things Love Does for Us | easy
+The Things We Do for Love | easy
+Turning to Diamonds | easy
+Way of Life | easy
+A Legacy to Last the Ages | medium
+An Unfortunate Accident | medium
+Bad Blood | medium
+Celebrity | medium
+Followed by Shadows | medium
+For the Faith! | medium
+Frankokratia | medium
+Going Places | medium
+Keeping it in the Family | medium
+Know Your Place | medium
+Land of the Rus | medium
+Monumental | medium
+Non Nobis Domine | medium
+Norman Yoke | medium
+Royal Dignity | medium
+Saint | medium
+Seven Holy Cities | medium
+The Emperor's New Clothes | medium
+Trapped in the Web | medium
+A Name Known Throughout the World | hard
+Al-Andalus | hard
+Beacon of Progress | hard
+Blood Eagle | hard
+End of an Era | hard
+From Rags to Riches | hard
+Give a Dog a Bone | hard
+Kings to the Seventh Generation | hard
+Last Count, First King | hard
+Paragon of Virtue | hard
+Prolific | hard
+Reconquista | hard
+Sibling Rivalry | hard
+Wily as the Fox | hard
+A Perfect Circle | very-hard
+Carolingian Consolidation | very-hard
+Mother of us All | very-hard
+Rise from the Ashes | very-hard
+What Nepotism? | very-hard
+
+# northern-lords
+First of the Crusader Kings | very-easy
+Völva | very-easy
+A Dangerous Business | easy
+Saga in Stone | easy
+Far From Home | medium
+Vladimir's Second Choice | medium
+Canute the Greater | hard
+Faster than the Fox | hard
+Miklagarðaríki | hard
+King of all the Isles | very-hard
+
+# royal-court
+Patronage | very-easy
+Changing Course | easy
+Converging Paths | easy
+I Made This | easy
+Polyglot | easy
+Brave and Bold | medium
+Crème de la Crème | medium
+Hoarder | medium
+One of a Kind | medium
+The True Royal Court | medium
+They Belong in a Museum! | medium
+Beta Israel | hard
+Bod Chen Po | hard
+Delusions of Grandeur | hard
+Inspirational | hard
+Rise of the Ghurids | hard
+True Tolerance | hard
+Turkish Eagle | hard
+Lingua Franca | very-hard
+Nobody Comes to Fika | very-hard
+
+# fate-of-iberia
+Basque In My Glory | easy
+Friendship Is Magic | easy
+History's Best Friends | easy
+High Stakes | medium
+Iberia or Iberia? | medium
+Iberian Compromise | medium
+Iberian Hostilities | medium
+Holidaying in Iberia | hard
+Iberian Conciliation | hard
+The Andalusian Inquisition | hard
+Legacy of The Campeadores | very-hard
+
+# tours-and-tournaments
+Hunting Accident | easy
+A Thousand & One Nights | medium
+Black Dinner | medium
+Fly, My Pretty! | medium
+Imperial March | medium
+Lions & Tigers & Bears, Oh My! | medium
+Pathway to Heaven | medium
+Sir Lance-a-Lot | medium
+The Grandest Tour | medium
+The Very Best | medium
+A.E.I.O.U. & Me | hard
+A Knight's Tale | hard
+A True & Perfect Knight | hard
+In My Element(s) | hard
+There and Back Again | hard
+The Iron and Golden King | hard
+Your Eternal Reward | hard
+Ahab | very-hard
+Like No One Ever Was | very-hard
+Little William Marshal | very-hard
+
+# legacy-of-persia
+Abbasid Might | easy
+Rich in Diversity | easy
+Royal Flush | easy
+All Your Caliphate Are Belong To Us | hard
+Fiscal Responsibility | hard
+Mulct Them Dry | hard
+Iranian Revival | hard
+Shia Reborn | hard
+Darius Revenge | very-hard
+The Umayyad Strikes Back | very-hard
+
+# legend-of-the-dead
+Legendary! | very-easy
+You'll Never Take Me Alive! | very-easy
+Neverending Story | easy
+Pay Respects | easy
+Canonized | medium
+Divine Right | medium
+Local Legend | medium
+Upward Mobility | medium
+Not Today | hard
+The Pharaoh Islands | hard
+Can't Touch This | very-hard
+
+# roads-to-power
+Historically Inaccurate | very-easy
+Band of Brothers | easy
+Quantum Leap | easy
+Birthright | medium
+Despotic | medium
+Epic Paperwork | medium
+In Good Estate | medium
+It's OK, I Got a Permit | medium
+Not Content to Serve | medium
+Started from the Bottom now we're ERE | medium
+Against the Odds | hard
+Byzywork | hard
+Chaos is a Ladder | hard
+Mio Cid | hard
+New Management, same as the Old Management | hard
+Rags to Riches to Rags to Riches | hard
+Regnum Dei | hard
+Tamar Mepe | hard
+The Old Man of the Mountain | hard
+Despoiler of Byzantium | very-hard
+
+# khans-of-the-steppe
+Blood of my Blood | very-easy
+Con-fed-up | easy
+Steppe by Steppe | easy
+In Xanadu | medium
+Nobody's Business | medium
+Settling In | medium
+Tribute Band | medium
+Shut Up Nerge | hard
+This Chinggis Everything | hard
+The Stallion that Mounts the World | very-hard
+
+# all-under-heaven
+Promised Land | very-easy
+Stamp of Approval | very-easy
+Yes I need, I need my Samurai | very-easy
+Flying Colors | easy
+Highway of Ideas | easy
+Humble Beginnings | easy
+Bloc Politics | medium
+Confucian Scholar | medium
+Cut off the Head... and the Body will Follow | medium
+Daits How You Do It | medium
+Devaraja | medium
+How it's done, done, done | medium
+Shōgun | medium
+Upper-upper | medium
+A Living God on Earth | hard
+Grand Governor | hard
+Mandate of Heaven | hard
+Sword of Japan | hard
+Fishing in China | very-hard
+The Heavenly Kingdom | very-hard

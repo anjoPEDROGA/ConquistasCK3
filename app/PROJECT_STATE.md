@@ -92,6 +92,7 @@ Build a local-first web app for tracking Crusader Kings III achievements, with r
 - Vite chunk-size warning
 - Possible future guide cleanup
 - Optional UI polish for large-data browsing
+- Difficulty is still not curated in the parser; UI now safely treats missing, empty, and `unknown` difficulty as `unknown`
 
 ## Recommended Next Steps
 

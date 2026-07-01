@@ -202,9 +202,33 @@ body {
 
 .filters {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1.5fr;
   gap: 12px;
   padding: 18px;
+}
+
+.toggles-field {
+  grid-column: 1 / -1;
+}
+
+.toggle-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.toggle-chip {
+  border: 1px solid rgba(197, 160, 89, 0.35);
+  background: rgba(24, 18, 13, 0.42);
+  color: var(--color-parchment-white);
+  border-radius: 999px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.toggle-chip.active {
+  background: rgba(197, 160, 89, 0.18);
+  border-color: rgba(197, 160, 89, 0.75);
 }
 
 .table-panel {

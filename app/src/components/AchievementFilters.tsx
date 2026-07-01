@@ -1,7 +1,7 @@
 import { FilterX, Search } from 'lucide-react'
 import clsx from 'clsx'
 import type { AchievementDifficulty, AchievementStatus, Language } from '../types/achievement'
-import type { AchievementFilterState } from '../utils/achievementFilters'
+import type { AchievementFilterState, AchievementSortOption } from '../utils/achievementFilters'
 
 interface Props {
   language: Language
@@ -9,11 +9,25 @@ interface Props {
   dlcs: Array<{ id: string; name: string }>
   filteredCount: number
   totalCount: number
+  hasUnknownDifficulty: boolean
+  sortBy: AchievementSortOption
   onChange: (next: AchievementFilterState) => void
+  onSortChange: (next: AchievementSortOption) => void
   onClear: () => void
 }
 
-export function AchievementFilters({ language, filters, dlcs, filteredCount, totalCount, onChange, onClear }: Props) {
+export function AchievementFilters({
+  language,
+  filters,
+  dlcs,
+  filteredCount,
+  totalCount,
+  hasUnknownDifficulty,
+  sortBy,
+  onChange,
+  onSortChange,
+  onClear,
+}: Props) {
   return (
     <section className="panel filters">
       <div className="filter-field search-field">
@@ -60,16 +74,59 @@ export function AchievementFilters({ language, filters, dlcs, filteredCount, tot
         <select
           id="achievement-difficulty"
           value={filters.difficulty}
-          onChange={(event) =>
-            onChange({ ...filters, difficulty: event.target.value as AchievementDifficulty | 'all' })
-          }
+          onChange={(event) => onChange({ ...filters, difficulty: event.target.value as AchievementDifficulty | 'all' })}
         >
           <option value="all">{language === 'pt' ? 'Todas as dificuldades' : 'All difficulties'}</option>
+          <option value="very-easy">{language === 'pt' ? 'Muito fácil' : 'Very easy'}</option>
           <option value="easy">{language === 'pt' ? 'Fácil' : 'Easy'}</option>
           <option value="medium">{language === 'pt' ? 'Média' : 'Medium'}</option>
           <option value="hard">{language === 'pt' ? 'Difícil' : 'Hard'}</option>
           <option value="very-hard">{language === 'pt' ? 'Muito difícil' : 'Very hard'}</option>
+          {hasUnknownDifficulty && (
+            <option value="unknown">{language === 'pt' ? 'Sem dificuldade definida' : 'No difficulty defined'}</option>
+          )}
         </select>
+      </div>
+
+      <div className="filter-field">
+        <label htmlFor="achievement-sort">{language === 'pt' ? 'Ordenação' : 'Sort'}</label>
+        <select id="achievement-sort" value={sortBy} onChange={(event) => onSortChange(event.target.value as AchievementSortOption)}>
+          <option value="default">{language === 'pt' ? 'Ordem padrão' : 'Default order'}</option>
+          <option value="dlc">{language === 'pt' ? 'DLC' : 'DLC'}</option>
+          <option value="name-asc">{language === 'pt' ? 'Nome A-Z' : 'Name A-Z'}</option>
+          <option value="name-desc">{language === 'pt' ? 'Nome Z-A' : 'Name Z-A'}</option>
+          <option value="status">{language === 'pt' ? 'Status' : 'Status'}</option>
+          <option value="difficulty">{language === 'pt' ? 'Dificuldade' : 'Difficulty'}</option>
+          <option value="checklist-incomplete-first">{language === 'pt' ? 'Checklist incompleta primeiro' : 'Checklist incomplete first'}</option>
+          <option value="completed-last">{language === 'pt' ? 'Concluídas por último' : 'Completed last'}</option>
+        </select>
+      </div>
+
+      <div className="filter-field toggles-field">
+        <label>{language === 'pt' ? 'Atalhos' : 'Quick filters'}</label>
+        <div className="toggle-group">
+          <button
+            type="button"
+            className={clsx('toggle-chip', filters.favoritesOnly && 'active')}
+            onClick={() => onChange({ ...filters, favoritesOnly: !filters.favoritesOnly })}
+          >
+            {language === 'pt' ? 'Favoritas' : 'Favorites'}
+          </button>
+          <button
+            type="button"
+            className={clsx('toggle-chip', filters.hasGuideOnly && 'active')}
+            onClick={() => onChange({ ...filters, hasGuideOnly: !filters.hasGuideOnly })}
+          >
+            {language === 'pt' ? 'Com guia' : 'Has guide'}
+          </button>
+          <button
+            type="button"
+            className={clsx('toggle-chip', filters.hideCompleted && 'active')}
+            onClick={() => onChange({ ...filters, hideCompleted: !filters.hideCompleted })}
+          >
+            {language === 'pt' ? 'Ocultar concluídas' : 'Hide completed'}
+          </button>
+        </div>
       </div>
 
       <div className="filters-footer">
