@@ -9,6 +9,7 @@
     "inventory:assets": "node scripts/inventory-assets.mjs",
     "scrape:achievements": "node scripts/scrape-achievements-wiki.mjs",
     "parse:achievements": "node scripts/parse-achievements.mjs",
+    "parse:achievements:structured": "node scripts/parse-achievements.mjs --source=structured",
     "parse:achievements:legacy": "node scripts/parse-achievements.mjs --legacy",
     "parse:achievements:strict": "node scripts/parse-achievements.mjs --strict",
     "lint": "oxlint",

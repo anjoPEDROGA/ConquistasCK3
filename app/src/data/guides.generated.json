@@ -1,5 +1,20 @@
 [
   {
+    "id": "the-stallion-that-mounts-the-world-guide",
+    "achievement_id": "the-stallion-that-mounts-the-world",
+    "title_pt": "",
+    "title_en": "The Stallion that Mounts the World",
+    "sections": [
+      {
+        "title_pt": "",
+        "title_en": "The Stallion that Mounts the World",
+        "body_pt": "",
+        "body_en": "Follow the Guide to the This Chinggis Everything achievement first. Destroy your current Regiments and replace them with Keshig and Cataphract Archers recruited from your subjects. You should get access to those by having Khitan or Tangut Vassals. Use the Offer Submission or Ruin interaction on your neighbouring rulers even if the Acceptance Chance is 0%. Either Demand Siege Weapons if their culture has Trebuchet Innovation unlocked or Demand Special Soldiers if not. You can do this even with already raised armies so you can continue from one ruler to the next. Grant conquered Counties and Duchies to people of the local culture or Mongols with high Martial. Demand Submission and Demand or Inspire Conversion with all your new Vassals. Don't Demand Vassalization anymore. The Offer Submission or Ruin interaction is much more effective and can even be made on your Tributaries. Continue until you control the entire world. Starting as Temüjin, conquer the world."
+      }
+    ],
+    "checklist": []
+  },
+  {
     "id": "flying-colors-guide",
     "achievement_id": "flying-colors",
     "title_pt": "",
@@ -9,7 +24,7 @@
         "title_pt": "",
         "title_en": "Flying Colors",
         "body_pt": "",
-        "body_en": "Passed all exams with the same character Follow the guide for Stamp of Approval first. After completing the Children's Examination, wait for a Provincial Examination to start, and enter it. Upon easily passing this one too, focus on improving your Learning and Confucian Education by using the Study scheme, getting a Mentor via the Request Mentorship interaction, and getting Perks from the Learning Lifestyle. Once the Emperor starts a Capital Examination, enter it. Pass all Exams with one character"
+        "body_en": "Follow the guide for Stamp of Approval first. After completing the Children's Examination, wait for a Provincial Examination to start, and enter it. Upon easily passing this one too, focus on improving your Learning and Confucian Education by using the Study scheme, getting a Mentor via the Request Mentorship interaction, and getting Perks from the Learning Lifestyle. Once the Emperor starts a Capital Examination, enter it. The Palace Examination is only available if you score in the top 10 of the regular Metropolitan Examination. You should be able to complete both at once if you're a skilled scholar. Pass all Exams with one character"
       }
     ],
     "checklist": []

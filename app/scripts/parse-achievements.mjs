@@ -4,6 +4,7 @@ import path from 'node:path'
 const projectRoot = 'E:/ConquistasCK3/app'
 const rawRoot = path.join(projectRoot, 'raw')
 const dlcsRoot = path.join(rawRoot, 'dlcs')
+const structuredRoot = path.join(rawRoot, 'dlcs-structured')
 const legacySourceFile = path.join(rawRoot, 'conteudo.txt')
 const imagesRoot = path.join(projectRoot, 'public/assets/images')
 const achievementsOut = path.join(projectRoot, 'src/data/achievements.generated.json')
@@ -25,6 +26,8 @@ const placeholderIcon = '/assets/images/placeholder-achievement.svg'
 const verbose = process.argv.includes('--verbose')
 const forceLegacy = process.argv.includes('--legacy')
 const strictMode = process.argv.includes('--strict')
+const sourceArg = process.argv.find((arg) => arg.startsWith('--source='))
+const requestedSource = sourceArg ? sourceArg.slice('--source='.length) : ''
 
 const DLC_SOURCE_FILES = {
   'base_game.txt': 'base-game',
@@ -40,6 +43,18 @@ const DLC_SOURCE_FILES = {
 }
 
 const DLC_ORDER = Object.values(DLC_SOURCE_FILES)
+const STRUCTURED_SOURCE_FILES = {
+  'base_game.json': 'base-game',
+  'northern_lords.json': 'northern-lords',
+  'royal_court.json': 'royal-court',
+  'fate_of_iberia.json': 'fate-of-iberia',
+  'tours_and_tournaments.json': 'tours-and-tournaments',
+  'legacy_of_persia.json': 'legacy-of-persia',
+  'legends_of_the_dead.json': 'legends-of-the-dead',
+  'roads_to_power.json': 'roads-to-power',
+  'khans_of_the_steppe.json': 'khans-of-the-steppe',
+  'all_under_heaven.json': 'all-under-heaven',
+}
 
 const difficultyMap = [
   { re: /\b(very easy|very-easy)\b/i, value: 'very-easy' },
@@ -272,6 +287,12 @@ const pickImage = (achievementName, dlcId, fileList) => {
   return iconCandidates[0]?.score >= 18 ? `/assets/images/${path.relative(imagesRoot, iconCandidates[0].file).replace(/\\/g, '/')}` : placeholderIcon
 }
 
+const resolveIconByFileName = (iconFile, fileList) => {
+  if (!iconFile) return placeholderIcon
+  const match = fileList.find((file) => path.basename(file) === iconFile)
+  return match ? `/assets/images/${path.relative(imagesRoot, match).replace(/\\/g, '/')}` : placeholderIcon
+}
+
 const detectMaps = (text, fileList) => {
   if (!/map|maps/i.test(text)) return []
   return fileList
@@ -456,6 +477,45 @@ const parseFromLegacyConteudo = async ({ fileList, warnings, rejectedBlocks, dup
   return { achievements, sourceFiles: ['raw/conteudo.txt'] }
 }
 
+const parseFromStructuredFiles = async ({ fileList, warnings, rejectedBlocks, duplicates, seenIds, filesRead, difficultyOverrides }) => {
+  const results = []
+  const sourceFiles = []
+  for (const [fileName, dlcId] of Object.entries(STRUCTURED_SOURCE_FILES)) {
+    const filePath = path.join(structuredRoot, fileName)
+    const raw = await readFile(filePath, 'utf8')
+    const items = JSON.parse(raw)
+    const achievements = items.map((item) => {
+      const id = slugify(item.name)
+      const difficulty = normalizeDifficulty(item.difficulty)
+      return {
+        id,
+        name_en: item.name,
+        name_pt: '',
+        dlc: dlcId,
+        icon: resolveIconByFileName(item.icon_file, fileList),
+        difficulty: normalizeDifficulty(difficultyOverrides?.[id]) !== 'unknown' ? normalizeDifficulty(difficultyOverrides?.[id]) : difficulty,
+        description_en: item.short_description ?? '',
+        description_pt: '',
+        requirements_en: item.requirements ?? '',
+        requirements_pt: '',
+        starting_conditions_en: item.starting_conditions ?? '',
+        starting_conditions_pt: '',
+        how_to_en: item.hints ?? '',
+        how_to_pt: '',
+        tags: selectTags(`${item.name}\n${item.short_description}\n${item.starting_conditions}\n${item.requirements}\n${item.hints}`),
+        checklist: checklistFromText(`${item.name}\n${item.short_description}\n${item.starting_conditions}\n${item.requirements}\n${item.hints}`, item.hints ?? ''),
+        guide_id: undefined,
+        maps: detectMaps(`${item.name}\n${item.short_description}\n${item.starting_conditions}\n${item.requirements}\n${item.hints}`, []),
+        _difficultySource: 'structured',
+      }
+    })
+    results.push(...achievements)
+    sourceFiles.push(`raw/dlcs-structured/${fileName}`)
+    filesRead.push({ file: `raw/dlcs-structured/${fileName}`, dlc: dlcId, achievements: achievements.length })
+  }
+  return { achievements: results, sourceFiles }
+}
+
 const buildGuide = (achievement, sourceText) => {
   const text = clean(sourceText.replace(new RegExp(`^${achievement.name_en}\\s*`, 'i'), ''))
   if (!/guide|guia|walkthrough|passo a passo|estrategia/i.test(text)) return null
@@ -505,8 +565,14 @@ async function main() {
   let sourceMode = 'legacy-conteudo'
   let sourceFiles = ['raw/conteudo.txt']
 
-  const useDlcFiles = !forceLegacy && (await sourceHasValidDlcFiles())
-  if (useDlcFiles) {
+  const useStructuredFiles = requestedSource === 'structured'
+  const useDlcFiles = !forceLegacy && !useStructuredFiles && (await sourceHasValidDlcFiles())
+  if (useStructuredFiles) {
+    sourceMode = 'structured'
+    const parsed = await parseFromStructuredFiles({ fileList, warnings, rejectedBlocks, duplicates, seenIds, filesRead })
+    achievements.push(...parsed.achievements)
+    sourceFiles = parsed.sourceFiles
+  } else if (useDlcFiles) {
     sourceMode = 'dlc-files'
     const parsed = await parseFromDlcFiles({ fileList, warnings, rejectedBlocks, duplicates, seenIds, filesRead })
     achievements.push(...parsed.achievements)
@@ -793,8 +859,8 @@ async function main() {
 
   if (strictMode) {
     const expectedFiles = Object.keys(DLC_SOURCE_FILES).length
-    if (sourceMode !== 'dlc-files' || filesRead.length !== expectedFiles) {
-      throw new Error(`Strict mode failed: expected ${expectedFiles} DLC files, got ${filesRead.length} in ${sourceMode}`)
+    if ((sourceMode !== 'dlc-files' && sourceMode !== 'structured') || filesRead.length !== expectedFiles) {
+      throw new Error(`Strict mode failed: expected ${expectedFiles} source files, got ${filesRead.length} in ${sourceMode}`)
     }
   }
 
