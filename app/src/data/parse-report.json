@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-01T08:06:23.536Z",
+  "generatedAt": "2026-07-13T02:06:07.202Z",
   "sourceMode": "dlc-files",
   "sourceFiles": [
     "raw/dlcs/base_game.txt",
@@ -78,30 +78,6 @@
     "roads-to-power": 20,
     "khans-of-the-steppe": 10,
     "all-under-heaven": 20
-  },
-  "expectedByDlc": {
-    "base-game": 56,
-    "northern-lords": 10,
-    "royal-court": 18,
-    "fate-of-iberia": 12,
-    "tours-and-tournaments": 15,
-    "legacy-of-persia": 13,
-    "legends-of-the-dead": 11,
-    "roads-to-power": 21,
-    "khans-of-the-steppe": 16,
-    "all-under-heaven": 16
-  },
-  "differencesByDlc": {
-    "base-game": 0,
-    "northern-lords": 0,
-    "royal-court": 2,
-    "fate-of-iberia": -1,
-    "tours-and-tournaments": 5,
-    "legacy-of-persia": -3,
-    "legends-of-the-dead": 0,
-    "roads-to-power": -1,
-    "khans-of-the-steppe": -6,
-    "all-under-heaven": 4
   },
   "withIcon": 188,
   "withoutIcon": 0,

@@ -40,18 +40,6 @@
 - khans-of-the-steppe: 10
 - all-under-heaven: 20
 
-## Expected vs Actual
-- base-game: expected 56, actual 56, diff 0
-- northern-lords: expected 10, actual 10, diff 0
-- royal-court: expected 18, actual 20, diff 2
-- fate-of-iberia: expected 12, actual 11, diff -1
-- tours-and-tournaments: expected 15, actual 20, diff 5
-- legacy-of-persia: expected 13, actual 10, diff -3
-- legends-of-the-dead: expected 11, actual 11, diff 0
-- roads-to-power: expected 21, actual 20, diff -1
-- khans-of-the-steppe: expected 16, actual 10, diff -6
-- all-under-heaven: expected 16, actual 20, diff 4
-
 ## Problems
 - Rejected blocks: 202
 - Guide candidates rejected: 0

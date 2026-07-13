@@ -300,16 +300,43 @@ const checklistFromText = (text, howTo) => {
   return [...items, ...hints].slice(0, 6)
 }
 
-const parseTabRow = (line) => {
-  const cells = line.split('\t').map((cell) => clean(cell)).filter(Boolean)
-  if (cells.length < 2) return null
-  const difficultyCell = cells[cells.length - 1]
-  const difficulty = detectDifficulty(difficultyCell) ?? detectDifficulty(line)
+const structuredMatchers = {
+  starting: [
+    /^(playing as|starting as|as an?|as any one|with |is |in \d{3,4}|capital is in|has created|has married|has 10 children|has a child|has a lover|has a full set of)/i,
+    /\b(culture|faith|religion|region|title|county|duchy|kingdom|empire)\b/i,
+  ],
+  requirements: [
+    /^(has|have|hold|own|owns|completely controls|defeat|win|use|reach|obtain|create|found|murder|marry|increase|suffer|take part|participate|declare|start|play|replace|swear fealty|fabricate|convert|unlock|complete)/i,
+    /\b(stress|hook|children|fame|devotion|dread|prestige|piety|legend|map|vassal|scheme)\b/i,
+  ],
+}
+
+const classifyStructuredText = (text) => {
+  const buckets = { starting: [], requirements: [], howTo: [] }
+  const lines = text.split(/\r?\n/)
+  for (const rawLine of lines) {
+    const line = clean(rawLine)
+    if (!line) continue
+    const cells = rawLine.split('\t').map((cell) => clean(cell)).filter(Boolean)
+    const parts = cells.length ? cells : [line]
+    for (const part of parts) {
+      if (/^(difficulty|starting conditions|requirements|hints & strategies)$/i.test(part)) continue
+      const isProse = part.length > 180 || part.split(/\s+/).length > 32 || /\.\s+[A-Z]/.test(part)
+      if (structuredMatchers.starting.some((re) => re.test(part))) {
+        buckets.starting.push(part)
+      } else if (structuredMatchers.requirements.some((re) => re.test(part)) || part.split(/\s+/).length <= 12 || !isProse) {
+        buckets.requirements.push(part)
+      } else {
+        buckets.howTo.push(part)
+      }
+    }
+  }
+
+  const dedupeJoin = (items) => [...new Set(items)].join('\n\n').trim()
   return {
-    startingConditions: cells[1] ?? '',
-    requirements: cells[2] ?? '',
-    howTo: cells[3] ?? '',
-    difficulty,
+    startingConditions: dedupeJoin(buckets.starting),
+    requirements: dedupeJoin(buckets.requirements),
+    howTo: dedupeJoin(buckets.howTo),
   }
 }
 
@@ -329,8 +356,7 @@ const parseAchievementText = (text, dlcId, fileList, warnings, rejectedBlocks, d
     return null
   }
 
-  const tabRows = meaningful.slice(2).filter((line) => /\t/.test(line) && !isNoiseLine(line))
-  const row = tabRows.length ? parseTabRow(tabRows[0]) : null
+  const structured = classifyStructuredText(meaningful.slice(2).join('\n'))
 
   const idBase = slugify(name)
   let id = idBase
@@ -344,15 +370,15 @@ const parseAchievementText = (text, dlcId, fileList, warnings, rejectedBlocks, d
 
   const textForDifficulty = `${description}\n${body}`
   const overrideDifficulty = normalizeDifficulty(difficultyOverrides?.[id])
-  const detectedDifficulty = normalizeDifficulty(row?.difficulty ?? detectDifficulty(textForDifficulty))
+  const detectedDifficulty = normalizeDifficulty(detectDifficulty(textForDifficulty))
   const difficulty = overrideDifficulty !== 'unknown' ? overrideDifficulty : detectedDifficulty
   const usedOverride = overrideDifficulty !== 'unknown'
   const usedUnknown = !usedOverride && detectedDifficulty === 'unknown'
   if (usedUnknown) warnings.push({ type: 'difficulty_unknown', achievementId: id, message: 'Dificuldade nao encontrada; usando unknown.' })
 
-  const starting = row?.startingConditions || ''
-  const requirements = row?.requirements || ''
-  const howTo = row?.howTo || body || description
+  const starting = structured.startingConditions || ''
+  const requirements = structured.requirements || ''
+  const howTo = structured.howTo || body || description
 
   return {
     id,
@@ -730,9 +756,6 @@ async function main() {
     '',
     '## By DLC',
     ...Object.entries(byDlc).map(([key, value]) => `- ${key}: ${value}`),
-    '',
-    '## Expected vs Actual',
-    ...DLC_ORDER.map((dlc) => `- ${dlc}: expected ${EXPECTED_BY_DLC[dlc] ?? 0}, actual ${byDlc[dlc] ?? 0}, diff ${(byDlc[dlc] ?? 0) - (EXPECTED_BY_DLC[dlc] ?? 0)}`),
     '',
     '## Problems',
     `- Rejected blocks: ${rejectedBlocks.length}`,
