@@ -40,18 +40,6 @@ const DLC_SOURCE_FILES = {
 }
 
 const DLC_ORDER = Object.values(DLC_SOURCE_FILES)
-const EXPECTED_BY_DLC = {
-  'base-game': 56,
-  'northern-lords': 10,
-  'royal-court': 18,
-  'fate-of-iberia': 12,
-  'tours-and-tournaments': 15,
-  'legacy-of-persia': 13,
-  'legends-of-the-dead': 11,
-  'roads-to-power': 21,
-  'khans-of-the-steppe': 16,
-  'all-under-heaven': 16,
-}
 
 const difficultyMap = [
   { re: /\b(very easy|very-easy)\b/i, value: 'very-easy' },
@@ -691,10 +679,6 @@ async function main() {
     totalAchievements: finalAchievements.length,
     totalGuides: guides.length,
     byDlc,
-    expectedByDlc: EXPECTED_BY_DLC,
-    differencesByDlc: Object.fromEntries(
-      DLC_ORDER.map((dlc) => [dlc, (byDlc[dlc] ?? 0) - (EXPECTED_BY_DLC[dlc] ?? 0)]),
-    ),
     withIcon,
     withoutIcon,
     withSamePtEnDescription,
