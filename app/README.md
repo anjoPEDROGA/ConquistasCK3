@@ -16,8 +16,8 @@ This project is fan-made and not affiliated with Paradox Interactive.
 
 - The UI consumes `src/data/achievements.generated.json`
 - The generated dataset contains 188 achievements
-- The parser uses `raw/dlcs` as the default source
-- `raw/conteudo.txt` is legacy fallback only
+- The parser uses `raw/dlcs-structured` as the default source
+- `raw/dlcs/*.txt` and `raw/conteudo.txt` are legacy fallback inputs only
 - Progress, favorites, notes, and checklist state persist in `localStorage`
 
 ## Features
@@ -36,10 +36,11 @@ This project is fan-made and not affiliated with Paradox Interactive.
 
 ## Data Flow
 
-1. `npm run parse:achievements` reads `raw/dlcs/*.txt`
-2. The parser writes generated data into `src/data/achievements.generated.json`
-3. The UI imports that JSON directly
-4. Progress is stored locally in the browser
+1. `npm run scrape:achievements` refreshes `raw/dlcs-structured/*.json` from the wiki
+2. `npm run parse:achievements` reads `raw/dlcs-structured/*.json`
+3. The parser writes generated data into `src/data/achievements.generated.json`
+4. The UI imports that JSON directly
+5. Progress is stored locally in the browser
 
 ## Commands
 
@@ -59,6 +60,12 @@ Parse generated data:
 
 ```powershell
 npm run parse:achievements
+```
+
+Refresh the structured wiki export:
+
+```powershell
+npm run scrape:achievements
 ```
 
 ## Notes

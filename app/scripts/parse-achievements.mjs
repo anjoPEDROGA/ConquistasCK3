@@ -565,7 +565,7 @@ async function main() {
   let sourceMode = 'legacy-conteudo'
   let sourceFiles = ['raw/conteudo.txt']
 
-  const useStructuredFiles = requestedSource === 'structured'
+  const useStructuredFiles = !forceLegacy && requestedSource !== 'dlc-files'
   const useDlcFiles = !forceLegacy && !useStructuredFiles && (await sourceHasValidDlcFiles())
   if (useStructuredFiles) {
     sourceMode = 'structured'

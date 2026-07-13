@@ -573,7 +573,7 @@
     "difficulty": "easy",
     "description_en": "Suffer from a Mental Break",
     "description_pt": "",
-    "requirements_en": "Stress level 1.png Stress level 1",
+    "requirements_en": "Stress level 1",
     "requirements_pt": "",
     "starting_conditions_en": "",
     "starting_conditions_pt": "",
@@ -827,7 +827,7 @@
     "difficulty": "easy",
     "description_en": "Reach the highest possible Stress Level",
     "description_pt": "",
-    "requirements_en": "Stress level 3.png Stress level 3",
+    "requirements_en": "Stress level 3",
     "requirements_pt": "",
     "starting_conditions_en": "",
     "starting_conditions_pt": "",
@@ -877,9 +877,9 @@
     "difficulty": "easy",
     "description_en": "Obtain every perk in a Lifestyle",
     "description_pt": "",
-    "requirements_en": "Has a full set of lifestyle traits perks in a tree: Expandir Diplomat, August and Patriarch / Matriarch Schemer, Seducer and Torturer Whole of Body, Scholar and Theologian Strategist, Overseer and Gallant Avaricious, Architect and Administrator",
+    "requirements_en": "Has a full set of lifestyle traits perks in a tree: Diplomat, August and Patriarch / Matriarch Schemer, Seducer and Torturer Whole of Body, Scholar and Theologian Strategist, Overseer and Gallant Avaricious, Architect and Administrator",
     "requirements_pt": "",
-    "starting_conditions_en": "Has a full set of lifestyle traits perks in a tree: Expandir Has neither: Diplomat, August and Patriarch / Matriarch Schemer, Seducer and Torturer Whole of Body, Scholar and Theologian Strategist, Overseer and Gallant Avaricious, Architect and Administrator",
+    "starting_conditions_en": "Has a full set of lifestyle traits perks in a tree: Has neither: Diplomat, August and Patriarch / Matriarch Schemer, Seducer and Torturer Whole of Body, Scholar and Theologian Strategist, Overseer and Gallant Avaricious, Architect and Administrator",
     "starting_conditions_pt": "",
     "how_to_en": "In 1066 replace the king of England with a 75 year old custom ruler with Coptic faith, Syriac culture, Mastermind Philosopher, Genius and Strong traits. With all these you get 56 experience per month. Take medicine focus then invest all perks in health and opinion. When duke of Normandy declares war on you immediately surrender. You'll get last 7 perks in 10-11 years. Note that having lifestyle traits is not enough. You need to unlock required lifestyle perks in a tree.",
     "how_to_pt": "",
@@ -1242,7 +1242,7 @@
     "requirements_pt": "",
     "starting_conditions_en": "",
     "starting_conditions_pt": "",
-    "how_to_en": "Note that you don't need to hold the Kingdom of Thessalonika title, only all its counties. Replace the Byzantine emperor from 1066 with a custom character of French culture and Catholic faith and traits that will offset the Opinion loss. Find a way to conquer enough territory from Hungary and Pechenegs to create the Empire of Carpathia. Then destroy the Byzantine Empire title. This achievement is possible to do in under 10 years as Haesteinn. With the Bellem Justum perk conquering an easy duchy like Brittany or Cornwall (and forming the title) and doing a pilgrimage will give you the necessary prestige and piety to use the Invade Kingdom casus belli against the Byzantines. Focus on Bondí to counter the Byzantines Kataphraktoí. Alternatively, after completing Miklagarðaríki (if you have the DLC Northern Lords.png Northern Lords DLC), move your capital to France and convert to the local faith and culture to get the achievement instantly.",
+    "how_to_en": "Note that you don't need to hold the Kingdom of Thessalonika title, only all its counties. Replace the Byzantine emperor from 1066 with a custom character of French culture and Catholic faith and traits that will offset the Opinion loss. Find a way to conquer enough territory from Hungary and Pechenegs to create the Empire of Carpathia. Then destroy the Byzantine Empire title. This achievement is possible to do in under 10 years as Haesteinn. With the Bellem Justum perk conquering an easy duchy like Brittany or Cornwall (and forming the title) and doing a pilgrimage will give you the necessary prestige and piety to use the Invade Kingdom casus belli against the Byzantines. Focus on Bondí to counter the Byzantines Kataphraktoí. Alternatively, after completing Miklagarðaríki (if you have the Northern Lords DLC), move your capital to France and convert to the local faith and culture to get the achievement instantly.",
     "how_to_pt": "",
     "tags": [
       "religion",
@@ -1769,7 +1769,7 @@
     "difficulty": "medium",
     "description_en": "As a Hindu ruler, hold all seven Hindu Holy Sites at the same time",
     "description_pt": "",
-    "requirements_en": "Is Hindu Owns or is liege of the owner of the Counties of: Expandir Varanasi Ayodhyā Mathura Sthanisvara Kanchipuram Ujjayini Dvaraka",
+    "requirements_en": "Is Hindu Owns or is liege of the owner of the Counties of: Varanasi Ayodhyā Mathura Sthanisvara Kanchipuram Ujjayini Dvaraka",
     "requirements_pt": "",
     "starting_conditions_en": "",
     "starting_conditions_pt": "",
@@ -1805,9 +1805,9 @@
         "label_pt": "As a Hindu ruler, hold all seven Hindu Holy Sites at the same time"
       },
       {
-        "id": "is-hindu-owns-or-is-liege-of-the-owner-of-the-counties-of-expandir-varanasi-ayodhya-mathura-sthanisvara-kanchipuram-ujjayini-dvaraka",
-        "label_en": "Is Hindu Owns or is liege of the owner of the Counties of: Expandir Varanasi Ayodhyā Mathura Sthanisvara Kanchipuram Ujjayini Dvaraka",
-        "label_pt": "Is Hindu Owns or is liege of the owner of the Counties of: Expandir Varanasi Ayodhyā Mathura Sthanisvara Kanchipuram Ujjayini Dvaraka"
+        "id": "is-hindu-owns-or-is-liege-of-the-owner-of-the-counties-of-varanasi-ayodhya-mathura-sthanisvara-kanchipuram-ujjayini-dvaraka",
+        "label_en": "Is Hindu Owns or is liege of the owner of the Counties of: Varanasi Ayodhyā Mathura Sthanisvara Kanchipuram Ujjayini Dvaraka",
+        "label_pt": "Is Hindu Owns or is liege of the owner of the Counties of: Varanasi Ayodhyā Mathura Sthanisvara Kanchipuram Ujjayini Dvaraka"
       }
     ],
     "maps": []
@@ -2097,7 +2097,7 @@
     "description_pt": "",
     "requirements_en": "Completely control the Empire of Britannia (Only need to hold the region of Britannia, do not need to hold the empire title)",
     "requirements_pt": "",
-    "starting_conditions_en": "In 867 is Starting as either: Expandir Duke Björn Ironside of Uppland Duke Ivar the Boneless of the Isles Duke Halfdan Whiteshirt of Jorvik Duke Sigurdr Snake-in-the-Eye of Sjælland",
+    "starting_conditions_en": "In 867 is Starting as either: Duke Björn Ironside of Uppland Duke Ivar the Boneless of the Isles Duke Halfdan Whiteshirt of Jorvik Duke Sigurdr Snake-in-the-Eye of Sjælland",
     "starting_conditions_pt": "",
     "how_to_en": "Aside from Earl Alfred of Wessex, all characters from the Wrath of the Northmen scenario are children of Ragnarr Loðbrók. Ivar the Boneless and Halfdan Whiteshirt offer the best starts.",
     "how_to_pt": "",
@@ -2363,7 +2363,7 @@
     "requirements_pt": "",
     "starting_conditions_en": "Starting as Duke Nuño Mendez of Portucale in 1066",
     "starting_conditions_pt": "",
-    "how_to_en": "Sometimes the character starts with the Meritocracy perk, allowing the Claim Throne scheme to be used from the start with adequate success chance. Note that you will still have to defeat several Muslim neighbors in order to form Portugal. Alternatively, try allying France on day 1 and immediately declaring an independence war on your liege, then using your French ally for the two back-to-back wars you'll need to take the south. Divorcing Duke Nuño’s first wife can help secure a useful alliance. You can also align with William the Conqueror early, but his special troops will be preoccupied with England for a while. With the DLC Fate of Iberia.png Fate of Iberia DLC you can Found Portugal without being independent as long as it's the Opportunity Phase (which the game begins in).",
+    "how_to_en": "Sometimes the character starts with the Meritocracy perk, allowing the Claim Throne scheme to be used from the start with adequate success chance. Note that you will still have to defeat several Muslim neighbors in order to form Portugal. Alternatively, try allying France on day 1 and immediately declaring an independence war on your liege, then using your French ally for the two back-to-back wars you'll need to take the south. Divorcing Duke Nuño’s first wife can help secure a useful alliance. You can also align with William the Conqueror early, but his special troops will be preoccupied with England for a while. With the Fate of Iberia DLC you can Found Portugal without being independent as long as it's the Opportunity Phase (which the game begins in).",
     "how_to_pt": "",
     "tags": [
       "war",
@@ -2521,7 +2521,7 @@
     "requirements_pt": "",
     "starting_conditions_en": "Iberian heritage Christian religion",
     "starting_conditions_pt": "",
-    "how_to_en": "In 867 replace the Umayyad Sultan with a custom character of Andalusian culture, Apostolic faith, learning education and pick traits that will offset the Opinion loss (Gregarious is a great option for all Muslims, while Just is a virtuous trait to Muslims, making them like you more. Temperate is also good, as it is considered a virtue by Muslims and any Christian faith with the Monasticism tenet, including Catholicism). Surrender in the starting wars. Focus on the Theologian lifestyle tree and conquer the independent counties before Asturias gets the chance. Then get the three island counties to the east, followed by Navarra and finally Asturias. If the DLC Fate of Iberia.png Fate of Iberia DLC is installed keep the Iberian Struggle in the Opportunity phase as long as possible. Alternatively, if the DLC Fate of Iberia.png Fate of Iberia DLC is enabled, you can follow the same instructions as above, but starting with a Mozarab ruler instead, as you will automatically be involved with the Struggle and can use the Struggle Casus Bellis. This will also help you unlock the Mozarabic Inquisition achievement.",
+    "how_to_en": "In 867 replace the Umayyad Sultan with a custom character of Andalusian culture, Apostolic faith, learning education and pick traits that will offset the Opinion loss (Gregarious is a great option for all Muslims, while Just is a virtuous trait to Muslims, making them like you more. Temperate is also good, as it is considered a virtue by Muslims and any Christian faith with the Monasticism tenet, including Catholicism). Surrender in the starting wars. Focus on the Theologian lifestyle tree and conquer the independent counties before Asturias gets the chance. Then get the three island counties to the east, followed by Navarra and finally Asturias. If the Fate of Iberia DLC is installed keep the Iberian Struggle in the Opportunity phase as long as possible. Alternatively, if the Fate of Iberia DLC is enabled, you can follow the same instructions as above, but starting with a Mozarab ruler instead, as you will automatically be involved with the Struggle and can use the Struggle Casus Bellis. This will also help you unlock the Mozarabic Inquisition achievement.",
     "how_to_pt": "",
     "tags": [
       "religion",
@@ -2574,9 +2574,9 @@
     "description_pt": "",
     "requirements_en": "Empire Empire of Hispania",
     "requirements_pt": "",
-    "starting_conditions_en": "In 1066, is Starting as either: Expandir King Alfonso VI of León King García of Galicia King Sancho II of Castille Countess Urraca of Zamora Elvira",
+    "starting_conditions_en": "In 1066, is Starting as either: King Alfonso VI of León King García of Galicia King Sancho II of Castille Countess Urraca of Zamora Elvira",
     "starting_conditions_pt": "",
-    "how_to_en": "If the DLC Fate of Iberia.png Fate of Iberia DLC is installed disable it so you don't have to end the Iberian Struggle in order to create the Empire of Hispania title. Start as Alfonso, he is a high Intrigue character—with some luck and preparation you can kill your two brothers within two years to get their kingdoms (you might need to wait a few months after starting the game before agents are willing to join your murder plots). Then, press your claim on the Kingdom of Navarra. At this point, you can use the Unite the Spanish Thrones decision to unite León, Galicia, Castille and Navarra, giving you a strong core from which you can expand into the rest of the Iberian peninsula until you can create the Empire of Hispania. It is not necessary to complete this achievement in one character's lifetime. Alternatively, consider leaving the DLC enabled. Once you are in position to end the Struggle, do so (do not take the Status Quo ending as it destroys the Hispania title), then create the empire. Convert to Mozarabism and begin converting counties. You can get a plethora of achievements this way. It is possible to get upwards of ten different achievements in runs that begin in Iberia; consider combining this one with one or more of those, such as Rise from the Ashes, Iberia or Iberia?, Darius Revenge, and more. In my run I was able to get fifteen achievements ranging from Struggle endings to surviving the Black Death, all the way until End of an Era in 1453.",
+    "how_to_en": "If the Fate of Iberia DLC is installed disable it so you don't have to end the Iberian Struggle in order to create the Empire of Hispania title. Start as Alfonso, he is a high Intrigue character—with some luck and preparation you can kill your two brothers within two years to get their kingdoms (you might need to wait a few months after starting the game before agents are willing to join your murder plots). Then, press your claim on the Kingdom of Navarra. At this point, you can use the Unite the Spanish Thrones decision to unite León, Galicia, Castille and Navarra, giving you a strong core from which you can expand into the rest of the Iberian peninsula until you can create the Empire of Hispania. It is not necessary to complete this achievement in one character's lifetime. Alternatively, consider leaving the DLC enabled. Once you are in position to end the Struggle, do so (do not take the Status Quo ending as it destroys the Hispania title), then create the empire. Convert to Mozarabism and begin converting counties. You can get a plethora of achievements this way. It is possible to get upwards of ten different achievements in runs that begin in Iberia; consider combining this one with one or more of those, such as Rise from the Ashes, Iberia or Iberia?, Darius Revenge, and more. In my run I was able to get fifteen achievements ranging from Struggle endings to surviving the Black Death, all the way until End of an Era in 1453.",
     "how_to_pt": "",
     "tags": [
       "war",
@@ -2612,9 +2612,9 @@
         "label_pt": "Starting as any of the Jimena siblings in 1066, become Emperor of Spain"
       },
       {
-        "id": "if-the-dlc-fate-of-iberia",
-        "label_en": "If the DLC Fate of Iberia",
-        "label_pt": "If the DLC Fate of Iberia"
+        "id": "in-1066-is-starting-as-either-king-alfonso-vi-of-leon-king-garcia-of-galicia-king-sancho-ii-of-castille-countess-urraca-of-zamora-elvira",
+        "label_en": "In 1066, is Starting as either: King Alfonso VI of León King García of Galicia King Sancho II of Castille Countess Urraca of Zamora Elvira",
+        "label_pt": "In 1066, is Starting as either: King Alfonso VI of León King García of Galicia King Sancho II of Castille Countess Urraca of Zamora Elvira"
       }
     ],
     "maps": []
@@ -2628,11 +2628,11 @@
     "difficulty": "hard",
     "description_en": "Starting as Robert the Fox in 1066, rule the Kingdom of Sicily, hold either the Kingdom of Epirus, Hellas, or Thessalonika, and have converted all of its original Counties to Catholicism",
     "description_pt": "",
-    "requirements_en": "One of the following: Expandir Owns the Kingdom of Sicily Owns the Kingdom of Naples Owns the Kingdom of Trinacria One of the following: Expandir Completely Controls the Kingdom of Epirus All Counties are Catholic Completely Controls the Kingdom of Thessalonika All Counties are Catholic Completely Controls the Kingdom of Hellas All Counties are Catholic",
+    "requirements_en": "One of the following: Owns the Kingdom of Sicily Owns the Kingdom of Naples Owns the Kingdom of Trinacria One of the following: Completely Controls the Kingdom of Epirus All Counties are Catholic Completely Controls the Kingdom of Thessalonika All Counties are Catholic Completely Controls the Kingdom of Hellas All Counties are Catholic",
     "requirements_pt": "",
     "starting_conditions_en": "Starting as Duke Robert de Hauteville of Apulia in 1066",
     "starting_conditions_pt": "",
-    "how_to_en": "Shortly after the game begins an event will trigger allowing you to get a 750 man army in your realm capital. Swell your Mangonels to the maximum size. Have your bishop fabricate a claim on any duchy within Epirus; the Byzantines will be weak due to the Seljuk invasion and Robert is an exceptional commander. After this, an event can appear where you support a monk's claim for the Byzantine throne in exchange for the Kingdom of Epirus. Start the war via the event. You will get 3000 special soldiers and will easily win if Robert is still alive. Winning this war gives tons of gold so don't bother waiting to create titles at the start. Convert all counties in Epirus to Christianity. (Note that in my experience, the relevant events will not fire while you are at war, so don't get into wars before they do.) The achievement does not require you to be independent, so it is also possible (if the Roads to Power Roads to Power DLC is NOT installed, making the Byzantines remain Feudal) to swear fealty to the Byzantine Empire, obtain the Religious Rights feudal contract via hook, and conquer and convert the required provinces as a vassal. Alternatively, educate your heir as Greek and Orthodox, claim the emperor's throne with him, and then convert back to Catholic with your vassals, taking care not to lose the Kingdom of Sicily, Naples, or Trinacria.",
+    "how_to_en": "Shortly after the game begins an event will trigger allowing you to get a 750 man army in your realm capital. Swell your Mangonels to the maximum size. Have your bishop fabricate a claim on any duchy within Epirus; the Byzantines will be weak due to the Seljuk invasion and Robert is an exceptional commander. After this, an event can appear where you support a monk's claim for the Byzantine throne in exchange for the Kingdom of Epirus. Start the war via the event. You will get 3000 special soldiers and will easily win if Robert is still alive. Winning this war gives tons of gold so don't bother waiting to create titles at the start. Convert all counties in Epirus to Christianity. (Note that in my experience, the relevant events will not fire while you are at war, so don't get into wars before they do.) The achievement does not require you to be independent, so it is also possible (if the Roads to Power DLC is NOT installed, making the Byzantines remain Feudal) to swear fealty to the Byzantine Empire, obtain the Religious Rights feudal contract via hook, and conquer and convert the required provinces as a vassal. Alternatively, educate your heir as Greek and Orthodox, claim the emperor's throne with him, and then convert back to Catholic with your vassals, taking care not to lose the Kingdom of Sicily, Naples, or Trinacria.",
     "how_to_pt": "",
     "tags": [
       "war",
@@ -2791,11 +2791,11 @@
     "difficulty": "very-hard",
     "description_en": "Starting as Magajiva Daura, reform an African pagan faith, and convert all Counties in Africa to it",
     "description_pt": "",
-    "requirements_en": "Has reformed and converted all African Counties to one of the following religions: Expandir / Mandé Yoruba Hausan Senegambian Akan Kordofanian Oromo-Somali North-African",
+    "requirements_en": "Has reformed and converted all African Counties to one of the following religions: / Mandé Yoruba Hausan Senegambian Akan Kordofanian Oromo-Somali North-African",
     "requirements_pt": "",
     "starting_conditions_en": "Is playing Countess Daurama Daura of Kano in 867",
     "starting_conditions_pt": "",
-    "how_to_en": "The Prophet lifestyle perk would reduce the price of reforming faith by 50%. Reforming the Faith with the Fundamentalist doctrine and the Mendicant Preachers and Sanctioned False Conversions tenets to increase the realm's conversion speed and resistance. Warmonger or Reincarnation are good choices for the third tenet. Revocable Clergy appointment doctrine allows you to select a priest with higher learning to speed up manual conversion. Try not to overuse Holy Wars, for they decrease fervor and at 40% or less there can be a heresy outbreak (of the unreformed version of your faith). Ensure that all of the county holders in your realm within Africa are converted to the proper faith. Keep an eye on nearby cultures, especially new hybrids, and hybridize with one that gets you closer to feudalizing. If succession becomes an issue, consider adopting administrative government (if the Roads to Power Roads to Power DLC is installed). Succession will not split the realm as long as you keep one of your dynasty members at the top of the score. Use political schemes to achieve this. Remember: all of Africa has to follow your religion, not your faith. Those who follow the unreformed version of your faith are still following your religion.",
+    "how_to_en": "The Prophet lifestyle perk would reduce the price of reforming faith by 50%. Reforming the Faith with the Fundamentalist doctrine and the Mendicant Preachers and Sanctioned False Conversions tenets to increase the realm's conversion speed and resistance. Warmonger or Reincarnation are good choices for the third tenet. Revocable Clergy appointment doctrine allows you to select a priest with higher learning to speed up manual conversion. Try not to overuse Holy Wars, for they decrease fervor and at 40% or less there can be a heresy outbreak (of the unreformed version of your faith). Ensure that all of the county holders in your realm within Africa are converted to the proper faith. Keep an eye on nearby cultures, especially new hybrids, and hybridize with one that gets you closer to feudalizing. If succession becomes an issue, consider adopting administrative government (if the Roads to Power DLC is installed). Succession will not split the realm as long as you keep one of your dynasty members at the top of the score. Use political schemes to achieve this. Remember: all of Africa has to follow your religion, not your faith. Those who follow the unreformed version of your faith are still following your religion.",
     "how_to_pt": "",
     "tags": [
       "religion",
@@ -2852,7 +2852,7 @@
     "requirements_pt": "",
     "starting_conditions_en": "",
     "starting_conditions_pt": "",
-    "how_to_en": "867 offers the best start. Either start as the Byzantine Empire or as Bulgaria and swear fealty to the Byzantine Empire before working your way up to replacing the emperor. Can be easily combined with a myriad of other achievements that involve forming Empires and Kingdoms in central Europe; consider combining with Wily as the Fox if no DLC is installed, or Miklagarðaríki if the DLC Northern Lords.png Northern Lords DLC is installed. The decision requires either the Byzantine Empire, Holy Roman Empire, or Empire of Italia (after using theUnify Italy decision). Pick any achievement that sets you on a path towards one of these titles and go from there. You will need to conquer a lot of land so focus on military traits and buildings.",
+    "how_to_en": "867 offers the best start. Either start as the Byzantine Empire or as Bulgaria and swear fealty to the Byzantine Empire before working your way up to replacing the emperor. Can be easily combined with a myriad of other achievements that involve forming Empires and Kingdoms in central Europe; consider combining with Wily as the Fox if no DLC is installed, or Miklagarðaríki if the Northern Lords DLC is installed. The decision requires either the Byzantine Empire, Holy Roman Empire, or Empire of Italia (after using theUnify Italy decision). Pick any achievement that sets you on a path towards one of these titles and go from there. You will need to conquer a lot of land so focus on military traits and buildings.",
     "how_to_pt": "",
     "tags": [
       "war",
@@ -3177,11 +3177,11 @@
     "difficulty": "medium",
     "description_en": "Starting and staying as a North Germanic Ásatrúan of any kind, have your Realm Capital on any of the Islands in the Indian Ocean Region. May not be available for characters created in the Ruler Designer.",
     "description_pt": "",
-    "requirements_en": "Has North Germanic heritage or Norman culture Asatru Capital is on an island in the Indian Ocean: Expandir One of the following Duchies Within the Kingdom of Lanka: Dakhina Desa Ruhunu Sinhala Within the Kingdom of Yemen: Socotra One of the following Counties Within the Kingdom of Tamilakam: Maldives Within the Kingdom of Gujarat: Kutch Far From Home map.png",
+    "requirements_en": "Has North Germanic heritage or Norman culture Asatru Capital is on an island in the Indian Ocean: One of the following Duchies Within the Kingdom of Lanka: Dakhina Desa Ruhunu Sinhala Within the Kingdom of Yemen: Socotra One of the following Counties Within the Kingdom of Tamilakam: Maldives Within the Kingdom of Gujarat: Kutch",
     "requirements_pt": "",
     "starting_conditions_en": "North Germanic heritage or Norman culture Asatru Custom character",
     "starting_conditions_pt": "",
-    "how_to_en": "If you have the Roads to Power Roads to Power DLC, in 867 start as Master Ubbe of the Scourge of the Saxons. As an adventurer, you can easily move your camp down the the island of Socotra off the coast of Yemen, stopping to gather Provisions along the way. Your camp is considered your Realm Capital, so as soon as you make camp on the island, you should get the achievement. Without the DLC, in 867 start as Jarl Hæsteinn of Montaigu. Start of by taking counties from the North Africans, Tulunids, the East Africans, and finally use the Varangian Adventure casus belli on the island of Socotra.",
+    "how_to_en": "If you have the Roads to Power DLC, in 867 start as Master Ubbe of the Scourge of the Saxons. As an adventurer, you can easily move your camp down the the island of Socotra off the coast of Yemen, stopping to gather Provisions along the way. Your camp is considered your Realm Capital, so as soon as you make camp on the island, you should get the achievement. Without the DLC, in 867 start as Jarl Hæsteinn of Montaigu. Start of by taking counties from the North Africans, Tulunids, the East Africans, and finally use the Varangian Adventure casus belli on the island of Socotra.",
     "how_to_pt": "",
     "tags": [
       "culture",
@@ -3216,9 +3216,9 @@
         "label_pt": "Starting and staying as a North Germanic Ásatrúan of any kind, have your Realm Capital on any of the Islands in the Indian Ocean Region"
       },
       {
-        "id": "if-you-have-the-roads-to-power-roads-to-power-dlc-in-867-start-as-master-ubbe-of-the-scourge-of-the-saxons",
-        "label_en": "If you have the Roads to Power Roads to Power DLC, in 867 start as Master Ubbe of the Scourge of the Saxons",
-        "label_pt": "If you have the Roads to Power Roads to Power DLC, in 867 start as Master Ubbe of the Scourge of the Saxons"
+        "id": "if-you-have-the-roads-to-power-dlc-in-867-start-as-master-ubbe-of-the-scourge-of-the-saxons",
+        "label_en": "If you have the Roads to Power DLC, in 867 start as Master Ubbe of the Scourge of the Saxons",
+        "label_pt": "If you have the Roads to Power DLC, in 867 start as Master Ubbe of the Scourge of the Saxons"
       }
     ],
     "maps": []
@@ -3346,7 +3346,7 @@
     "requirements_pt": "",
     "starting_conditions_en": "North Germanic heritage or Norman culture Asatru Custom character",
     "starting_conditions_pt": "",
-    "how_to_en": "Although the steam achievement states Norse tribal, the in-game achievement has been changed to allow any government type, including Jarl Haesteinn who is now feudal. This will still trigger the steam achievement. Starting as Jarl Haesteinn in 867 use the Duchy conquest casus belli to seize Sicily while they are at war with the Byzantines. Move your capital to Palermo and start conquering small independent Counts and Dukes. For Byzantine territories, wait for a weakness or make allies to match their strength and use the Kingdom conquest casus belli to take all of the land in one war, since it could be a costly war keep it for the end. Alternatively, after taking enough non-Byzantine and Italian land to create the Kingdom, swear fealty to the Byzantines and the emperor should grant you the remaining de-jure counties in the Kingdom of Sicily. Follow this with an independence war when having a stronge enough faction or enough allies. Another approach (if the Roads to Power Roads to Power DLC is NOT installed, which keeps the Byzantines Feudal) would be to swear fealty to the Byzantine Emperor after you have seized Sicily, start by conquering the smaller independent realms and vassals of the Byzantine empire. You should modify your feudal contract to protect yourself from title revocation, you can always add religious rights to your contract later. You will then have to break away from the empire eventually and can do this via an independence faction, use your spy master to find hooks on the various dukes in the empire so you can force them to join. A few assassinations can also destabilize the empire. Once you are independent the achievement should fire.",
+    "how_to_en": "Although the steam achievement states Norse tribal, the in-game achievement has been changed to allow any government type, including Jarl Haesteinn who is now feudal. This will still trigger the steam achievement. Starting as Jarl Haesteinn in 867 use the Duchy conquest casus belli to seize Sicily while they are at war with the Byzantines. Move your capital to Palermo and start conquering small independent Counts and Dukes. For Byzantine territories, wait for a weakness or make allies to match their strength and use the Kingdom conquest casus belli to take all of the land in one war, since it could be a costly war keep it for the end. Alternatively, after taking enough non-Byzantine and Italian land to create the Kingdom, swear fealty to the Byzantines and the emperor should grant you the remaining de-jure counties in the Kingdom of Sicily. Follow this with an independence war when having a stronge enough faction or enough allies. Another approach (if the Roads to Power DLC is NOT installed, which keeps the Byzantines Feudal) would be to swear fealty to the Byzantine Emperor after you have seized Sicily, start by conquering the smaller independent realms and vassals of the Byzantine empire. You should modify your feudal contract to protect yourself from title revocation, you can always add religious rights to your contract later. You will then have to break away from the empire eventually and can do this via an independence faction, use your spy master to find hooks on the various dukes in the empire so you can force them to join. A few assassinations can also destabilize the empire. Once you are independent the achievement should fire.",
     "how_to_pt": "",
     "tags": [
       "culture",
@@ -3455,7 +3455,7 @@
     "difficulty": "very-hard",
     "description_en": "Starting and staying as a North Germanic Ásatrúan of any kind, Completely Control everything in the Islands in the Atlantic and Mediterranean Region without ever having over 80 Realm Size",
     "description_pt": "",
-    "requirements_en": "Is North Germanic culture group or Norman Asatru Realm Size above 80 provinces Completely controls the following: Expandir The following Duchies: Within the Kingdom of Norway:f Iceland Northern Isles Within the Kingdom of Denmark: Sjælland Within the Kingdom of Sweden: Visby Within the Kingdom of Scotland: the Isles Mann Within the Kingdom of Maghreb: Canarias Within the Kingdom of Valencia: Mallorca Within the Kingdom of Sardinia: Sardinia Corsica Within the Kingdom of Sicily: Sicily Within the Kingdom of Venice: Venice Within the Kingdom of Epirus: Cephalonia Within the Kingdom of Krete: Krete Within the Kingdom of Cyprus: Cyprus The following Counties: Within the Kingdom of Denmark: Bornholm Within the Kingdom of Sweden: Aland Öland Within the Kingdom of Estonia: Osel Within the Kingdom of Wales: Anglesey Within the Kingdom of England: Wight Within the Kingdom of Thessalonika: Chios Lesbos Naxos Rhodos All the isles.png",
+    "requirements_en": "Is North Germanic culture group or Norman Asatru Realm Size above 80 provinces Completely controls the following: The following Duchies: Within the Kingdom of Norway:f Iceland Northern Isles Within the Kingdom of Denmark: Sjælland Within the Kingdom of Sweden: Visby Within the Kingdom of Scotland: the Isles Mann Within the Kingdom of Maghreb: Canarias Within the Kingdom of Valencia: Mallorca Within the Kingdom of Sardinia: Sardinia Corsica Within the Kingdom of Sicily: Sicily Within the Kingdom of Venice: Venice Within the Kingdom of Epirus: Cephalonia Within the Kingdom of Krete: Krete Within the Kingdom of Cyprus: Cyprus The following Counties: Within the Kingdom of Denmark: Bornholm Within the Kingdom of Sweden: Aland Öland Within the Kingdom of Estonia: Osel Within the Kingdom of Wales: Anglesey Within the Kingdom of England: Wight Within the Kingdom of Thessalonika: Chios Lesbos Naxos Rhodos",
     "requirements_pt": "",
     "starting_conditions_en": "North Germanic heritage or Norman culture Asatru",
     "starting_conditions_pt": "",
@@ -3776,7 +3776,7 @@
     "difficulty": "medium",
     "description_en": "Starting as the Piasts in 867, rule Poland, adopt Feudalism, and own a Famed or Illustrious-rarity regalia, crown, weapon, and armor.",
     "description_pt": "",
-    "requirements_en": "Kingdom of Poland Government is Feudal Artifact armor.png Famed or illustrious armor Artifact crown.png Famed or illustrious crown Artifact regalia.png Famed or illustrious regalia Artifact weapon.png Famed or illustrious weapon",
+    "requirements_en": "Kingdom of Poland Government is Feudal Famed or illustrious armor Famed or illustrious crown Famed or illustrious regalia Famed or illustrious weapon",
     "requirements_pt": "",
     "starting_conditions_en": "Playing as Siemowit of Greater Poland in 867",
     "starting_conditions_pt": "",
@@ -4319,7 +4319,7 @@
     "difficulty": "hard",
     "description_en": "Starting as the Duke of Ghur in 867 or 1066, conquer the Region of the Historical Ghurid Empire",
     "description_pt": "",
-    "requirements_en": "Completely controls the Historical Ghurid Empire region: Expandir The following Duchies: Within the Kingdom of Bengal: Gauda Varendra Vanga Nadia Suhma Within the Kingdom of Bihar: Magadha Tirabhukti Kasi Within the Kingdom of Kosala: Kanyakubja Saryupara Within the Kingdom of Delhi: Kuru Haritanaka Mathura Vodamayutja Within the Kingdom of Punjab: Multan Lahore Gandhara Within the Kingdom of Rajputana: Maru Jangladesh Stravani Ajmer Within the Kingdom of Sindh: Sauvira Bhakkar Within the Kingdom of Makran: Makran Jabal Kufs Sistan Within the Kingdom of Kabulistan: Kabulistan Zabulistan Within the Kingdom of Persia: Kirman Within the Kingdom of Khorsan: Merv Ghur Herat Balkh The following Counties: Within the Kingdom of Khorsan: Nishapur Tus Ghurid map.png",
+    "requirements_en": "Completely controls the Historical Ghurid Empire region: The following Duchies: Within the Kingdom of Bengal: Gauda Varendra Vanga Nadia Suhma Within the Kingdom of Bihar: Magadha Tirabhukti Kasi Within the Kingdom of Kosala: Kanyakubja Saryupara Within the Kingdom of Delhi: Kuru Haritanaka Mathura Vodamayutja Within the Kingdom of Punjab: Multan Lahore Gandhara Within the Kingdom of Rajputana: Maru Jangladesh Stravani Ajmer Within the Kingdom of Sindh: Sauvira Bhakkar Within the Kingdom of Makran: Makran Jabal Kufs Sistan Within the Kingdom of Kabulistan: Kabulistan Zabulistan Within the Kingdom of Persia: Kirman Within the Kingdom of Khorsan: Merv Ghur Herat Balkh The following Counties: Within the Kingdom of Khorsan: Nishapur Tus",
     "requirements_pt": "",
     "starting_conditions_en": "Starting as Firuzkuhshah Zahhak of Ghurid in 867 or Muhammad Abbaszde of Ghurid in 1066",
     "starting_conditions_pt": "",
@@ -4488,7 +4488,7 @@
     "difficulty": "very-hard",
     "description_en": "Have all Royal Courts in the world speak your Court Language. May not be available for characters created in the Ruler Designer.",
     "description_pt": "",
-    "requirements_en": "Royal court.png Royal Court All Royal Courts have the same court language",
+    "requirements_en": "Royal Court All Royal Courts have the same court language",
     "requirements_pt": "",
     "starting_conditions_en": "Custom character",
     "starting_conditions_pt": "",
@@ -4524,9 +4524,9 @@
         "label_pt": "Desbloquear a conquista no jogo"
       },
       {
-        "id": "png-royal-court-all-royal-courts-have-the-same-court-language",
-        "label_en": "png Royal Court All Royal Courts have the same court language",
-        "label_pt": "png Royal Court All Royal Courts have the same court language"
+        "id": "royal-court-all-royal-courts-have-the-same-court-language",
+        "label_en": "Royal Court All Royal Courts have the same court language",
+        "label_pt": "Royal Court All Royal Courts have the same court language"
       },
       {
         "id": "the-most-straight-forward-way-to-accomplish-this-is-to-destroy-all-royal-courts-in-the-game-other-than-your-own",
@@ -4814,7 +4814,7 @@
     "difficulty": "medium",
     "description_en": "As an Iberian character, control all of the Caucasian Iberia region. May not be available for characters created in the Ruler Designer.",
     "description_pt": "",
-    "requirements_en": "Iberian Heritage Control the following counties: Expandir Hayk Hereti Kakheti Kartli Klarjeti Lori Tao Tbilisi Vanand",
+    "requirements_en": "Iberian Heritage Control the following counties: Hayk Hereti Kakheti Kartli Klarjeti Lori Tao Tbilisi Vanand",
     "requirements_pt": "",
     "starting_conditions_en": "Custom character",
     "starting_conditions_pt": "",
@@ -4853,9 +4853,9 @@
         "label_pt": "As an Iberian character, control all of the Caucasian Iberia region"
       },
       {
-        "id": "iberian-heritage-control-the-following-counties-expandir-hayk-hereti-kakheti-kartli-klarjeti-lori-tao-tbilisi-vanand",
-        "label_en": "Iberian Heritage Control the following counties: Expandir Hayk Hereti Kakheti Kartli Klarjeti Lori Tao Tbilisi Vanand",
-        "label_pt": "Iberian Heritage Control the following counties: Expandir Hayk Hereti Kakheti Kartli Klarjeti Lori Tao Tbilisi Vanand"
+        "id": "iberian-heritage-control-the-following-counties-hayk-hereti-kakheti-kartli-klarjeti-lori-tao-tbilisi-vanand",
+        "label_en": "Iberian Heritage Control the following counties: Hayk Hereti Kakheti Kartli Klarjeti Lori Tao Tbilisi Vanand",
+        "label_pt": "Iberian Heritage Control the following counties: Hayk Hereti Kakheti Kartli Klarjeti Lori Tao Tbilisi Vanand"
       }
     ],
     "maps": []
@@ -5150,7 +5150,7 @@
     "requirements_pt": "",
     "starting_conditions_en": "Custom character",
     "starting_conditions_pt": "",
-    "how_to_en": "This achievement becomes a lot easier if the Roads to Power Roads to Power DLC is installed to make El Cid playable, in which case he will appear in the The Wandering Exiles scenario screen. Easily combined with Mio Cid. After completing the story and becoming a vassal of Castille, build up power and take your liege's throne. Claim a random county within Valencia, preferably one that's part of a duchy mostly owned by one state. Your priest will give you a claim on the entire duchy due to the religious differences. Take that duchy and use the Struggle Clash casus belli to get to the 6 county threshold for forming the kingdom.",
+    "how_to_en": "This achievement becomes a lot easier if the Roads to Power DLC is installed to make El Cid playable, in which case he will appear in the The Wandering Exiles scenario screen. Easily combined with Mio Cid. After completing the story and becoming a vassal of Castille, build up power and take your liege's throne. Claim a random county within Valencia, preferably one that's part of a duchy mostly owned by one state. Your priest will give you a claim on the entire duchy due to the religious differences. Take that duchy and use the Struggle Clash casus belli to get to the 6 county threshold for forming the kingdom.",
     "how_to_pt": "",
     "tags": [
       "dynasty",
@@ -5349,7 +5349,7 @@
     "difficulty": "medium",
     "description_en": "Finish the Falconer track in the Hunter Trait",
     "description_pt": "",
-    "requirements_en": "Trait track falconer.png Finished the Falconer track in the Hunter trait",
+    "requirements_en": "Finished the Falconer track in the Hunter trait",
     "requirements_pt": "",
     "starting_conditions_en": "",
     "starting_conditions_pt": "",
@@ -5385,9 +5385,9 @@
         "label_pt": "Finish the Falconer track in the Hunter Trait"
       },
       {
-        "id": "trait-track-falconer",
-        "label_en": "Trait track falconer",
-        "label_pt": "Trait track falconer"
+        "id": "finished-the-falconer-track-in-the-hunter-trait",
+        "label_en": "Finished the Falconer track in the Hunter trait",
+        "label_pt": "Finished the Falconer track in the Hunter trait"
       }
     ],
     "maps": []
@@ -5830,7 +5830,7 @@
     "requirements_pt": "",
     "starting_conditions_en": "",
     "starting_conditions_pt": "",
-    "how_to_en": "Acclaimed knights gain glory per winning battle they participate in, so farming as many battles as possible through constant wars and raiding is the fastest way to reach level 6. Norse is highly recommended as they have a +20% glory bonus through cultural traditions and faith tenets, and can raid overseas to constantly fight battles without waiting to siege wargoals. The most straightforward path for this achievement is to start as any Norse ruler in 867 and play a regular game. Create the accolade one you're a King and rconstantly raid overseas with the Adventure raid intent The side effect of this wis that you will hav bountiful wealth that you can use to keep expanding. Option 1 - When powerful enough, conquer Rome from the pope to force Christianity into unlocking Crusades, then convert. A Crusade should be called for Jerusalem very quickly. Participate and send your armies to the war goal to give your knight the trait and get the achievement. Ensure that the Accolade always has a successor, or it will lose rank. Option 2 - Build up enough piety from pilgrimages to form a new religion. It will need the Theocratic Clerical Tradition Doctrine theocracy lay clergy.png and Temporal Head of Faith (which will be you) Doctrine temporal head.png doctrines, and the Armed PilgraCore tenet sword.png tenant. Then pick a victim, and declare your own Great Holy War Directed great holy war cb.png. Note that you do not need to win the war, but your acclaimed knight must enter the target kingdom and fight there (sieges or battles) to get the trait.",
+    "how_to_en": "Acclaimed knights gain glory per winning battle they participate in, so farming as many battles as possible through constant wars and raiding is the fastest way to reach level 6. Norse is highly recommended as they have a +20% glory bonus through cultural traditions and faith tenets, and can raid overseas to constantly fight battles without waiting to siege wargoals. The most straightforward path for this achievement is to start as any Norse ruler in 867 and play a regular game. Create the accolade one you're a King and rconstantly raid overseas with the Adventure raid intent The side effect of this wis that you will hav bountiful wealth that you can use to keep expanding. Option 1 - When powerful enough, conquer Rome from the pope to force Christianity into unlocking Crusades, then convert. A Crusade should be called for Jerusalem very quickly. Participate and send your armies to the war goal to give your knight the trait and get the achievement. Ensure that the Accolade always has a successor, or it will lose rank. Option 2 - Build up enough piety from pilgrimages to form a new religion. It will need the Theocratic Clerical Tradition and Temporal Head of Faith (which will be you) doctrines, and the Armed Pilgra tenant. Then pick a victim, and declare your own Great Holy War . Note that you do not need to win the war, but your acclaimed knight must enter the target kingdom and fight there (sieges or battles) to get the trait.",
     "how_to_pt": "",
     "tags": [
       "religion",
@@ -5887,7 +5887,7 @@
     "requirements_pt": "",
     "starting_conditions_en": "",
     "starting_conditions_pt": "",
-    "how_to_en": "Create a custom character with the Pilgrim trait. When planning the activity manually add detours through each terrain type. Detours can't deviate from the optimal path too much, with a limit on additional travel time, so starting from taiga in the north or jungle in the south and ending on the opposite side of the map, while passing through Egypt for floodplains and oasis, is the easiest to plan. The two naval terrains are Sea and Coastal Sea. Example: Expandir Start as the Chiefdom of Obran Osh in 867 with Vaishnavism (Hindu) as your faith and perform a pilgrimage to Ujjayini with the following stops: Obran Osh - Start Theodosia Alexandria Ujjayini - Destination Ghatagaon Rajpipla Baqirda This route will hit the 15 terrains on land and 2 at sea, at least once at: Obran Osh - Taiga Mtensk - Forest Chally-Kala - Steppe Or Qapi - Wetlands Theodosia - Mountains Black Sea - Coastal Sea Levantine Sea - Sea Alexandria - Oasis Cairo - Floodplains Quzlam - Desert Kamboika - Plains Ujjayini - Farmlands Rajpipla - Jungle Basiyan - Drylands Baqirda - Desert Mountains Saird - Hills Ghatagaon - Terraced Hills",
+    "how_to_en": "Create a custom character with the Pilgrim trait. When planning the activity manually add detours through each terrain type. Detours can't deviate from the optimal path too much, with a limit on additional travel time, so starting from taiga in the north or jungle in the south and ending on the opposite side of the map, while passing through Egypt for floodplains and oasis, is the easiest to plan. The two naval terrains are Sea and Coastal Sea. Example: Start as the Chiefdom of Obran Osh in 867 with Vaishnavism (Hindu) as your faith and perform a pilgrimage to Ujjayini with the following stops: Obran Osh - Start Theodosia Alexandria Ujjayini - Destination Ghatagaon Rajpipla Baqirda This route will hit the 15 terrains on land and 2 at sea, at least once at: Obran Osh - Taiga Mtensk - Forest Chally-Kala - Steppe Or Qapi - Wetlands Theodosia - Mountains Black Sea - Coastal Sea Levantine Sea - Sea Alexandria - Oasis Cairo - Floodplains Quzlam - Desert Kamboika - Plains Ujjayini - Farmlands Rajpipla - Jungle Basiyan - Drylands Baqirda - Desert Mountains Saird - Hills Ghatagaon - Terraced Hills",
     "how_to_pt": "",
     "tags": [
       "religion",
@@ -6362,7 +6362,7 @@
     "difficulty": "easy",
     "description_en": "As a character of a Faith with the Fedayeen Doctrine, dispose of a Lowborn, a King, and an Emperor",
     "description_pt": "",
-    "requirements_en": "Faith has the Fedayeen tenet Icon scheme hostile.png Succeeded a Murder scheme against a lowborn Icon scheme hostile.png Succeeded a Murder scheme against a king Icon scheme hostile.png Succeeded a Murder scheme against an emperor",
+    "requirements_en": "Faith has the Fedayeen tenet Succeeded a Murder scheme against a lowborn Succeeded a Murder scheme against a king Succeeded a Murder scheme against an emperor",
     "requirements_pt": "",
     "starting_conditions_en": "",
     "starting_conditions_pt": "",
@@ -6400,9 +6400,9 @@
         "label_pt": "As a character of a Faith with the Fedayeen Doctrine, dispose of a Lowborn, a King, and an Emperor"
       },
       {
-        "id": "faith-has-the-fedayeen-tenet-icon-scheme-hostile",
-        "label_en": "Faith has the Fedayeen tenet Icon scheme hostile",
-        "label_pt": "Faith has the Fedayeen tenet Icon scheme hostile"
+        "id": "appoint-a-master-assassin-choose-intrigue-focus-and-swear-fealty-to-saffarids-to-get-extended-diplomatic-range",
+        "label_en": "Appoint a Master Assassin, choose Intrigue focus and swear fealty to Saffarids to get extended diplomatic range",
+        "label_pt": "Appoint a Master Assassin, choose Intrigue focus and swear fealty to Saffarids to get extended diplomatic range"
       }
     ],
     "maps": []
@@ -7414,7 +7414,7 @@
     "difficulty": "easy",
     "description_en": "Have every camp followers temperament be positive and have at least 10 camp followers.",
     "description_pt": "",
-    "requirements_en": "Loyalty selfless.png Steadfast camp temperament At least 10 camp followers",
+    "requirements_en": "Steadfast camp temperament At least 10 camp followers",
     "requirements_pt": "",
     "starting_conditions_en": "",
     "starting_conditions_pt": "",
@@ -7443,9 +7443,9 @@
         "label_pt": "Desbloquear a conquista no jogo"
       },
       {
-        "id": "png-steadfast-camp-temperament-at-least-10-camp-followers",
-        "label_en": "png Steadfast camp temperament At least 10 camp followers",
-        "label_pt": "png Steadfast camp temperament At least 10 camp followers"
+        "id": "steadfast-camp-temperament-at-least-10-camp-followers",
+        "label_en": "Steadfast camp temperament At least 10 camp followers",
+        "label_pt": "Steadfast camp temperament At least 10 camp followers"
       },
       {
         "id": "in-1066-replace-king-harold-of-england-with-a-custom-character-with-a-spouse-and-9-children-and-spend-all-points-on-diplomacy",
@@ -7573,7 +7573,7 @@
     "difficulty": "medium",
     "description_en": "As Co-Emperor, rule a Despotate.",
     "description_pt": "",
-    "requirements_en": "Scale of power.png Co-Emperor Rules a Despotate",
+    "requirements_en": "Co-Emperor Rules a Despotate",
     "requirements_pt": "",
     "starting_conditions_en": "",
     "starting_conditions_pt": "",
@@ -7610,9 +7610,9 @@
         "label_pt": "As Co-Emperor, rule a Despotate"
       },
       {
-        "id": "png-co-emperor-rules-a-despotate",
-        "label_en": "png Co-Emperor Rules a Despotate",
-        "label_pt": "png Co-Emperor Rules a Despotate"
+        "id": "co-emperor-rules-a-despotate",
+        "label_en": "Co-Emperor Rules a Despotate",
+        "label_pt": "Co-Emperor Rules a Despotate"
       }
     ],
     "maps": []
@@ -7679,7 +7679,7 @@
     "difficulty": "medium",
     "description_en": "Upgrade your Estate with a lvl 5 Villa and fill all external slots.",
     "description_pt": "",
-    "requirements_en": "Domicile building grand estate.png Grand Estate villa level Constructed a domicile building in each building slot",
+    "requirements_en": "Grand Estate villa level Constructed a domicile building in each building slot",
     "requirements_pt": "",
     "starting_conditions_en": "",
     "starting_conditions_pt": "",
@@ -7717,9 +7717,9 @@
         "label_pt": "Upgrade your Estate with a lvl 5 Villa and fill all external slots"
       },
       {
-        "id": "domicile-building-grand-estate",
-        "label_en": "Domicile building grand estate",
-        "label_pt": "Domicile building grand estate"
+        "id": "grand-estate-villa-level-constructed-a-domicile-building-in-each-building-slot",
+        "label_en": "Grand Estate villa level Constructed a domicile building in each building slot",
+        "label_pt": "Grand Estate villa level Constructed a domicile building in each building slot"
       }
     ],
     "maps": []
@@ -7846,7 +7846,7 @@
     "requirements_pt": "",
     "starting_conditions_en": "Adventurer",
     "starting_conditions_pt": "",
-    "how_to_en": "With minimal DLC, a strong start is Master Todor (1178, Landless Adventurer), who starts within Byzantine Empire borders with high gold, high prestige and a prestige gain modifier. Note that you will lose Todor's powerful special troops upon purchasing your estate, so feel free to throw them at the many enemies of the Empire. With the Khans of the Steppe Khans of the Steppe DLC, however, starting in 1178 is NOT recommended because the Mongols will conquer rapidly, potentially un-landing you and leaving you rivaled with the Khan (making it tedious to acquire de jure land within or restore the Byzantine Empire title). An alternative start is Robert Phrangopoulos (\"The Wandering Exiles\", 1066), whose Martial skill and Prowess make for entertaining Swords-for-Hire play. Regardless of the chosen character and start date, the paths to the throne are about the same. Your first goal is to grow your family. You will need adult heirs to maintain your governorship and spread your dynasty. Marry a camp follower, romance nearby eligible courtiers, or complete \"Rescue Fair Subject\" contracts for a chance to invite a beautiful maiden to camp. Before landing yourself, your next goal is to buy an estate. Prioritize completing contracts for duchy-level patrons in the Empire, all of whom can be approached for the \"Procure Estate\" interaction. You will require 1000 gold, and either a weak hook, high prestige or high piety. You may also need to sway your target lord and improve your Level of Fame before (s)he agrees to grant the estate. While it is not necessary to get the Emperor as a patron, a hook may be useful later; look for \"Fight Corruption\" tasks, or decline an invitation to war so you can negotiate patronage. Once estate-landed, there are several Roads to Power. Stockpile Influence and seek candidacy for your House within the realm. If the Emperor likes you, you may be able to use 200+ Influence to request a governorship outright. You can also \"Influence Candidacy\" of yourself or adult heirs to other Themes besides your own. You can \"Start Boundary Disputes\" against neighboring vassals (preferably those belonging to Powerful Families) to take more land. Provided you first have a Theme, you may use the Meritocracy perk to make a claim on the Empire. Consider also kidnapping or murdering the Emperor to get your way. Alternatively, request the Emperor install you as Co-Emperor, and use the \"Depose\" scheme to win a bloodless coup.",
+    "how_to_en": "With minimal DLC, a strong start is Master Todor (1178, Landless Adventurer), who starts within Byzantine Empire borders with high gold, high prestige and a prestige gain modifier. Note that you will lose Todor's powerful special troops upon purchasing your estate, so feel free to throw them at the many enemies of the Empire. With the Khans of the Steppe DLC, however, starting in 1178 is NOT recommended because the Mongols will conquer rapidly, potentially un-landing you and leaving you rivaled with the Khan (making it tedious to acquire de jure land within or restore the Byzantine Empire title). An alternative start is Robert Phrangopoulos (\"The Wandering Exiles\", 1066), whose Martial skill and Prowess make for entertaining Swords-for-Hire play. Regardless of the chosen character and start date, the paths to the throne are about the same. Your first goal is to grow your family. You will need adult heirs to maintain your governorship and spread your dynasty. Marry a camp follower, romance nearby eligible courtiers, or complete \"Rescue Fair Subject\" contracts for a chance to invite a beautiful maiden to camp. Before landing yourself, your next goal is to buy an estate. Prioritize completing contracts for duchy-level patrons in the Empire, all of whom can be approached for the \"Procure Estate\" interaction. You will require 1000 gold, and either a weak hook, high prestige or high piety. You may also need to sway your target lord and improve your Level of Fame before (s)he agrees to grant the estate. While it is not necessary to get the Emperor as a patron, a hook may be useful later; look for \"Fight Corruption\" tasks, or decline an invitation to war so you can negotiate patronage. Once estate-landed, there are several Roads to Power. Stockpile Influence and seek candidacy for your House within the realm. If the Emperor likes you, you may be able to use 200+ Influence to request a governorship outright. You can also \"Influence Candidacy\" of yourself or adult heirs to other Themes besides your own. You can \"Start Boundary Disputes\" against neighboring vassals (preferably those belonging to Powerful Families) to take more land. Provided you first have a Theme, you may use the Meritocracy perk to make a claim on the Empire. Consider also kidnapping or murdering the Emperor to get your way. Alternatively, request the Emperor install you as Co-Emperor, and use the \"Depose\" scheme to win a bloodless coup.",
     "how_to_pt": "",
     "tags": [
       "war",
@@ -8439,7 +8439,7 @@
     "difficulty": "very-easy",
     "description_en": "Become Blood Brothers",
     "description_pt": "",
-    "requirements_en": "Blood brother.png Blood Brother",
+    "requirements_en": "Blood Brother",
     "requirements_pt": "",
     "starting_conditions_en": "",
     "starting_conditions_pt": "",
@@ -8596,7 +8596,7 @@
     "difficulty": "medium",
     "description_en": "Build a Pleasure Dome.",
     "description_pt": "",
-    "requirements_en": "Building pleasure dome.png Built a Pleasure Dome",
+    "requirements_en": "Built a Pleasure Dome",
     "requirements_pt": "",
     "starting_conditions_en": "",
     "starting_conditions_pt": "",
@@ -8633,9 +8633,9 @@
         "label_pt": "Build a Pleasure Dome"
       },
       {
-        "id": "building-pleasure-dome",
-        "label_en": "Building pleasure dome",
-        "label_pt": "Building pleasure dome"
+        "id": "built-a-pleasure-dome",
+        "label_en": "Built a Pleasure Dome",
+        "label_pt": "Built a Pleasure Dome"
       }
     ],
     "maps": []
@@ -9764,7 +9764,7 @@
     "difficulty": "hard",
     "description_en": "Starting as landless, work your way up to become a Minister in China",
     "description_pt": "",
-    "requirements_en": "Council.png Councilor of Hegemony of China",
+    "requirements_en": "Councilor of Hegemony of China",
     "requirements_pt": "",
     "starting_conditions_en": "Landless",
     "starting_conditions_pt": "",
@@ -9800,9 +9800,9 @@
         "label_pt": "Starting as landless, work your way up to become a Minister in China"
       },
       {
-        "id": "png-councilor-of-hegemony-of-china",
-        "label_en": "png Councilor of Hegemony of China",
-        "label_pt": "png Councilor of Hegemony of China"
+        "id": "councilor-of-hegemony-of-china",
+        "label_en": "Councilor of Hegemony of China",
+        "label_pt": "Councilor of Hegemony of China"
       }
     ],
     "maps": []
