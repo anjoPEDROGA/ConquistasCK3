@@ -2,16 +2,157 @@
   {
     "id": "mother-of-us-all-guide",
     "achievement_id": "mother-of-us-all",
-    "title_en": "Mother of Us All",
-    "summary_en": "Detailed guide to be expanded.",
+    "title_en": "Mother of us All Guide",
+    "title_pt": "Guia Mother of us All",
+    "summary_en": "Start as Daurama Daura in 867, reform an African faith, and convert every county in Africa to it.",
+    "summary_pt": "Comece como Daurama Daura em 867, reforme uma fé africana e converta todos os condados da África para ela.",
+    "recommended_start": "Daurama Daura, Kano, 867",
+    "recommended_date": "867",
+    "tags": ["very-hard", "faith", "conversion", "africa", "long-campaign", "867"],
     "sections": [
       {
-        "id": "overview",
-        "title_en": "Overview",
-        "body_en": "Detailed guide to be expanded."
+        "id": "start",
+        "title_en": "Starting position",
+        "title_pt": "Posição inicial",
+        "body_en": "Daurama Daura begins in a demanding but flexible position in Kano in 867. Your first priority is survival: secure your court, protect your domain, and avoid early wars that would waste time and resources.\n\nUse the opening years to understand your neighbors, your alliances, and the religious map around you. You are not trying to rush the achievement from day one; you are building the foundation for a long campaign.",
+        "body_pt": "Daurama Daura começa em uma posição difícil, mas flexível, em Kano em 867. Sua primeira prioridade é sobreviver: proteger a corte, estabilizar o domínio e evitar guerras iniciais que desperdiçam tempo e recursos.\n\nUse os primeiros anos para entender seus vizinhos, alianças e o mapa religioso ao redor. O objetivo não é correr para a conquista desde o primeiro dia; é construir a base para uma campanha longa."
+      },
+      {
+        "id": "early-game",
+        "title_en": "Early survival",
+        "title_pt": "Sobrevivência inicial",
+        "body_en": "In the early game, focus on keeping your realm intact and your ruler alive. A stable succession and a reliable domain matter more than aggressive expansion.\n\nAvoid overextending before your income, levies, and political position can support it. Small wins are better than a risky push that leaves your realm fractured.",
+        "body_pt": "No início, foque em manter o reino intacto e a governante viva. Uma sucessão estável e um domínio confiável valem mais do que uma expansão agressiva.\n\nEvite se estender demais antes que sua renda, exércitos e posição política deem suporte. Vitórias pequenas são melhores do que um avanço arriscado que deixa o reino fragmentado."
+      },
+      {
+        "id": "expansion",
+        "title_en": "Expansion across Africa",
+        "title_pt": "Expansão pela África",
+        "body_en": "Once the realm is secure, expand methodically into nearby lands and strengthen your base of power. Prioritize territory that improves your borders, income, and long-term control.\n\nThe achievement is much easier when your expansion supports the eventual conversion effort, so think about which regions you will need to hold or influence later.",
+        "body_pt": "Quando o reino estiver seguro, expanda de forma metódica para terras próximas e fortaleça sua base de poder. Priorize territórios que melhorem fronteiras, renda e controle de longo prazo.\n\nA conquista fica bem mais fácil quando a expansão já apoia o esforço final de conversão, então pense em quais regiões você precisará manter ou influenciar depois."
+      },
+      {
+        "id": "faith-reformation",
+        "title_en": "Reforming the faith",
+        "title_pt": "Reforma da fé",
+        "body_en": "Reforming an African faith is the strategic core of the run. Plan your piety, your holy site control, and your religious timing before committing to the reform.\n\nA good reformation should make later county conversion easier, not harder. Choose doctrines and tenets that support a long campaign and reduce friction in your realm.",
+        "body_pt": "Reformar uma fé africana é o centro estratégico da campanha. Planeje sua piedade, o controle dos locais sagrados e o momento da reforma antes de se comprometer.\n\nUma boa reforma deve facilitar a conversão posterior dos condados, não complicar. Escolha doutrinas e preceitos que apoiem uma campanha longa e reduzam atritos no reino."
+      },
+      {
+        "id": "conversion",
+        "title_en": "Converting Africa",
+        "title_pt": "Conversão da África",
+        "body_en": "Once the faith is reformed, shift your focus to county conversion. Work outward from your strongest core and keep pressure on regions that would otherwise remain resistant.\n\nUse your realm structure, court, and vassals to help the process. The achievement is not about one dramatic moment; it is about sustained conversion across the continent.",
+        "body_pt": "Depois que a fé estiver reformada, mude o foco para a conversão dos condados. Trabalhe a partir do seu núcleo mais forte e mantenha pressão sobre as regiões que poderiam permanecer resistentes.\n\nUse a estrutura do reino, a corte e os vassalos para ajudar no processo. A conquista não é um momento dramático único; é uma conversão sustentada pelo continente."
+      },
+      {
+        "id": "final-check",
+        "title_en": "Final checks",
+        "title_pt": "Checagem final",
+        "body_en": "Before expecting the achievement to fire, confirm that every county in Africa follows the reformed faith. Check for stragglers, border regions, and any counties that were missed during the long campaign.\n\nIf the map is not complete, keep converting until it is. The final step is usually administrative rather than dramatic, so patience matters here.",
+        "body_pt": "Antes de esperar que a conquista apareça, confirme que todos os condados da África seguem a fé reformada. Verifique remanescentes, regiões de fronteira e qualquer condado que tenha escapado durante a campanha longa.\n\nSe o mapa não estiver completo, continue convertendo até estar. O passo final costuma ser mais administrativo do que dramático, então a paciência é importante."
       }
     ],
-    "checklist": []
+    "checklist": [
+      {
+        "id": "start-as-daurama",
+        "label_en": "Start as Daurama Daura",
+        "label_pt": "Começar como Daurama Daura",
+        "description_en": "Pick the 867 opening with the intended ruler.",
+        "description_pt": "Escolha o início de 867 com a governante correta."
+      },
+      {
+        "id": "secure-succession",
+        "label_en": "Secure succession",
+        "label_pt": "Garantir a sucessão",
+        "description_en": "Keep your heir and realm stable before expanding.",
+        "description_pt": "Mantenha o herdeiro e o reino estáveis antes de expandir."
+      },
+      {
+        "id": "stabilize-domain",
+        "label_en": "Stabilize the domain",
+        "label_pt": "Estabilizar o domínio",
+        "description_en": "Make sure your core holdings are safe and productive.",
+        "description_pt": "Garanta que seus domínios centrais estejam seguros e produtivos."
+      },
+      {
+        "id": "expand-local-kingdom",
+        "label_en": "Expand the local kingdom",
+        "label_pt": "Expandir o reino local",
+        "description_en": "Grow into nearby territory that strengthens your position.",
+        "description_pt": "Avance para territórios próximos que fortaleçam sua posição."
+      },
+      {
+        "id": "build-piety",
+        "label_en": "Build piety",
+        "label_pt": "Construir piedade",
+        "description_en": "Prepare enough piety for a faith reform.",
+        "description_pt": "Junte piedade suficiente para a reforma da fé."
+      },
+      {
+        "id": "control-holy-sites",
+        "label_en": "Control holy sites",
+        "label_pt": "Controlar locais sagrados",
+        "description_en": "Hold the sacred places needed for the reformation.",
+        "description_pt": "Controle os locais sagrados necessários para a reforma."
+      },
+      {
+        "id": "reform-african-faith",
+        "label_en": "Reform an African faith",
+        "label_pt": "Reformar uma fé africana",
+        "description_en": "Create the religion that will carry the run forward.",
+        "description_pt": "Crie a religião que levará a campanha adiante."
+      },
+      {
+        "id": "create-or-secure-empire",
+        "label_en": "Create or secure an empire",
+        "label_pt": "Criar ou assegurar um império",
+        "description_en": "Reach a stable political scale for the late game.",
+        "description_pt": "Alcance uma escala política estável para o fim de jogo."
+      },
+      {
+        "id": "convert-capital-and-vassals",
+        "label_en": "Convert capital and vassals",
+        "label_pt": "Converter capital e vassalos",
+        "description_en": "Start conversion with your core realm first.",
+        "description_pt": "Comece a conversão pelo seu núcleo principal."
+      },
+      {
+        "id": "convert-west-africa",
+        "label_en": "Convert West Africa",
+        "label_pt": "Converter a África Ocidental",
+        "description_en": "Push the faith westward through the continent.",
+        "description_pt": "Leve a fé para o oeste pelo continente."
+      },
+      {
+        "id": "convert-east-africa",
+        "label_en": "Convert East Africa",
+        "label_pt": "Converter a África Oriental",
+        "description_en": "Keep eastern regions aligned with the reformed faith.",
+        "description_pt": "Mantenha as regiões orientais alinhadas com a fé reformada."
+      },
+      {
+        "id": "convert-north-africa",
+        "label_en": "Convert North Africa",
+        "label_pt": "Converter a África do Norte",
+        "description_en": "Finish the northern stretch of the continent.",
+        "description_pt": "Conclua a faixa norte do continente."
+      },
+      {
+        "id": "check-remaining-counties",
+        "label_en": "Check remaining counties",
+        "label_pt": "Verificar condados restantes",
+        "description_en": "Make sure there are no holdouts before the end.",
+        "description_pt": "Garanta que não restem condados resistentes antes do fim."
+      },
+      {
+        "id": "trigger-achievement",
+        "label_en": "Trigger the achievement",
+        "label_pt": "Disparar a conquista",
+        "description_en": "Confirm the requirement is fully satisfied.",
+        "description_pt": "Confirme que o requisito foi totalmente cumprido."
+      }
+    ]
   },
   {
     "id": "a-perfect-circle-guide",
