@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "inventory:assets": "node scripts/inventory-assets.mjs",
+    "scrape:achievements": "node scripts/scrape-achievements-wiki.mjs",
     "parse:achievements": "node scripts/parse-achievements.mjs",
     "parse:achievements:legacy": "node scripts/parse-achievements.mjs --legacy",
     "parse:achievements:strict": "node scripts/parse-achievements.mjs --strict",
@@ -14,6 +15,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "cheerio": "^1.2.0",
     "clsx": "^2.1.1",
     "lucide-react": "^1.22.0",
     "react": "^19.2.7",
@@ -25,6 +27,7 @@
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.3",
     "oxlint": "^1.71.0",
+    "playwright": "^1.61.1",
     "typescript": "~6.0.2",
     "vite": "^8.1.1"
   }

@@ -1,0 +1,506 @@
+[
+  {
+    "name": "Death Did Us Part",
+    "short_description": "Murder your Spouse",
+    "icon_file": "Death_did_us_part_achievement.png",
+    "starting_conditions": "",
+    "requirements": "Spouse has been murdered by player in a scheme.",
+    "hints": "Create a married ruler with the Impatient and Schemer traits and start a murder scheme against the spouse.",
+    "difficulty": "VE"
+  },
+  {
+    "name": "It's not a Cult!",
+    "short_description": "Create a Faith",
+    "icon_file": "Its_not_a_cult_achievement.png",
+    "starting_conditions": "",
+    "requirements": "Has created a faith.",
+    "hints": "Create a Catholic ruler with a theology education trait and at least 27 years old. They will start with enough lifestyle points to take the Prophet lifestyle perk.",
+    "difficulty": "VE"
+  },
+  {
+    "name": "Until Death Do Us Part",
+    "short_description": "Marry another Character",
+    "icon_file": "Until_death_do_us_part_achievement.png",
+    "starting_conditions": "",
+    "requirements": "Has married.",
+    "hints": "Play as any unmarried character. There will always be someone willing to marry.",
+    "difficulty": "VE"
+  },
+  {
+    "name": "A House of My Own",
+    "short_description": "Create a Cadet Branch of your Dynasty",
+    "icon_file": "A_house_of_my_own_achievement.png",
+    "starting_conditions": "",
+    "requirements": "Has created a cadet branch.",
+    "hints": "Play the Iberia in Pieces scenario as King Antso IV of Navarra. He can create a Cadet Branch from the start.",
+    "difficulty": "E"
+  },
+  {
+    "name": "Above God",
+    "short_description": "Have a Strong Hook on your Head of Faith",
+    "icon_file": "Above_god_achievement.png",
+    "starting_conditions": "",
+    "requirements": "Strong Hook on the Head of Faith",
+    "hints": "Create a Catholic ruler with intrigue education and get the 'Truth is Relative' perk. Begin fabricating a hook on the Pope, delaying the scheme's completion until a strong hook is offered.",
+    "difficulty": "E"
+  },
+  {
+    "name": "Álmost There",
+    "short_description": "As Álmos Árpád, form Hungary and convert to Christianity",
+    "icon_file": "Almost_there_achievement.png",
+    "starting_conditions": "Playing as Álmos Árpád of the Mogyër Confederation in 867",
+    "requirements": "Kingdom of Hungary Christian religion Playing as Álmos Árpád",
+    "hints": "Declaring war using the Migrate to Pannonia casus belli will create two powerful armies in the realm capital and outnumber the Bulgarian armies two to one.",
+    "difficulty": "E"
+  },
+  {
+    "name": "Dreadful Ruler",
+    "short_description": "Have the maximum amount of Dread",
+    "icon_file": "Dreadful_ruler_achievement.png",
+    "starting_conditions": "",
+    "requirements": "100 Dread",
+    "hints": "Create a custom ruler with the Arbitrary, Sadistic and Wrathful traits and pick the Intimidation lifestyle focus.",
+    "difficulty": "E"
+  },
+  {
+    "name": "Fine Print",
+    "short_description": "Use a hook to modify a Feudal Contract",
+    "icon_file": "Fine_print_achievement.png",
+    "starting_conditions": "",
+    "requirements": "Modified a vassal contract with a hook.",
+    "hints": "Play the The Fate of England scenario as King Harold of England. He starts with a Strong Hook on a Vassal.",
+    "difficulty": "E"
+  },
+  {
+    "name": "Moving up in the World",
+    "short_description": "Increase your Rank",
+    "icon_file": "Moving_up_in_the_world_achievement.png",
+    "starting_conditions": "",
+    "requirements": "Gain a title that is a higher rank than previous title.",
+    "hints": "Play the The Great Adventurers scenario as Rurik Rurikid of Novgorod. He can create the Kingdom of Novgorod from the start.",
+    "difficulty": "E"
+  },
+  {
+    "name": "Not So Feudal System",
+    "short_description": "Use the Claim Throne Scheme successfully",
+    "icon_file": "Not_so_feudal_system_achievement.png",
+    "starting_conditions": "",
+    "requirements": "Gain a claim on a title with a scheme.",
+    "hints": "Replace any duke vassal character with a custom ruler with the Midas Touched, Impatient and Schemer traits and put the remaining points into Stewardship. Take the Domain lifestyle focus and use your free perk to pick the \"Meritocracy\" perk. Use the Claim Throne scheme against your liege.",
+    "difficulty": "E"
+  },
+  {
+    "name": "Seductive",
+    "short_description": "As any one Character, successfully seduce ten people",
+    "icon_file": "Seductive_achievement.png",
+    "starting_conditions": "",
+    "requirements": "Successfully seduce 10 characters.",
+    "hints": "Create a 40 year old custom ruler with intrigue education and the Diplomat trait. Use the free points to get as many perks in the Seducer/Seductress path of the Intrigue lifestyle as you can. Seducing ten people becomes fairly easy after this.",
+    "difficulty": "E"
+  },
+  {
+    "name": "Stressful Situation",
+    "short_description": "Suffer from a Mental Break",
+    "icon_file": "Stressful_situation_achievement.png",
+    "starting_conditions": "",
+    "requirements": "Stress level 1",
+    "hints": "Reset lifestyle perks to gain the achievement instantly.",
+    "difficulty": "E"
+  },
+  {
+    "name": "The Emerald Isle",
+    "short_description": "Starting as an Irish ruler, hold the Kingdom of Ireland",
+    "icon_file": "The_emerald_isle_achievement.png",
+    "starting_conditions": "Irish culture Capital is in Ireland region",
+    "requirements": "Kingdom of Ireland",
+    "hints": "Play the Rags to Riches scenario as Petty King Murchad of Munster. Fabricating claims is sufficient for this, as most of Ireland is divided among independent counts. Alternatively, if you have the perks in the August diplomacy lifestyle at game start, the +20 to vassalization acceptance makes it possible to do this quite quickly without a single war: it's possible to get enough single-county rulers to accept vassalization, starting in the south and working north, to form the Kingdom of Ireland. Their feudal taxes will help get you enough gold to create a second duchy, and then the Kingdom of Ireland.",
+    "difficulty": "E"
+  },
+  {
+    "name": "The Succession is Safe",
+    "short_description": "Have ten living children. May not be available for characters created in the Ruler Designer.",
+    "icon_file": "The_succession_is_safe_achievement.png",
+    "starting_conditions": "Has 10 children",
+    "requirements": "Has 10 children",
+    "hints": "Create a married ruler with 9 children and the Lustful, Fecund and Seducer traits. Use the Seduce scheme on the wife. Very easy if your faith allows concubines or polygamy.",
+    "difficulty": "E"
+  },
+  {
+    "name": "The Things Love Does for Us",
+    "short_description": "Have a Lover save you from a Murder attempt",
+    "icon_file": "The_things_love_does_for_us_achievement.png",
+    "starting_conditions": "",
+    "requirements": "A lover saved the player from a murder attempt.",
+    "hints": "In 1066 play as Count Otger of Spreewald. He starts with a rival who has high Intrigue and a wife who is his soulmate. Wait for your rival to attempt to murder you and restart until your soulmate saves you. The Mortal Adoration perk is not necessary but greatly increases the odds. Do not give your lover titles as this will prevent it from triggering. Since 1.13 and the scheme rework, it might be easier achieve it playing as Jarl Haesteinn, the Count of Montigue in 867, become your wife's soulmate, fire your spymaster and wait for the murder attempt by Charles the Bald of France since he's the most well-connected rival.",
+    "difficulty": "E"
+  },
+  {
+    "name": "The Things We Do for Love",
+    "short_description": "Murder your Lover's Spouse",
+    "icon_file": "The_things_we_do_for_love_achievement.png",
+    "starting_conditions": "",
+    "requirements": "Murder a lover's spouse.",
+    "hints": "Play the Iberia in Pieces scenario as King Alfonso VI of Leon. He starts with a lover. Marry her to someone with low intrigue and start a murder scheme against her spouse.",
+    "difficulty": "E"
+  },
+  {
+    "name": "Turning to Diamonds",
+    "short_description": "Reach the highest possible Stress Level",
+    "icon_file": "Turning_to_diamonds_achievement.png",
+    "starting_conditions": "",
+    "requirements": "Stress level 3",
+    "hints": "Play the Wrath of the Northmen scenario as Björn Ironside of Uppland. He starts with the Honest trait and can immediately reach the highest possible Stress level by starting 10 Murder Schemes.",
+    "difficulty": "E"
+  },
+  {
+    "name": "Way of Life",
+    "short_description": "Obtain every perk in a Lifestyle",
+    "icon_file": "Way_of_life_achievement.png",
+    "starting_conditions": "Has a full set of lifestyle traits perks in a tree: Has neither: Diplomat, August and Patriarch / Matriarch Schemer, Seducer and Torturer Whole of Body, Scholar and Theologian Strategist, Overseer and Gallant Avaricious, Architect and Administrator",
+    "requirements": "Has a full set of lifestyle traits perks in a tree: Diplomat, August and Patriarch / Matriarch Schemer, Seducer and Torturer Whole of Body, Scholar and Theologian Strategist, Overseer and Gallant Avaricious, Architect and Administrator",
+    "hints": "In 1066 replace the king of England with a 75 year old custom ruler with Coptic faith, Syriac culture, Mastermind Philosopher, Genius and Strong traits. With all these you get 56 experience per month. Take medicine focus then invest all perks in health and opinion. When duke of Normandy declares war on you immediately surrender. You'll get last 7 perks in 10-11 years. Note that having lifestyle traits is not enough. You need to unlock required lifestyle perks in a tree.",
+    "difficulty": "E"
+  },
+  {
+    "name": "A Legacy to Last the Ages",
+    "short_description": "Complete an entire Dynasty Legacy path",
+    "icon_file": "A_legacy_to_last_the_ages_achievement.png",
+    "starting_conditions": "Dynasty has a complete legacy track",
+    "requirements": "Dynasty has a complete legacy track",
+    "hints": "Play the The Carolingians scenario as Charles the Bald of West Francia. He has enough Renown to unlock two legacy levels from the start and the Karlings' dynasty also has the fastest progression. Don't worry if an AI character becomes Dynasty Head; it will always try to complete the legacy tree with the most current progress.",
+    "difficulty": "M"
+  },
+  {
+    "name": "An Unfortunate Accident",
+    "short_description": "Inherit a Title from someone you Murdered",
+    "icon_file": "An_unfortunate_accident_achievement.png",
+    "starting_conditions": "",
+    "requirements": "Murder a character whose heir is the player.",
+    "hints": "In 867 start as Prince Ibrahim ibn Ahmad, Duke of Gabes. Start a murder scheme against your liege brother and it will always succeed.",
+    "difficulty": "M"
+  },
+  {
+    "name": "Bad Blood",
+    "short_description": "Go to War with one of your siblings over a Claim",
+    "icon_file": "Bad_blood_achievement.png",
+    "starting_conditions": "",
+    "requirements": "Declare war against a sibling with the Claim Casus Belli",
+    "hints": "Play the The Carolingians scenario as any character. All of them can declare such a war as soon as the game starts.",
+    "difficulty": "M"
+  },
+  {
+    "name": "Celebrity",
+    "short_description": "Reach the highest possible Level of Fame",
+    "icon_file": "Celebrity_achievement.png",
+    "starting_conditions": "",
+    "requirements": "Exalted Among Men level of fame",
+    "hints": "Play the The Great Adventurers scenario as Jarl Hæsteinn of Montaigu. He starts with the Illustrious level of fame. Fame is most easily gained from creating titles and winning battles. A successful Great Holy War will also give you huge amounts of Prestige.",
+    "difficulty": "M"
+  },
+  {
+    "name": "Followed by Shadows",
+    "short_description": "Know ten Secrets simultaneously",
+    "icon_file": "Followed_by_shadows_achievement.png",
+    "starting_conditions": "",
+    "requirements": "Know 10 secrets.",
+    "hints": "Each seduced character will grant a secret. See the Seductive achievement for tips.",
+    "difficulty": "M"
+  },
+  {
+    "name": "For the Faith!",
+    "short_description": "Take part in a successful Great Holy War, on either side",
+    "icon_file": "For_the_faith_achievement.png",
+    "starting_conditions": "",
+    "requirements": "Win a defensive or offensive Great Holy War.",
+    "hints": "Start as a Catholic in 1178. The Pope will call a Crusade within the first twenty years nine times out of ten.",
+    "difficulty": "M"
+  },
+  {
+    "name": "Frankokratia",
+    "short_description": "As a French Catholic, hold and Completely Control the Kingdom of Thessalonika without holding or being vassalized to the Byzantine Empire",
+    "icon_file": "Frankokratia_achievement.png",
+    "starting_conditions": "",
+    "requirements": "Completely controls the Kingdom of Thessalonika French culture Catholic faith Byzantine Empire Roman Empire Liege owns the Byzantine Empire Liege owns the Roman Empire",
+    "hints": "Note that you don't need to hold the Kingdom of Thessalonika title, only all its counties. Replace the Byzantine emperor from 1066 with a custom character of French culture and Catholic faith and traits that will offset the Opinion loss. Find a way to conquer enough territory from Hungary and Pechenegs to create the Empire of Carpathia. Then destroy the Byzantine Empire title. This achievement is possible to do in under 10 years as Haesteinn. With the Bellem Justum perk conquering an easy duchy like Brittany or Cornwall (and forming the title) and doing a pilgrimage will give you the necessary prestige and piety to use the Invade Kingdom casus belli against the Byzantines. Focus on Bondí to counter the Byzantines Kataphraktoí. Alternatively, after completing Miklagarðaríki (if you have the Northern Lords DLC), move your capital to France and convert to the local faith and culture to get the achievement instantly.",
+    "difficulty": "M"
+  },
+  {
+    "name": "Going Places",
+    "short_description": "As Hæsteinn of Montaigu in 867, hold any Kingdom Tier Title",
+    "icon_file": "Going_places_achievement.png",
+    "starting_conditions": "Playing as Jarl Hæsteinn of Montaigu in 867",
+    "requirements": "Kingdom or Empire title Playing as Jarl Hæsteinn of Montaigu",
+    "hints": "Declare war on Cornwall using the Conquer Duchy Casus Belli. You should have no problem winning the war unless the Cornish get a strong ally (just restart if that happens). Move capital to Cornwall, convert to the local culture, recreate the Duchy and then use the Restore the Kingdom of Cornwall decision.",
+    "difficulty": "M"
+  },
+  {
+    "name": "Keeping it in the Family",
+    "short_description": "Have a child with the Inbred Trait. May not be available for characters created in the Ruler Designer.",
+    "icon_file": "Keeping_it_in_the_family_achievement.png",
+    "starting_conditions": "A child has the Inbred trait",
+    "requirements": "A child has the Inbred trait",
+    "hints": "Play the Iberia in Pieces scenario as King Alfonso VI of León. He starts as lovers with his full sister Infanta Urraca Fernandez of León.",
+    "difficulty": "M"
+  },
+  {
+    "name": "Know Your Place",
+    "short_description": "Defeat a Faction in a War",
+    "icon_file": "Know_your_place_achievement.png",
+    "starting_conditions": "",
+    "requirements": "Win a civil war.",
+    "hints": "A Peasant Rabble revolt will not count for this achievement. In 867 Umayyad starts on the brink of civil war, especially if you surrender in the starting wars. But winning might be difficult in that situation.",
+    "difficulty": "M"
+  },
+  {
+    "name": "Land of the Rus",
+    "short_description": "Starting as Rurik the Troublemaker in 867, lead your Dynasty to rule the Empire of Russia",
+    "icon_file": "Land_of_the_rus_achievement.png",
+    "starting_conditions": "Starting as Duke Rurik Rurikid of Novgorod in 867",
+    "requirements": "Empire of Russia",
+    "hints": "The Kingdom of Novgorod can be created right from the start. Then, to form the Empire of Russia within Rurik's lifetime, you need to do as the Varangians did and convert to the local culture and religion. Your neighbors will be happy and accept vassalage if you are de jure their liege (some gifts might be required). Use your once-per-lifetime Subjugation casus belli to conquer Minsk, then continue to use the Conquer Duchy casus belli. Alternatively, you can start multiple murder plots to stress suicide Rurik, allowing you to play as his only heir, a 17-year-old who also uses the martial tree. His stats are worse than Rurik's, but you have much longer to form Russia before succession issues.",
+    "difficulty": "M"
+  },
+  {
+    "name": "Monumental",
+    "short_description": "Fully upgrade a Duchy Building anywhere in your personal Domain",
+    "icon_file": "Monumental_achievement.png",
+    "starting_conditions": "",
+    "requirements": "Domain has a fully upgraded duchy building.",
+    "hints": "Create a faith with the Megalithic Constructions tenet. Great Megalith does not have any upgrades and will trigger the achievement when first build.",
+    "difficulty": "M"
+  },
+  {
+    "name": "Non Nobis Domine",
+    "short_description": "Found a Holy Order",
+    "icon_file": "Non_nobis_domine_achievement.png",
+    "starting_conditions": "",
+    "requirements": "Create a holy order.",
+    "hints": "Play the The Carolingians scenario as King Louis II of Italy. He starts the closest to meeting the creation requirements.",
+    "difficulty": "M"
+  },
+  {
+    "name": "Norman Yoke",
+    "short_description": "Starting as William the Bastard in 1066, win the Norman Invasion, become English, and have only English Vassals below you in the Kingdom of England",
+    "icon_file": "Norman_yoke_achievement.png",
+    "starting_conditions": "Starting as Duke William the Bastard of Normandy in 1066",
+    "requirements": "Win the Norman Conquest English culture Kingdom of England All direct vassals who hold a county or duchy in De Jure England have English culture",
+    "hints": "Moving the Realm Capital within the de jure territory of Kingdom of England enables the Embrace English Culture decision. The achievement checks direct vassals only so revoke all the duchies of non-English vassals and transfer non-English counts to English dukes if you have at least one in the realm.",
+    "difficulty": "M"
+  },
+  {
+    "name": "Royal Dignity",
+    "short_description": "Starting as Vratislav Přemyslid in 1066, lead your Dynasty to rule the Kingdom of Bohemia and the Holy Roman Empire simultaneously",
+    "icon_file": "Royal_dignity_achievement.png",
+    "starting_conditions": "Starting as Duke Vratislav Přemyslid of Bohemia in 1066",
+    "requirements": "Kingdom of Bohemia Holy Roman Empire",
+    "hints": "Wait a few months and you will have enough gold to create the Duchy of Moravia. Then make no expenses for a few years and you'll be able to create the Kingdom of Bohemia. To take the Holy Roman Empire, fabricate a hook on the Kaiser (requires the Truth is Relative Perk) and force him to vote for you. You and the Kaiser will always beat out the other electors. Then, simply murder the Kaiser to gain the title.",
+    "difficulty": "M"
+  },
+  {
+    "name": "Saint",
+    "short_description": "Reach the highest possible Level of Devotion",
+    "icon_file": "Saint_achievement.png",
+    "starting_conditions": "",
+    "requirements": "Religious Icon level of devotion",
+    "hints": "Replace the Abbasid Caliph in 867 with a custom character of Mashriqi culture and an Islamic faith wiith the Just, Generous, and Temperate traits. Using the Caliphate's sizeable gold, conduct Hajj pilgrimages as often as you are allowed, choosing the options that improve piety rewards every time. Choose the Theology lifestyle focus and pick perks that improve piety at every opportunity.",
+    "difficulty": "M"
+  },
+  {
+    "name": "Seven Holy Cities",
+    "short_description": "As a Hindu ruler, hold all seven Hindu Holy Sites at the same time",
+    "icon_file": "Seven_holy_cities_achievement.png",
+    "starting_conditions": "",
+    "requirements": "Is Hindu Owns or is liege of the owner of the Counties of: Varanasi Ayodhyā Mathura Sthanisvara Kanchipuram Ujjayini Dvaraka",
+    "hints": "Several Hindu faiths have holy sites that are unrelated to this achievement. Smartism or Kalikula Shaktism have the correct holy sites for this achievement. You can still get the achievement as any Hindu faith, just use the Smartism religion menu to find the necessary counties. In 867 Maharaja Bhoja of Pratihara (Khosala) starts in control of all but one of the Smartism Holy Sites. If you convert to Smartism or Kalikula Shaktism you only need to gain a casus belli against a Duke ruler. Holders of the sites do not actually have to be of your religion, just need to hold the counties or be the liege of the holders.",
+    "difficulty": "M"
+  },
+  {
+    "name": "The Emperor's New Clothes",
+    "short_description": "While holding any Empire Title, be naked. May not be available for characters created in the Ruler Designer.",
+    "icon_file": "The_emperors_new_clothes_achievement.png",
+    "starting_conditions": "Owns an Empire title and is naked",
+    "requirements": "Empire title Is naked",
+    "hints": "Starting in 1066, replace the King of France with a custom character of the Papuan or Nakavaram Culture and the traits Temperate, Forgiving, Compassionate, and Honest. The character should be at least 42 with the Fortune Builder education. Aim to have as high Stewardship as possible ( Diplomacy is also important to deal with the negative opinion your vassals will have from cultural acceptance, but other skills are completely unnecessary). Choose the Wealth Focus Lifestyle, and obtain all of the traits of the Avaricious tree, then immediately take the decisions Sell Trivial Titles and Extort Subjects (pick the option that gives the highest gold). Before unpausing, find a spouse with the highest Stewardship (they will be lowborn, but that is fine) and set them to manage domain. Set your Lodging Standards to the highest and every other Court Amenity to the lowest. Invite the character Konan mab Konan de Rennes to your court and once he agrees, declare war on the Duchy of Britanny for his claim. Seiging two castles and winning one battle should be enough to win the war, which should take less than 6 months. Once you have 1250 gold (you should already be very close), create the Kingdom of Britanny and then the Empire of Francia.",
+    "difficulty": "M"
+  },
+  {
+    "name": "Trapped in the Web",
+    "short_description": "Have Strong Hooks on three Direct Vassals",
+    "icon_file": "Trapped_in_the_web_achievement.png",
+    "starting_conditions": "",
+    "requirements": "3 Strong Hooks on vassals",
+    "hints": "Using the predominant Homosexuality game rule, choose a ruler under a faith which criminalizes it—Björn Ironside in 867 is a safe option—then wait a few years for vassals to start their criminal love affairs for you to find. Also, with the Truth is Relative perk, your spymaster can fabricate Strong Hooks with the Find Secrets task. The task typically fabricates Hooks on courtiers, not rulers, but you can use it to get Hooks on your own courtiers and then land them. You can start in 867 as any of the Igbo culture Chiefs and simply conquer enough to become a High Chief (Ajapado). You can use the raiding intent of capture. Make use of the Igbo culture tradition of Recognition of Talent and negotiate release of prisoners by recruiting them, this will provide each new courtier with a strong hook. Once you have enough land to hand out in your duchy, provide each of your 3 courtiers with strong hooks with a Chiefdom.",
+    "difficulty": "M"
+  },
+  {
+    "name": "A Name Known Throughout the World",
+    "short_description": "Have your Dynasty reach the highest possible Level of Splendor",
+    "icon_file": "A_name_known_throughout_the_world_achievement.png",
+    "starting_conditions": "",
+    "requirements": "Legendary level of splendor",
+    "hints": "The Yamato dynasty starts with the Fabled level of splendor in all start dates. In 867 a number of members are landed, allowing them to be played without additional DLCs. Almost any run that lasts long enough will achieve this level of splendor naturally. To that end, you do not necessarily need to specifically aim for this achievement if you're doing a very long run, such as End of an Era.",
+    "difficulty": "H"
+  },
+  {
+    "name": "Al-Andalus",
+    "short_description": "Starting as an Iberian Muslim, control all of Iberia and take the Avenge the Battle of Tours Decision",
+    "icon_file": "Al_andalus_achievement.png",
+    "starting_conditions": "Castilian, Basque, Portuguese, Catalan, Andalusian, Visigothic or Suebi culture Muslim faith Capital is in Iberia",
+    "requirements": "Taken the Avenge the Battle of Tours decision Completely controls the Iberia region",
+    "hints": "In 867 replace the Umayyad Sultan with a custom character of Andalusian culture and Muwalladism faith. This solves his initial Popular Opinion. Surrender in the starting wars and conquer the independent counties before Asturias gets the chance, followed by the island counties to the east. When ready get the rebelled duchies back.",
+    "difficulty": "H"
+  },
+  {
+    "name": "Beacon of Progress",
+    "short_description": "Have your Culture unlock all Innovations, excluding regional and culture-specific Innovations",
+    "icon_file": "Beacon_of_progress_achievement.png",
+    "starting_conditions": "",
+    "requirements": "Culture has all Innovations",
+    "hints": "Iranian cultures in 1178 offer the best start. Change the Divergent and Hybrid Culture Cooldowns game rule to Faster and create hybrid cultures to speed up the process. Like A Name Known Throughout the World, most long-term runs will unlock this achievement as a matter of course if you consistently hybridize.",
+    "difficulty": "H"
+  },
+  {
+    "name": "Blood Eagle",
+    "short_description": "Starting as any child of Ragnarr Loðbrók, conquer all of the British Isles",
+    "icon_file": "Blood_eagle_achievement.png",
+    "starting_conditions": "In 867 is Starting as either: Duke Björn Ironside of Uppland Duke Ivar the Boneless of the Isles Duke Halfdan Whiteshirt of Jorvik Duke Sigurdr Snake-in-the-Eye of Sjælland",
+    "requirements": "Completely control the Empire of Britannia (Only need to hold the region of Britannia, do not need to hold the empire title)",
+    "hints": "Aside from Earl Alfred of Wessex, all characters from the Wrath of the Northmen scenario are children of Ragnarr Loðbrók. Ivar the Boneless and Halfdan Whiteshirt offer the best starts.",
+    "difficulty": "H"
+  },
+  {
+    "name": "End of an Era",
+    "short_description": "Play until 1453",
+    "icon_file": "End_of_an_era_achievement.png",
+    "starting_conditions": "",
+    "requirements": "Date is 1452.12.1",
+    "hints": "In 1178 play as the Rurikid dynasty. They have over a hundred dynasty members so it's extremely difficult for everyone to die. It is very inefficient to do a run specifically for this achievement; start a run and go for other achievements, and once you've exhausted the possibilities for that run, wait until the time is up.",
+    "difficulty": "H"
+  },
+  {
+    "name": "From Rags to Riches",
+    "short_description": "Starting as a Count, lead your line to rule an Empire",
+    "icon_file": "From_rags_to_riches_achievement.png",
+    "starting_conditions": "Count",
+    "requirements": "Empire title",
+    "hints": "Start as the heir of Seljuk in 1066, Ayaz Alp Arslanoğlu of West-Tokharestan. Wait for the emperor to die or kill him.",
+    "difficulty": "H"
+  },
+  {
+    "name": "Give a Dog a Bone",
+    "short_description": "Starting as Matilda di Canossa in 1066, lead your Dynasty to rule the Kingdom of Italy, have at least fifty living Dynasty members, and found a Holy Order",
+    "icon_file": "Give_a_dog_a_bone_achievement.png",
+    "starting_conditions": "Starting as Duchess Matilda of Tuscany in 1066",
+    "requirements": "Any dynasty member owns the Kingdom of Italy Dynasty has 50 living members Created a holy order",
+    "hints": "Fabricate claims to conquer all the independent counties in Italy (restart if your Realm Priest has poor Learning). Meanwhile, try to request a claim on the Duchy of Lombardy, either by befriending the Pope or fabricating a hook on him (requiring perks in the Family Hierarch or Schemer perk trees, respectively). You should then have enough land to form the Kingdom of Italy. To accelerate the siring of dynasty members, land all your sons and matrilineal sons-in-law. Rulers and their spouses receive a fertility bonus.",
+    "difficulty": "H"
+  },
+  {
+    "name": "Kings to the Seventh Generation",
+    "short_description": "Starting as Count Eudes Capet of Anjou in 867, lead your Dynasty to rule the Kingdom of France",
+    "icon_file": "Kings_to_the_seventh_generation_achievement.png",
+    "starting_conditions": "Starting as Count Eudes Robertine of Anjou in 867",
+    "requirements": "Kingdom of France",
+    "hints": "Build up your power among your fellow vassals, focusing on getting the Duchy of Anjou first. To do so with relative safety within France, modify your feudal contract, offering your liege high levies in exchange for Protected Title Revocation and, when available, high taxes for March. When ready to face the king, use the Claim Throne scheme (requires Meritocracy perk).",
+    "difficulty": "H"
+  },
+  {
+    "name": "Last Count, First King",
+    "short_description": "Starting as Duke Nuño of Portucale, form Portugal",
+    "icon_file": "Last_count_first_king_achievement.png",
+    "starting_conditions": "Starting as Duke Nuño Mendez of Portucale in 1066",
+    "requirements": "Kingdom of Portugal Is Playing Duke Nuño Mendez of Portucale.",
+    "hints": "Sometimes the character starts with the Meritocracy perk, allowing the Claim Throne scheme to be used from the start with adequate success chance. Note that you will still have to defeat several Muslim neighbors in order to form Portugal. Alternatively, try allying France on day 1 and immediately declaring an independence war on your liege, then using your French ally for the two back-to-back wars you'll need to take the south. Divorcing Duke Nuño’s first wife can help secure a useful alliance. You can also align with William the Conqueror early, but his special troops will be preoccupied with England for a while. With the Fate of Iberia DLC you can Found Portugal without being independent as long as it's the Opportunity Phase (which the game begins in).",
+    "difficulty": "H"
+  },
+  {
+    "name": "Paragon of Virtue",
+    "short_description": "Have three or more Virtuous Traits. May not be available for characters created in the Ruler Designer.",
+    "icon_file": "Paragon_of_virtue_achievement.png",
+    "starting_conditions": "Has 3 virtuous traits",
+    "requirements": "Has 3 virtuous traits",
+    "hints": "Start as Bayajidda of Kano in 867. He starts with two virtues and can instantly (if lucky) get Possessed through the Seek Aid of the Spirits decision. If the decision doesn't result in Possessed reset and try again. Alternatively, search for a member of the Turumism faith that randomly generates with two of three virtuous personality traits, restarting if unsuccessful. This is slightly easier in 1066 as there are more independent turumic characters. Once you find a character, simply complete a hunt to get Hunter.",
+    "difficulty": "H"
+  },
+  {
+    "name": "Prolific",
+    "short_description": "Have one hundred living Dynasty members",
+    "icon_file": "Prolific_achievement.png",
+    "starting_conditions": "",
+    "requirements": "Dynasty has 100 living members",
+    "hints": "Obtained instantly by playing as the Rurikids in 1178.",
+    "difficulty": "H"
+  },
+  {
+    "name": "Reconquista",
+    "short_description": "Starting as an Iberian Christian, convert all of Iberia to Christianity",
+    "icon_file": "Reconquista_achievement.png",
+    "starting_conditions": "Iberian heritage Christian religion",
+    "requirements": "Completely controls the Iberia region All counties in the Iberia region is Christian Iberian heritage Christian religion",
+    "hints": "In 867 replace the Umayyad Sultan with a custom character of Andalusian culture, Apostolic faith, learning education and pick traits that will offset the Opinion loss (Gregarious is a great option for all Muslims, while Just is a virtuous trait to Muslims, making them like you more. Temperate is also good, as it is considered a virtue by Muslims and any Christian faith with the Monasticism tenet, including Catholicism). Surrender in the starting wars. Focus on the Theologian lifestyle tree and conquer the independent counties before Asturias gets the chance. Then get the three island counties to the east, followed by Navarra and finally Asturias. If the Fate of Iberia DLC is installed keep the Iberian Struggle in the Opportunity phase as long as possible. Alternatively, if the Fate of Iberia DLC is enabled, you can follow the same instructions as above, but starting with a Mozarab ruler instead, as you will automatically be involved with the Struggle and can use the Struggle Casus Bellis. This will also help you unlock the Mozarabic Inquisition achievement.",
+    "difficulty": "H"
+  },
+  {
+    "name": "Sibling Rivalry",
+    "short_description": "Starting as any of the Jimena siblings in 1066, become Emperor of Spain",
+    "icon_file": "Sibling_rivalry_achievement.png",
+    "starting_conditions": "In 1066, is Starting as either: King Alfonso VI of León King García of Galicia King Sancho II of Castille Countess Urraca of Zamora Elvira",
+    "requirements": "Empire Empire of Hispania",
+    "hints": "If the Fate of Iberia DLC is installed disable it so you don't have to end the Iberian Struggle in order to create the Empire of Hispania title. Start as Alfonso, he is a high Intrigue character—with some luck and preparation you can kill your two brothers within two years to get their kingdoms (you might need to wait a few months after starting the game before agents are willing to join your murder plots). Then, press your claim on the Kingdom of Navarra. At this point, you can use the Unite the Spanish Thrones decision to unite León, Galicia, Castille and Navarra, giving you a strong core from which you can expand into the rest of the Iberian peninsula until you can create the Empire of Hispania. It is not necessary to complete this achievement in one character's lifetime. Alternatively, consider leaving the DLC enabled. Once you are in position to end the Struggle, do so (do not take the Status Quo ending as it destroys the Hispania title), then create the empire. Convert to Mozarabism and begin converting counties. You can get a plethora of achievements this way. It is possible to get upwards of ten different achievements in runs that begin in Iberia; consider combining this one with one or more of those, such as Rise from the Ashes, Iberia or Iberia?, Darius Revenge, and more. In my run I was able to get fifteen achievements ranging from Struggle endings to surviving the Black Death, all the way until End of an Era in 1453.",
+    "difficulty": "H"
+  },
+  {
+    "name": "Wily as the Fox",
+    "short_description": "Starting as Robert the Fox in 1066, rule the Kingdom of Sicily, hold either the Kingdom of Epirus, Hellas, or Thessalonika, and have converted all of its original Counties to Catholicism",
+    "icon_file": "Wily_as_the_fox_achievement.png",
+    "starting_conditions": "Starting as Duke Robert de Hauteville of Apulia in 1066",
+    "requirements": "One of the following: Owns the Kingdom of Sicily Owns the Kingdom of Naples Owns the Kingdom of Trinacria One of the following: Completely Controls the Kingdom of Epirus All Counties are Catholic Completely Controls the Kingdom of Thessalonika All Counties are Catholic Completely Controls the Kingdom of Hellas All Counties are Catholic",
+    "hints": "Shortly after the game begins an event will trigger allowing you to get a 750 man army in your realm capital. Swell your Mangonels to the maximum size. Have your bishop fabricate a claim on any duchy within Epirus; the Byzantines will be weak due to the Seljuk invasion and Robert is an exceptional commander. After this, an event can appear where you support a monk's claim for the Byzantine throne in exchange for the Kingdom of Epirus. Start the war via the event. You will get 3000 special soldiers and will easily win if Robert is still alive. Winning this war gives tons of gold so don't bother waiting to create titles at the start. Convert all counties in Epirus to Christianity. (Note that in my experience, the relevant events will not fire while you are at war, so don't get into wars before they do.) The achievement does not require you to be independent, so it is also possible (if the Roads to Power DLC is NOT installed, making the Byzantines remain Feudal) to swear fealty to the Byzantine Empire, obtain the Religious Rights feudal contract via hook, and conquer and convert the required provinces as a vassal. Alternatively, educate your heir as Greek and Orthodox, claim the emperor's throne with him, and then convert back to Catholic with your vassals, taking care not to lose the Kingdom of Sicily, Naples, or Trinacria.",
+    "difficulty": "H"
+  },
+  {
+    "name": "A Perfect Circle",
+    "short_description": "Have only two distinct parents, grandparents, and great grandparents, counting absent ancestors as individual Characters",
+    "icon_file": "A_perfect_circle_achievement.png",
+    "starting_conditions": "",
+    "requirements": "Missing unique ancestors is 50 or more.",
+    "hints": "Does not require two distinct grandparents or great-grandparents. Requires having no more than 12 unique characters among the player's parents through great-great-great-grandparents (the maximum possible is 62; 62 − 50 = 12). If there is no recorded parent, as for lowborn, it's counted as a whole tree of unrelated ancestors. Start in Iceland with the restricted diplomatic range rule, where you're rather isolated and can be left alone. Use the Ruler Designer to create a character of the Messalianism faith with the Pure-blooded trait, then inbreed siblings for three generations. The greatest threat to this achievement is cuckoldry. Playing a female ruler (easy as Messalianism is gender-equal) together with the predominant Homosexuality or Asexuality rules can alleviate this. Alternatively, play as a Zoroastrian ruler somewhere in India. Since it is an Eastern Religion, you won't have to worry about Holy Wars. **This achievement is bugged in the current patch (as of April 2025). It will never trigger no matter what you do. Use the Steam Beta feature to roll your version back to 1.13.2 and it should trigger if you've met the requirements.",
+    "difficulty": "VH"
+  },
+  {
+    "name": "Carolingian Consolidation",
+    "short_description": "Starting as a Karling, be the only independent Karling to hold a Landed Title",
+    "icon_file": "Carolingian_consolidation_achievement.png",
+    "starting_conditions": "Starting as someone in the Karling Dynasty",
+    "requirements": "Is independent All dynasty members except the player is not landed or an independent ruler",
+    "hints": "In 1066 play as Count Herbert of Vermandois, a vassal of France and the only landed Karling. Declare an independence war and surrender. There is a chance that you will be banished as an adventurer, which will instantly unlock the achievement. Another approach is to get strong alliances. William the Conqueror and Kaiser Heinrich are both good candidates and should be willing to ally. Make sure your allies are at peace, declare an independence war, call your allies in, and they will stomp your liege. Enforce demands to get the achievement.",
+    "difficulty": "VH"
+  },
+  {
+    "name": "Mother of us All",
+    "short_description": "Starting as Magajiva Daura, reform an African pagan faith, and convert all Counties in Africa to it",
+    "icon_file": "Mother_of_us_all_achievement.png",
+    "starting_conditions": "Is playing Countess Daurama Daura of Kano in 867",
+    "requirements": "Has reformed and converted all African Counties to one of the following religions: / Mandé Yoruba Hausan Senegambian Akan Kordofanian Oromo-Somali North-African",
+    "hints": "The Prophet lifestyle perk would reduce the price of reforming faith by 50%. Reforming the Faith with the Fundamentalist doctrine and the Mendicant Preachers and Sanctioned False Conversions tenets to increase the realm's conversion speed and resistance. Warmonger or Reincarnation are good choices for the third tenet. Revocable Clergy appointment doctrine allows you to select a priest with higher learning to speed up manual conversion. Try not to overuse Holy Wars, for they decrease fervor and at 40% or less there can be a heresy outbreak (of the unreformed version of your faith). Ensure that all of the county holders in your realm within Africa are converted to the proper faith. Keep an eye on nearby cultures, especially new hybrids, and hybridize with one that gets you closer to feudalizing. If succession becomes an issue, consider adopting administrative government (if the Roads to Power DLC is installed). Succession will not split the realm as long as you keep one of your dynasty members at the top of the score. Use political schemes to achieve this. Remember: all of Africa has to follow your religion, not your faith. Those who follow the unreformed version of your faith are still following your religion.",
+    "difficulty": "VH"
+  },
+  {
+    "name": "Rise from the Ashes",
+    "short_description": "Restore the Roman Empire",
+    "icon_file": "Rise_from_the_ashes_achievement.png",
+    "starting_conditions": "",
+    "requirements": "Roman Empire",
+    "hints": "867 offers the best start. Either start as the Byzantine Empire or as Bulgaria and swear fealty to the Byzantine Empire before working your way up to replacing the emperor. Can be easily combined with a myriad of other achievements that involve forming Empires and Kingdoms in central Europe; consider combining with Wily as the Fox if no DLC is installed, or Miklagarðaríki if the Northern Lords DLC is installed. The decision requires either the Byzantine Empire, Holy Roman Empire, or Empire of Italia (after using theUnify Italy decision). Pick any achievement that sets you on a path towards one of these titles and go from there. You will need to conquer a lot of land so focus on military traits and buildings.",
+    "difficulty": "VH"
+  },
+  {
+    "name": "What Nepotism?",
+    "short_description": "Have your Dynasty rule ten independent realms of at least Kingdom tier simultaneously",
+    "icon_file": "What_nepotism_achievement.png",
+    "starting_conditions": "",
+    "requirements": "At least 10 dynasty members are independent and own a Kingdom title or higher.",
+    "hints": "In 867 replace the khagan of Kirghiz with a custom ruler with 9 sons and whatever traits are beneficial. You start completely controlling the de jure territory of 3 kingdoms and half of two more. The Kirghiz Khanate does not have any de jure territory so you can grant independence to any kingdom. Create the kingdoms you already control and conquer more, then give them to your sons and grant them independence all together.",
+    "difficulty": "VH"
+  }
+]

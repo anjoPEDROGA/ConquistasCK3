@@ -1,0 +1,101 @@
+[
+  {
+    "name": "Legendary!",
+    "short_description": "Complete a Legend",
+    "icon_file": "Legendary!_achievement.png",
+    "starting_conditions": "",
+    "requirements": "Completed a Legend",
+    "hints": "In game rules set Legend Cost to Very Low.",
+    "difficulty": "VE"
+  },
+  {
+    "name": "You'll Never Take Me Alive!",
+    "short_description": "Travel to a safe Holding while your Capital is infected by a Plague",
+    "icon_file": "You%27ll_never_take_me_alive!_achievement.png",
+    "starting_conditions": "",
+    "requirements": "Capital barony has a plague Traveled to a barony without a plague",
+    "hints": "In game rules set Plague Frequency to Doomsday. If you get a plague in your realm move your capital there, revoking titles if necessary. Then travel to a barony without a plague using activities. A Pilgrimage works best to ensure the plague doesn't catch up with you.",
+    "difficulty": "VE"
+  },
+  {
+    "name": "Neverending Story",
+    "short_description": "Complete your ancestor's Legend after their death",
+    "icon_file": "Neverending_story_achievement.png",
+    "starting_conditions": "",
+    "requirements": "Completed a legend after its owner died",
+    "hints": "Start creating a legend and do not complete it until the character dies. Playing as the heir, take ownership of the legend before unpausing the game to be sure another relative doesn't do it. Then complete the legend.",
+    "difficulty": "E"
+  },
+  {
+    "name": "Pay Respects",
+    "short_description": "Host a Funeral for your Legend Protagonist",
+    "icon_file": "Pay_respects_achievement.png",
+    "starting_conditions": "",
+    "requirements": "Hosted a Funeral for a Legend Protagonist",
+    "hints": "Make a dead character a legend protagonist before starting a Funeral.",
+    "difficulty": "E"
+  },
+  {
+    "name": "Canonized",
+    "short_description": "Manage to make your Legend Protagonist a Saint",
+    "icon_file": "Canonized_achievement.png",
+    "starting_conditions": "",
+    "requirements": "Is a Legend Protagonist Has the Venerated Ancestor trait",
+    "hints": "Getting the Venerated Ancestor trait requires the third Heroic Bloodline dynasty legacy and completing a Holy Legend with Mythical quality. Don't forget to choose yourself as the Legend Protagonist.",
+    "difficulty": "M"
+  },
+  {
+    "name": "Divine Right",
+    "short_description": "Reach the maximum level of Legitimacy",
+    "icon_file": "Divine_right_achievement.png",
+    "starting_conditions": "",
+    "requirements": "Has legitimacy level 5",
+    "hints": "Create a 33 years custom character with the Virtuoso Arbitrator, Just, Diplomat and Sayyid traits. Take the Diplomacy Lifestyle and the Writing History perk. You will start with Legitimacy level 4 and half of the progress to level 5.",
+    "difficulty": "M"
+  },
+  {
+    "name": "Local Legend",
+    "short_description": "As a Count, complete a Mythical Legend",
+    "icon_file": "Local_legend_achievement.png",
+    "starting_conditions": "",
+    "requirements": "Title rank is Count Completed a legend of Mythical quality",
+    "hints": "In game rules, set Legend Spread Chance to Very High and Legend Cost to Very Low. In 867, replace the Chief of Gotland in Scandinavia with a custom ruler that has high stewardship and the Holy Monarch trait. This trait unlocks a legend seed that has no fame or piety requirements. Ask every neighboring ruler to promote it as often as you can and focus on saving up gold to petition more rulers. Gotland is fairly safe from its larger neighbors and you can ask every Norse ruler to promote your legend. Consider conquering land on the Baltic coast to unlock more possible rulers for promotion. Another option is to start and promote the legend as a King or Emperor, then wait until death, choose a new destiny as a count, take ownership of the legend from your deceased dyansty member, and complete it.",
+    "difficulty": "M"
+  },
+  {
+    "name": "Upward Mobility",
+    "short_description": "Successfully claim your Liege's title while having a higher Legitimacy Level than them",
+    "icon_file": "Upward_mobility_achievement.png",
+    "starting_conditions": "",
+    "requirements": "Gain a claim on a your Liege's title by diplomacy while having a higher Legitimacy Level.",
+    "hints": "As of 1.12.2, You just need to claim your Liege's title from diplomacy, no need to win the war. And we can not get achievement by using scheme. Create a custom character to replace the duke in the Doolani Amirate in the Habbari Sultanate from 867. Make the character Just, Sayyid and with Diplomacy focus. You will start with Legitamacy 4/5 with your liege being at 1/5. Go on hunts, feasts and any other activity than can increase your prestige to get to the required 1500 prestige for the Claim your Liege's title interaction.",
+    "difficulty": "M"
+  },
+  {
+    "name": "Not Today",
+    "short_description": "Contract, and recover from, the Bubonic Plague",
+    "icon_file": "Not_today_achievement.png",
+    "starting_conditions": "",
+    "requirements": "Recovered from the Bubonic Plague",
+    "hints": "In game rules set Plague Frequency to Doomsday and allow Black Death to happen at any point. Create a custom character with the Herculean/Amazonian, Strong, Temperate and Conscientious Scribe traits. Take the Medicine focus and the Whole of Body perks and always employ the best Personal Physician you can. Once a Bubonic Plague appears travel to the infected baronies. Catching the plague can be tricky, raising an army with your character as general and stationing it in an infected barony give you the highest chance to get it. The Personal Physician medical treatment event must happen within 1 year after getting Bubonic Plague. If you never get it, just fire and rehire them. When the event takes place, choose the risky treatment option. Losing the bubonic trait naturally will also trigger the achievement.",
+    "difficulty": "H"
+  },
+  {
+    "name": "The Pharaoh Islands",
+    "short_description": "As a Scottish character, complete a Legend claiming your descent from Ancient Egypt",
+    "icon_file": "The_pharaoh_islands_achievement.png",
+    "starting_conditions": "",
+    "requirements": "Completed the Sons of Scota legend",
+    "hints": "The legend seed requires holding the kingdom of Scotland while having West Germanic or Goidelic heritage. In the game rules set Legend Cost to Very Low. In 1066, replace the King of Scotland with a character of Scots culture that has high diplomacy and a few children. Wait until William conquers England, then ally with him and use him to take some of the de jure land you don't already control. Create the duchy titles and continue building your prestige to level 4, then start the legend. You do not need to upgrade the quality of the legend for the achievement.",
+    "difficulty": "H"
+  },
+  {
+    "name": "Can't Touch This",
+    "short_description": "Have an infected Barony at the maximum Plague Resistance",
+    "icon_file": "Can%27t_touch_this_achievement.png",
+    "starting_conditions": "",
+    "requirements": "An owned barony has a plague and 100 Plague Resistance",
+    "hints": "In 1066 play as Mahasamanta Parakkirama of Pandya (he's a vassal of Chola). Construct temple holdings in Madurai and upgrade all holdings. In the realm capital construct the Burial Site duchy building and build and upgrade Hospices and Monasteries in every barony in Madurai. Wait for a plague to appear in the realm and then use the Isolate Capital decision. Employ the best Personal Physician you can and use Control Plagues.",
+    "difficulty": "VH"
+  }
+]
